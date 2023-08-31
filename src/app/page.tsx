@@ -8,8 +8,12 @@ export default async function Main() {
   return (
     <>
       <main className='flex min-h-screen flex-col items-center'>
-        {/* {page.products.cart} */}
-        <Header lang={lang}></Header>
+        <Header
+          lang={lang}
+          lightMode={false}
+          imageLogoFilename={'/logo_jnvs_thin_black.svg'}
+          imageLogoAlt='JNVS Logo'
+        ></Header>
       </main>
     </>
   );
