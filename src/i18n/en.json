@@ -1,5 +1,16 @@
 {
   "products": {
     "cart": "Add to Cart"
+  },
+  "navItems": [
+    { "itemName": "About", "itemLink": "#about" },
+    { "itemName": "Experience", "itemLink": "#experience" },
+    { "itemName": "Projects", "itemLink": "#projects" },
+    { "itemName": "Learning", "itemLink": "#learning" },
+    { "itemName": "Contact", "itemLink": "#contact" }
+  ],
+  "resume": {
+    "itemName": "Resume",
+    "itemLink": "#resume"
   }
 }
