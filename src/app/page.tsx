@@ -20,6 +20,7 @@ export default async function Main() {
           navItems={navItems}
           resumeLink={resume}
         ></Header>
+        <div className='h-24 w-24'></div>
       </main>
     </>
   );

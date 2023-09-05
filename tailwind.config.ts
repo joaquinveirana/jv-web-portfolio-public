@@ -16,8 +16,31 @@ const config: Config = {
       'dark-primary-color-700': '#384f6f',
       'dark-primary-color-800': '#415b80',
       'dark-secondary-color': '#526d82',
-      'light-primary-color': '#dde6ed',
-      'light-secondary-color': '#9db2bf',
+      'light-primary-color-200': '#abc1d3',
+      'light-primary-color-300': '#bccddb',
+      'light-primary-color-400': '#ccdae4',
+      'light-primary-color-500': '#dde6ed',
+      'light-primary-color-600': '#eef2f6',
+      'light-primary-color-700': '#ffffff',
+      'light-primary-color-800': '#ffffff',
+
+      'light-secondary-color-200': '#6f8ea1',
+      'light-secondary-color-300': '#7e9aab',
+      'light-secondary-color-400': '#8ea6b5',
+      'light-secondary-color-500': '#9db2bf',
+      'light-secondary-color-600': '#acbec9',
+      'light-secondary-color-700': '#bccad3',
+      'light-secondary-color-800': '#cbd6dd',
+
+      'skyblue-terciary-color': '#00eaff',
+
+      'ig-dark-purple': '#190019',
+      'ig-purple': '#2b124c',
+      'ig-light-purple': '#522b6b',
+      'ig-very-light-purple': '#854f6c',
+      'ig-beige': '#dfb6b2',
+      'ig-light-beige': '#e2d6c6',
+      'ig-yellow': '#f39f5a',
     },
     extend: {
       backgroundImage: {
