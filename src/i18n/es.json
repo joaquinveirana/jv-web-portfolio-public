@@ -6,7 +6,6 @@
     { "itemName": "Sobre mí", "itemLink": "#about" },
     { "itemName": "Experiencia", "itemLink": "#experience" },
     { "itemName": "Proyectos", "itemLink": "#projects" },
-    { "itemName": "Learning", "itemLink": "#learning" },
     { "itemName": "Contacto", "itemLink": "#contact" }
   ],
   "resume": {

@@ -32,7 +32,7 @@ const config: Config = {
       'light-secondary-color-700': '#bccad3',
       'light-secondary-color-800': '#cbd6dd',
 
-      'skyblue-terciary-color': '#00eaff',
+      'cyan-terciary-color': '#00eaff',
 
       'ig-dark-purple': '#190019',
       'ig-purple': '#2b124c',
@@ -41,6 +41,7 @@ const config: Config = {
       'ig-beige': '#dfb6b2',
       'ig-light-beige': '#e2d6c6',
       'ig-yellow': '#f39f5a',
+      'ig-yellow-2': '#ffe000ff',
     },
     extend: {
       backgroundImage: {

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="700pt"
+   height="700pt"
+   viewBox="0 0 700 700"
+   version="1.1"
+   id="svg858"
+   sodipodi:docname="logo_jnvs_bold_cyan.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs862" />
+  <sodipodi:namedview
+     id="namedview860"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="1046.518"
+     inkscape:cy="171.11984"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg858" />
+  <g
+     id="g851">
+    <path
+       d="m 262.06853,18.39814 v 204.21863 q 0,55.12944 -30.68073,86.28956 -30.20141,30.68073 -84.37201,30.68073 -38.83038,0 -63.279014,-14.38159 Q 59.288001,310.82388 49.700272,284.937 40.112542,258.57075 46.344633,224.05493 l 49.376738,-9.10834 q -5.752637,41.22723 6.232089,60.88207 11.98459,19.17547 45.06233,19.17547 35.95392,0 49.37674,-20.61363 13.90227,-21.093 13.90227,-61.36146 V 18.39814 Z"
+       style="font-weight:500;font-size:360.95px;line-height:1.25;font-family:'Work Sans';-inkscape-font-specification:'Work Sans Medium';fill:#00eaff;fill-opacity:1;stroke-width:11.9847"
+       id="path37479-6" />
+    <path
+       d="M 542.88867,18.39814 V 334.7932 H 489.19752 C 437.11726,249.98439 384.01593,166.55983 336.27318,79.28022 h -0.47932 L 337.7114,334.7932 H 283.54067 V 18.39814 h 60.40269 l 121.76416,198.94538 31.16006,57.04698 h 0.47945 l -1.91755,-51.77373 V 18.39814 Z"
+       style="font-weight:500;font-size:360.95px;line-height:1.25;font-family:'Work Sans';-inkscape-font-specification:'Work Sans Medium';fill:#00eaff;fill-opacity:1;stroke-width:11.9847"
+       id="path37481-9"
+       sodipodi:nodetypes="ccccccccccccccc" />
+    <path
+       d="M 337.7114,334.7932 220.26165,651.18826 H 160.33842 L 42.88867,334.7932 h 54.650059 l 73.825511,210.45065 19.17546,62.79963 19.17545,-62.32024 73.82552,-210.93004 z"
+       style="font-weight:500;font-size:360.95px;line-height:1.25;font-family:'Work Sans';-inkscape-font-specification:'Work Sans Medium';fill:#00eaff;fill-opacity:1;stroke-width:11.9847"
+       id="path37483-8" />
+    <path
+       d="m 414.5934,324.83227 q 42.66546,0 73.82551,16.29914 31.16019,15.81975 52.73251,46.97987 l -34.51582,33.07767 q -18.21669,-27.80442 -41.22724,-39.78908 -22.53109,-12.46405 -53.69128,-12.46405 -23.01055,0 -37.87146,6.23202 -14.86105,6.23203 -22.05178,16.77853 -6.71141,10.06711 -6.71141,23.01055 0,14.86098 10.06704,25.88687 10.54651,11.02589 38.83038,17.25791 l 64.23778,14.38159 q 46.0211,10.06712 65.19656,30.68074 19.17546,20.61361 19.17546,52.25312 0,29.24258 -15.81982,50.81497 -15.81969,21.57239 -44.10356,33.07766 -27.80441,11.50527 -65.67587,11.50527 -33.55705,0 -60.4027,-8.62895 -26.84564,-8.62896 -46.97987,-23.48994 -20.13423,-14.86098 -33.07773,-34.03643 l 35.4746,-35.47461 q 10.06718,16.77853 25.40755,30.20136 15.34036,12.94343 35.47459,20.13423 20.61355,7.1908 45.54165,7.1908 22.05177,0 37.87159,-5.27326 16.29914,-5.27325 24.44865,-15.34037 8.62896,-10.5465 8.62896,-24.92809 0,-13.90221 -9.58773,-24.44871 -9.10828,-10.5465 -34.51583,-16.29914 l -69.51097,-15.81975 q -28.76318,-6.23203 -47.45933,-17.7373 -18.696,-11.50528 -27.80441,-27.80441 -9.10828,-16.77853 -9.10828,-37.39215 0,-26.84564 14.3816,-48.41803 14.86091,-22.05178 42.66533,-34.99522 27.80441,-13.42281 66.15533,-13.42281 z"
+       style="font-weight:500;font-size:360.95px;line-height:1.25;font-family:'Work Sans';-inkscape-font-specification:'Work Sans Medium';fill:#00eaff;fill-opacity:1;stroke-width:11.9847"
+       id="path37485-8" />
+  </g>
+</svg>
