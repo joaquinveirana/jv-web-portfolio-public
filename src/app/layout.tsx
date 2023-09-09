@@ -1,9 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Work_Sans } from 'next/font/google';
 import { getLang } from '../i18n/i18n_functions';
 
-const inter = Inter({ subsets: ['latin'] });
+const WorkSans = Work_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Joaquín Veirana',
@@ -17,7 +17,11 @@ export default async function RootLayout({
 }) {
   return (
     <html lang={getLang()}>
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${WorkSans.className} scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-light-secondary-color-200 scrollbar-track-dark-primary-color-300`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

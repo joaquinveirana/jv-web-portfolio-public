@@ -1,9 +1,8 @@
 export type HeaderProps = {
   lang: string;
-  lightMode: boolean;
   logo: HeaderLogo;
   navItems: NavItem[];
-  resumeLink: NavItem;
+  resume: NavItem;
 };
 
 export type HeaderLogo = {
@@ -11,4 +10,4 @@ export type HeaderLogo = {
   imageLogoSecondary: string;
   imageLogoAlt: string;
 };
-export type NavItem = { itemName: string; itemLink: string };
+export type NavItem = { itemId: string; itemName: string; itemLink: string };

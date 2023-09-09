@@ -3,10 +3,14 @@
     "cart": "Agregar al carrito"
   },
   "navItems": [
-    { "itemName": "Sobre mí", "itemLink": "#about" },
-    { "itemName": "Experiencia", "itemLink": "#experience" },
-    { "itemName": "Proyectos", "itemLink": "#projects" },
-    { "itemName": "Contacto", "itemLink": "#contact" }
+    { "itemId": "#about", "itemName": "Sobre mí", "itemLink": "#about" },
+    {
+      "itemId": "#experience",
+      "itemName": "Experiencia",
+      "itemLink": "#experience"
+    },
+    { "itemId": "#projects", "itemName": "Proyectos", "itemLink": "#projects" },
+    { "itemId": "#contact", "itemName": "Contacto", "itemLink": "#contact" }
   ],
   "resume": {
     "itemName": "Currículum",

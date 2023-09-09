@@ -3,10 +3,14 @@
     "cart": "Add to Cart"
   },
   "navItems": [
-    { "itemName": "About", "itemLink": "#about" },
-    { "itemName": "Experience", "itemLink": "#experience" },
-    { "itemName": "Projects", "itemLink": "#projects" },
-    { "itemName": "Contact", "itemLink": "#contact" }
+    { "itemId": "#about", "itemName": "About", "itemLink": "#about" },
+    {
+      "itemId": "#experience",
+      "itemName": "Experience",
+      "itemLink": "#experience"
+    },
+    { "itemId": "#projects", "itemName": "Projects", "itemLink": "#projects" },
+    { "itemId": "#contact", "itemName": "Contact", "itemLink": "#contact" }
   ],
   "resume": {
     "itemName": "Resume",

@@ -32,7 +32,9 @@ const config: Config = {
       'light-secondary-color-700': '#bccad3',
       'light-secondary-color-800': '#cbd6dd',
 
-      'cyan-terciary-color': '#00eaff',
+      'cyan-terciary-color-500': '#1ab3ff',
+      'cyan-terciary-color-600': '#34bbff',
+      'cyan-terciary-color-700': '#4dc4ff',
 
       'ig-dark-purple': '#190019',
       'ig-purple': '#2b124c',
@@ -52,8 +54,11 @@ const config: Config = {
       backdropBlur: {
         xs: '2px',
       },
+      borderWidth: {
+        3: '3px',
+      },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar')({ nocompatible: true })],
 };
 export default config;

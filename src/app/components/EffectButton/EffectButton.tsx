@@ -1,8 +1,15 @@
-export default async function EffectButton() {
+'use client';
+
+import { EffectButtonProps } from '@/app/types/EffectButtonTypes';
+
+export default function EffectButton(props: EffectButtonProps) {
   return (
     <div>
-      <button className='px-4 py-2 transition duration-500 ease-in-out hover:transform hover:-translate-x-[5px] hover:opacity-0 border-solid border-4 border-cyan-terciary-color text-light-primary-color-600'>
-        Test
+      <button
+        onClick={() => props.callback()}
+        className={`md:text-sm m-6 px-6 py-2 transition-all duration-300 ease-in-out border-solid border-2 border-cyan-terciary-color-600 text-light-primary-color-800 text-2xl hover:text-cyan-terciary-color-700`}
+      >
+        {props.text}
       </button>
     </div>
   );
