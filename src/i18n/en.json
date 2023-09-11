@@ -2,18 +2,24 @@
   "products": {
     "cart": "Add to Cart"
   },
-  "navItems": [
-    { "itemId": "#about", "itemName": "About", "itemLink": "#about" },
-    {
-      "itemId": "#experience",
-      "itemName": "Experience",
-      "itemLink": "#experience"
-    },
-    { "itemId": "#projects", "itemName": "Projects", "itemLink": "#projects" },
-    { "itemId": "#contact", "itemName": "Contact", "itemLink": "#contact" }
-  ],
-  "resume": {
-    "itemName": "Resume",
-    "itemLink": "#resume"
+  "header": {
+    "navItems": [
+      { "itemId": "#about", "itemName": "Sobre mí", "itemLink": "#about" },
+      {
+        "itemId": "#experience",
+        "itemName": "Experiencia",
+        "itemLink": "#experience"
+      },
+      {
+        "itemId": "#projects",
+        "itemName": "Proyectos",
+        "itemLink": "#projects"
+      },
+      { "itemId": "#contact", "itemName": "Contacto", "itemLink": "#contact" }
+    ],
+    "resume": {
+      "itemName": "Currículum",
+      "itemLink": "#resume"
+    }
   }
 }

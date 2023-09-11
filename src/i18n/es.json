@@ -2,18 +2,34 @@
   "products": {
     "cart": "Agregar al carrito"
   },
-  "navItems": [
-    { "itemId": "#about", "itemName": "Sobre mí", "itemLink": "#about" },
-    {
-      "itemId": "#experience",
-      "itemName": "Experiencia",
-      "itemLink": "#experience"
+  "header": {
+    "navItems": [
+      { "itemId": "#about", "itemName": "Sobre mí", "itemLink": "#about" },
+      {
+        "itemId": "#experience",
+        "itemName": "Experiencia",
+        "itemLink": "#experience"
+      },
+      {
+        "itemId": "#projects",
+        "itemName": "Proyectos",
+        "itemLink": "#projects"
+      },
+      { "itemId": "#contact", "itemName": "Contacto", "itemLink": "#contact" }
+    ],
+    "resume": {
+      "itemName": "Currículum",
+      "itemLink": "#resume"
     },
-    { "itemId": "#projects", "itemName": "Proyectos", "itemLink": "#projects" },
-    { "itemId": "#contact", "itemName": "Contacto", "itemLink": "#contact" }
-  ],
-  "resume": {
-    "itemName": "Currículum",
-    "itemLink": "#resume"
+    "moreInfo": {
+      "title": "Sobre este sitio...",
+      "paragraph": "Este sitio se basa en bla bla bla usa la tecnologia bla bla bla"
+    }
+  },
+  "landing": {
+    "title0": "Hola, mi nombre es",
+    "title1": "Joaquin Veirana.",
+    "title2": "Hago tal cosa.",
+    "description": "Soy un ingeniero de software bla bla bla bla"
   }
 }

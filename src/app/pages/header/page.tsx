@@ -1,78 +1,56 @@
 'use client';
-import Image from 'next/image';
 import { LegacyRef, useEffect, useRef, useState } from 'react';
 import { useClickAway } from '@uidotdev/usehooks';
-import { HeaderProps, NavItem } from '@/app/types/HeaderTypes';
+
+import Grow from '@mui/material/Grow';
 import { BurgerClose } from 'react-burger-icons';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+
+import { HeaderProps, NavItemType } from '@/app/props/HeaderProps';
 import EffectButton from '@/app/components/EffectButton/EffectButton';
+import Logo from '@/app/components/Logo/Logo';
+import Dialog from '@/app/components/Dialog/Dialog';
+import MoreInfoIcon from '@/app/components/MoreInfoIcon/MoreInfoIcon';
+import NavItem from '@/app/components/NavItem/NavItem';
 
 /* 
   --- Styles ---
 */
 // Header Main Items Classes
 const mainHeaderClass =
-  'md:px-6 md:h-[100px] fixed top-0 w-full h-[90px] text-sm bg-dark-primary-color-300 bg-opacity-70 backdrop-blur-sm';
-const logoClass = 'md:mx-6 mx-1 px-4 absolute top-50% left-0 cursor-pointer';
+  'md:px-6 fixed top-0 w-full h-[100px] text-sm bg-dark-primary-color-300 bg-opacity-70 backdrop-blur-sm';
 const hamburgerIconClass =
   'md:hidden fixed right-0 w-[50px] h-[50px] z-20 cursor-pointer';
 
 // Nav Panel Classes
 const blurPanelClass =
-  'md:hidden fixed top-0 left-0 z-15 w-screen h-screen bg-[transparent] backdrop-blur-sm';
+  'md:hidden fixed top-0 left-0 w-screen h-screen z-15 bg-[transparent] backdrop-blur-sm';
 const mobileNavPanel =
-  'fixed top-0 left-full z-10 w-3/4 h-screen bg-dark-primary-color-500';
-const desktopNavPanel = 'md:h-[70px] md:w-fit md:sticky md:bg-[transparent]';
-const desktopNavItemList =
-  'md:h-full md:flex md:flex-row md:items-center md:justify-center';
-const navLinksClass =
-  'md:m-4 md:text-sm m-6 text-2xl text-light-primary-color-700';
+  'fixed top-0 left-full w-3/4 h-screen z-10 pt-32 pb-10 bg-dark-primary-color-500';
+const desktopNavPanel =
+  'md:p-0 md:h-[70px] md:w-fit md:sticky md:bg-[transparent]';
+const desktopNavItemList = 'md:h-full md:flex-row-centered';
 
 export default function Header(props: HeaderProps) {
-  /* 
-    --- React Hooks ---
-  */
-  const [isOpen, setIsOpen] = useState(false);
-  const refSlider = useClickAway(() => setIsOpen(false));
-  const headerRef = useRef<HTMLInputElement>(null);
-  useEffect(() => {
-    const handleScrollDirectionChange = () => {
-      if (!headerRef.current) return;
-
-      // Shadows removal on top and creation on scroll and height change on top
-      if (window.scrollY === 0) {
-        headerRef.current.style.height = '100px';
-        headerRef.current.style.boxShadow = '0 0px 0px 0px rgb(0 0 0 / 0.1)';
-      } else {
-        headerRef.current.style.height = '70px';
-        headerRef.current.style.boxShadow =
-          '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)';
-      }
-
-      // Hide header on scroll
-      if (window.scrollY > prevScroll)
-        headerRef.current.style.transform = 'translateY(-100px)';
-      else headerRef.current.style.transform = 'translateY(0px)';
-
-      prevScroll = window.scrollY;
-    };
-    window.addEventListener('scroll', handleScrollDirectionChange);
-    return () => {
-      window.removeEventListener('scroll', handleScrollDirectionChange);
-    };
-  }, []);
+  const content = props.textContent;
 
   /* 
     --- Aux Functions ---
   */
+  const checkWindowsDefined = (): boolean => {
+    return typeof window !== 'undefined';
+  };
+
   let prevScroll = 0;
-  if (typeof window !== 'undefined') {
+  if (checkWindowsDefined()) {
     prevScroll = window.scrollY;
   }
 
   const scrollToSection = (sectionId: string) => () => {
+    console.log(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
-      setIsOpen(false);
+      setIsOpenNavSlider(false);
       element.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
@@ -83,39 +61,77 @@ export default function Header(props: HeaderProps) {
   const openCloseSlidingPanel = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
-    setIsOpen(!isOpen);
+    setIsOpenNavSlider(!isOpenNavSlider);
     e.stopPropagation();
   };
 
   const openResume = () => {
-    // Resume pdf saved in public folder
-    if (typeof window !== 'undefined') window.open('/resume.pdf');
+    if (checkWindowsDefined()) window.open('/resume.pdf');
   };
 
+  /* 
+    --- React Hooks ---
+  */
+  const [isOpenNavSlider, setIsOpenNavSlider] = useState<boolean>(false);
+  const [isOpenInfoDialog, setIsOpenInfoDialog] = useState<boolean>(false);
+
+  const refSlider = useClickAway(() => setIsOpenNavSlider(false));
+  const refHeader = useRef<HTMLInputElement>(null);
+
+  // Hide header on scroll down + change header height on scroll + disable shadows when header on top
+  useEffect(() => {
+    const handleScrollDirectionChange = () => {
+      if (!refHeader.current) return;
+
+      if (window.scrollY === 0) {
+        refHeader.current.style.height = '100px';
+        refHeader.current.style.boxShadow = '0 0px 0px 0px rgb(0 0 0 / 0.1)';
+      } else {
+        refHeader.current.style.height = '70px';
+        refHeader.current.style.boxShadow =
+          '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)';
+      }
+
+      if (window.scrollY > prevScroll)
+        refHeader.current.style.transform = 'translateY(-100px)';
+      else refHeader.current.style.transform = 'translateY(0px)';
+
+      prevScroll = window.scrollY;
+    };
+    window.addEventListener('scroll', handleScrollDirectionChange);
+    return () => {
+      window.removeEventListener('scroll', handleScrollDirectionChange);
+    };
+  }, []);
+
+  // Disable scroll when sliding panel is open
+  useEffect(() => {
+    if (checkWindowsDefined())
+      if (isOpenNavSlider) disableBodyScroll(document as any);
+      else enableBodyScroll(document as any);
+  }, [isOpenNavSlider]);
+
+  // Disable scroll when dialog panel is open
+  useEffect(() => {
+    if (checkWindowsDefined())
+      if (isOpenInfoDialog) disableBodyScroll(document as any);
+      else enableBodyScroll(document as any);
+  }, [isOpenInfoDialog]);
+
+  /* 
+    --- Component ---
+  */
   return (
     <header
-      ref={headerRef}
-      className={`${mainHeaderClass} flex-rox-centered transition-all-eio-300`}
+      ref={refHeader}
+      className={`${mainHeaderClass} flex-row-centered transition-all-eio-300`}
     >
       {/* Main Logo */}
-      <div className={`md:w-fit flex justify-center items-center`}>
-        <Image
-          src={props.logo.imageLogo}
-          alt={props.logo.imageLogoAlt}
-          className={`${logoClass} z-20 transition-all-eio-500 hover:opacity-0`}
-          width={80}
-          height={15}
-          priority
-        />
-        <Image
-          src={props.logo.imageLogoSecondary}
-          alt={props.logo.imageLogoAlt}
-          className={`${logoClass} z-10 transition-all-eio-500`}
-          width={80}
-          height={15}
-          priority
-        />
-      </div>
+      <Logo
+        imageLogo={props.logo.imageLogo}
+        imageLogoSecondary={props.logo.imageLogoSecondary}
+        callback={() => scrollToSection('#landing')}
+      ></Logo>
 
       {/* Hamburguer Menu Icon */}
       <button
@@ -124,42 +140,59 @@ export default function Header(props: HeaderProps) {
         ) => openCloseSlidingPanel(e)}
         className={`${hamburgerIconClass}`}
       >
-        <BurgerClose isClosed={isOpen} />
+        <BurgerClose isClosed={isOpenNavSlider} />
       </button>
 
       {/* Blur behind Nav Sliding Panel */}
-      {isOpen && <div className={`${blurPanelClass}`}></div>}
+      {isOpenNavSlider && <div className={`${blurPanelClass}`}></div>}
 
       {/* Sliding Nav Panel */}
       <section
         ref={refSlider as LegacyRef<HTMLDivElement>}
-        className={`${mobileNavPanel} ${desktopNavPanel} flex-col-centered transition-all-eio-300
-        ${isOpen && 'transform -translate-x-full'}
+        className={`${mobileNavPanel} ${desktopNavPanel} transition-all-eio-300
+        ${isOpenNavSlider && 'transform -translate-x-full'}
         `}
       >
-        <nav className='md:h-full'>
+        <nav className='md:p-0 md:flex-row-centered h-full flex-col-centered justify-between'>
           <ul className={`${desktopNavItemList} flex-col-centered`}>
-            {props.navItems.map((navItem: NavItem, index: number) => {
+            {content.navItems.map((navItem: NavItemType, index: number) => {
               return (
-                <li key={index} className={`${navLinksClass} hover-cyan-text`}>
-                  <a
-                    href={navItem.itemLink}
-                    onClick={scrollToSection(navItem.itemId)}
-                  >
-                    {navItem.itemName}
-                  </a>
-                </li>
+                <NavItem
+                  key={index}
+                  callback={(id: string) => scrollToSection(id)}
+                  growTimeout={300 * (index + 1)}
+                  navItem={navItem}
+                ></NavItem>
               );
             })}
 
             <EffectButton
-              text={props.resume.itemName}
+              text={content.resume.itemName}
               callback={() => openResume()}
               width='32'
+              growTimeout={300 * (content.navItems.length + 1)}
             ></EffectButton>
           </ul>
+
+          <MoreInfoIcon
+            growTimeout={300 * (content.navItems.length + 2)}
+            callback={() => {
+              setIsOpenInfoDialog(true);
+              setIsOpenNavSlider(false);
+            }}
+          ></MoreInfoIcon>
         </nav>
       </section>
+
+      {isOpenInfoDialog && (
+        <Dialog
+          callback={() => setIsOpenInfoDialog(false)}
+          content={{
+            title: props.textContent.moreInfo.title,
+            paragraph: props.textContent.moreInfo.paragraph,
+          }}
+        ></Dialog>
+      )}
     </header>
   );
 }

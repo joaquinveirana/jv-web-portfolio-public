@@ -15,11 +15,11 @@
     @apply flex flex-col items-center justify-center;
   }
 
-  .flex-rox-centered {
+  .flex-row-centered {
     @apply flex flex-row items-center justify-center;
   }
 
   .hover-cyan-text {
-    @apply hover:text-cyan-terciary-color-700 transition-all duration-500 ease-in-out;
+    @apply transition-all duration-300 ease-in-out hover:text-cyan-terciary-color-700;
   }
 }

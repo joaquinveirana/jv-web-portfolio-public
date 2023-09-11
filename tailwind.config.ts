@@ -35,27 +35,27 @@ const config: Config = {
       'cyan-terciary-color-500': '#1ab3ff',
       'cyan-terciary-color-600': '#34bbff',
       'cyan-terciary-color-700': '#4dc4ff',
-
-      'ig-dark-purple': '#190019',
-      'ig-purple': '#2b124c',
-      'ig-light-purple': '#522b6b',
-      'ig-very-light-purple': '#854f6c',
-      'ig-beige': '#dfb6b2',
-      'ig-light-beige': '#e2d6c6',
-      'ig-yellow': '#f39f5a',
-      'ig-yellow-2': '#ffe000ff',
     },
     extend: {
+      animation: {
+        'fade-in': 'fadeIn 1000ms ease-in-out',
+      },
+      backdropBlur: {
+        xs: '2px',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-      backdropBlur: {
-        xs: '2px',
-      },
       borderWidth: {
         3: '3px',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '100' },
+        },
       },
     },
   },
