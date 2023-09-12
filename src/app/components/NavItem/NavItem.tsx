@@ -1,9 +1,11 @@
 'use client';
 
 import Grow from '@mui/material/Grow';
-
 import { NavItemProps } from '@/app/props/NavItemProps';
 
+/* 
+  --- Styles ---
+*/
 const navLinksClass =
   'md:m-4 md:text-sm m-6 text-2xl text-light-primary-color-700';
 

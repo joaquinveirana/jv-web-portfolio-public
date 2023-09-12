@@ -10,6 +10,7 @@ export type HeaderProps = {
 export type LogoType = {
   imageLogo: string;
   imageLogoSecondary: string;
+  altLogo: string;
 };
 
 export type NavItemType = {

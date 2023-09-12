@@ -2,7 +2,6 @@
 import { LegacyRef, useEffect, useRef, useState } from 'react';
 import { useClickAway } from '@uidotdev/usehooks';
 
-import Grow from '@mui/material/Grow';
 import { BurgerClose } from 'react-burger-icons';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
@@ -107,15 +106,17 @@ export default function Header(props: HeaderProps) {
   // Disable scroll when sliding panel is open
   useEffect(() => {
     if (checkWindowsDefined())
-      if (isOpenNavSlider) disableBodyScroll(document as any);
-      else enableBodyScroll(document as any);
+      if (isOpenNavSlider)
+        disableBodyScroll(document as unknown as HTMLElement);
+      else enableBodyScroll(document as unknown as HTMLElement);
   }, [isOpenNavSlider]);
 
   // Disable scroll when dialog panel is open
   useEffect(() => {
     if (checkWindowsDefined())
-      if (isOpenInfoDialog) disableBodyScroll(document as any);
-      else enableBodyScroll(document as any);
+      if (isOpenInfoDialog)
+        disableBodyScroll(document as unknown as HTMLElement);
+      else enableBodyScroll(document as unknown as HTMLElement);
   }, [isOpenInfoDialog]);
 
   /* 
@@ -130,6 +131,7 @@ export default function Header(props: HeaderProps) {
       <Logo
         imageLogo={props.logo.imageLogo}
         imageLogoSecondary={props.logo.imageLogoSecondary}
+        altLogo={props.logo.altLogo}
         callback={() => scrollToSection('#landing')}
       ></Logo>
 
