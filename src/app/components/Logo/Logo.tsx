@@ -9,7 +9,7 @@ const logoDivClass =
   'md:w-fit flex justify-center items-center animate-fade-in';
 
 const logoImageClass =
-  'px-4 absolute top-50% left-0 cursor-pointer transition-all-eio-500';
+  'px-4 absolute top-50% md:left-6 left-0 cursor-pointer transition-all-eio-500';
 
 export default function Logo(props: LogoProps) {
   return (

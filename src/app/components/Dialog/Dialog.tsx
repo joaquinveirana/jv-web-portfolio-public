@@ -10,7 +10,7 @@ export default function EffectButton(props: DialogProps) {
   });
 
   return (
-    <div className='absolute top-0 left-0 w-full h-screen z-50 bg-[black] bg-opacity-30 backdrop-blur-xl flex-col-centered'>
+    <div className='absolute top-0 left-0 w-full h-screen z-50 bg-[transparent] bg-opacity-30 backdrop-blur-xl flex-col-centered'>
       <div
         ref={refDialog as LegacyRef<HTMLDivElement>}
         className='md:w-1/2 w-3/4 h-1/2 z-60 bg-[red] rounded-md'

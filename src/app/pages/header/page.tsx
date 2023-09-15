@@ -17,7 +17,7 @@ import NavItem from '@/app/components/NavItem/NavItem';
 */
 // Header Main Items Classes
 const mainHeaderClass =
-  'md:px-6 fixed top-0 w-full h-[100px] text-sm bg-dark-primary-color-300 bg-opacity-70 backdrop-blur-sm';
+  'md:px-8 fixed top-0 w-full h-[100px] text-sm bg-dark-primary-color-300 bg-opacity-70 backdrop-blur-sm';
 const hamburgerIconClass =
   'md:hidden fixed right-0 w-[50px] h-[50px] z-20 cursor-pointer';
 

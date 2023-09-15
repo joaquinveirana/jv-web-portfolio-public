@@ -3,26 +3,16 @@
 import Grow from '@mui/material/Grow';
 import InfoIcon from '@mui/icons-material/InfoOutlined';
 
-import { MoreInfoIconProps } from '@/app/props/MoreInfoIconProps';
+import { IconProps } from '@/app/props/IconProps';
 
-/* 
-  --- Styles ---
-*/
-const iconSxStyle = {
-  color: '#ffffff',
-  transition: '500ms',
-  fontSize: '32px',
-  '@media (min-width: 768px)': {
-    fontSize: '20px',
-  },
-  '&:hover': { color: '#34bbff', cursor: 'pointer' },
-};
-
-export default function MoreInfoIcon(props: MoreInfoIconProps) {
+export default function MoreInfoIcon(props: IconProps) {
   return (
     <Grow in={true} timeout={props.growTimeout}>
       <div>
-        <InfoIcon onClick={() => props.callback()} sx={iconSxStyle}></InfoIcon>
+        <InfoIcon
+          className='md:w-[24px] md:h-[24px] w-[32px] h-[32px] icon-class'
+          onClick={() => props.callback()}
+        ></InfoIcon>
       </div>
     </Grow>
   );

@@ -1,4 +1,4 @@
-export type MoreInfoIconProps = {
+export type IconProps = {
   callback: Function;
   growTimeout: number;
 };
