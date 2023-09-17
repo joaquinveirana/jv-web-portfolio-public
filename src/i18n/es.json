@@ -30,6 +30,59 @@
     "title0": "Hola, mi nombre es",
     "title1": "Joaquín Veirana.",
     "title2": "Desarrollador de software.",
-    "description": "Soy un ingeniero en computación apasionado por el desarrollo frontend y mobile. Actualmente me desempeño como desarrollador full stack en IBM del Uruguay, habiendo trabajado en una amplia variedad de proyectos."
-  }
+    "description": "Soy un ingeniero en computación apasionado por el desarrollo de software y con perfil orientado al frontend. Actualmente me desempeño como desarrollador full stack en IBM del Uruguay, habiendo trabajado en una amplia variedad de proyectos."
+  },
+  "about": {
+    "title": "Sobre Mi",
+    "paragraphs": [
+      "Gracias por visitar mi sitio web! Me llamo Joaquín, soy apasionado por la tecnología y disfruto de crear aplicaciones estéticas, centradas en la experiencia del usuario final y con una base de código centrada en buenas prácticas.",
+      "Trabajé con distintas tecnologías como Java, Python y JavaScript, siendo esta última mi favorita y en la que tengo más experiencia tanto con frameworks y bibliotecas de frontend como Angular y React como backend con Node.js.",
+      "Estudié ingeniería en computación en la Facultad de Ingeniería de la Univarsidad de la República y egresé de la misma en 2023, actualmente me encuentro trabajando como desarrollador full stack en IBM del Uruguay.",
+      "En mis tiempos libres también disfruto de aprender en otras áreas que también llaman mi atención, como el machine learning, el desarrollo de videojuegos y el desarrollo mobile.",
+      "Estas son las tecnologías con las que principalmente trabajo:"
+    ],
+    "techsList": "JavaScript,React,Angular,Node.js,TypeScipt,Kubernetes"
+  },
+  "experience": [
+    {
+      "company": "Facultad de Ingeniería, UdelaR",
+      "companyShortName": "FIng UdelaR",
+      "position": "Ayudante Grado 1",
+      "startDate": "Julio 2023",
+      "endDate": "Presente",
+      "keyPoints": [
+        "Continuación con el trabajo de Smart Campus e Internet de las Cosas realizado en mi proyecto de grado, con la finalidad de realizar un despliegue productivo en la Facultad del prototipo de Smart Campus desarrollado en el proyecto de grado.",
+        "Mantenimiento y programación de mejoras en dispositivos sensores basados en sistemas embebidos, utilizando C++, Espressif y PlatformIO.",
+        "Mantenimiento de ThingsBoard, la plataforma de Internet de las Cosas utiliada para el Smart Campus."
+      ]
+    },
+    {
+      "company": "IBM del Uruguay",
+      "companyShortName": "IBM",
+      "position": "Desarrollador Full stack",
+      "startDate": "Enero 2022",
+      "endDate": "Presente",
+      "keyPoints": [
+        "Desarrollo frontend de aplicaciones web de gestión internas del cliente en Angular con el fin de recontruírlas con una tecnología más moderna y mejorar la experiencia de usuario y interfaz de las mismas.",
+        "Desarrollo de librerías en Angular a paritr de componentes utilizados comúnmente en distintas aplicaciones con el fin de agilizar el desarrollo mediante la reutilización de componentes a nivel de proyectos.",
+        "Desarrollo backend de aplicaciones batch y API REST de menor porte en Java 8 y 11 en conjunto con frameworks como Spring Boot y Apache Camel.",
+        "Mantenimiento de aplicaciones alojadas tanto en la nube IBM Cloud como On-premise en servidores del cliente, realizando mejoras y correcciones de errores.",
+        "Gestión de los servicios de nube utilizados por el cliente y el despliegue de las aplicaciones en la misma."
+      ]
+    },
+    {
+      "company": "IBM del Uruguay",
+      "companyShortName": "IBM",
+      "position": "Desarrollador Cloud como Student",
+      "startDate": "Enero 2021",
+      "endDate": "Diciembre 2021",
+      "keyPoints": [
+        "Partición extensa en el desarrollo de una aplicacion web para un conocido periódico nacional. Construída con React, Node.js y MongoDB, esta aplicación se centraba en el procesamiento y disposición de distintas métricas en las publicaciones del periódico.",
+        "Integración de servicios de machine learning alojados en IBM Cloud en aplicaciones web mediante la utilización de los SDKs y las API REST de dichos servicios.",
+        "Despliegue de aplicaciones web contenerizadas en Kubernetes y CloudFoundry sobre IBM Cloud."
+      ]
+    }
+  ],
+  "projects": {},
+  "learning": {}
 }

@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer components {
+  .transition-all-eo-100 {
+    @apply transition-all duration-100 ease-out;
+  }
+
+  .transition-all-eio-100 {
+    @apply transition-all duration-100 ease-in-out;
+  }
+
   .transition-all-eio-300 {
     @apply transition-all duration-300 ease-in-out;
   }

@@ -17,13 +17,13 @@ import NavItem from '@/app/components/NavItem/NavItem';
 */
 // Header Main Items Classes
 const mainHeaderClass =
-  'md:px-8 fixed top-0 w-full h-[100px] text-sm bg-dark-primary-color-300 bg-opacity-70 backdrop-blur-sm';
+  'md:px-8 fixed top-0 w-full h-[100px] text-sm bg-dark-primary-color-300 bg-opacity-70';
 const hamburgerIconClass =
   'md:hidden fixed right-0 w-[50px] h-[50px] z-20 cursor-pointer';
 
 // Nav Panel Classes
 const blurPanelClass =
-  'md:hidden fixed top-0 left-0 w-screen h-screen z-15 bg-[transparent] backdrop-blur-sm';
+  'md:hidden fixed top-0 right-full w-screen h-screen z-15 backdrop-blur-sm';
 const mobileNavPanel =
   'fixed top-0 left-full w-3/4 h-screen z-10 pt-32 pb-10 bg-dark-primary-color-500';
 const desktopNavPanel =
@@ -125,7 +125,9 @@ export default function Header(props: HeaderProps) {
   return (
     <header
       ref={refHeader}
-      className={`${mainHeaderClass} flex-row-centered transition-all-eio-300`}
+      className={`${mainHeaderClass} ${
+        !isOpenNavSlider && !isOpenInfoDialog && 'backdrop-blur-sm'
+      } flex-row-centered transition-all-eio-300`}
     >
       {/* Main Logo */}
       <Logo
@@ -146,12 +148,15 @@ export default function Header(props: HeaderProps) {
       </button>
 
       {/* Blur behind Nav Sliding Panel */}
-      {isOpenNavSlider && <div className={`${blurPanelClass}`}></div>}
+      <div
+        className={`${blurPanelClass} 
+        ${isOpenNavSlider && 'transform translate-x-full'}`}
+      ></div>
 
       {/* Sliding Nav Panel */}
       <section
         ref={refSlider as LegacyRef<HTMLDivElement>}
-        className={`${mobileNavPanel} ${desktopNavPanel} transition-all-eio-300
+        className={`${mobileNavPanel} ${desktopNavPanel} transition-all-eio-500
         ${isOpenNavSlider && 'transform -translate-x-full'}
         `}
       >
