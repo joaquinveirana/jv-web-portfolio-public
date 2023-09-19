@@ -32,6 +32,6 @@
   }
 
   .icon-class {
-    @apply hover:transform hover:-translate-y-1 text-light-primary-color-800 hover:text-cyan-terciary-color-500 hover:fill-cyan-terciary-color-500 transition-all-eio-500 cursor-pointer;
+    @apply hover:transform hover:-translate-y-1 text-light-primary-color-800 hover:text-cyan-terciary-color-500 hover:fill-cyan-terciary-color-500 transition-all-eio-300 cursor-pointer;
   }
 }

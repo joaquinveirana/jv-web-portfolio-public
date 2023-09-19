@@ -10,6 +10,7 @@ import {
   SiAcclaim,
 } from 'react-icons/si';
 import { Site, SocialsBarProps } from '@/app/props/SocialsBarProps';
+import { useState } from 'react';
 
 /* 
   --- Styles ---
@@ -20,46 +21,82 @@ const socialSidebarClass =
 const iconHoverEffectClass =
   'md:w-[26px] md:h-[26px] w-[32px] h-[32px] icon-class';
 
-const iconBySite = (site: Site) => {
-  const goToSite: Function = () => {
-    window.open(site.link, '_blank');
+export default function SocialsBar(props: SocialsBarProps) {
+  const iconBySite = (site: Site) => {
+    const goToSite: Function = () => {
+      window.open(site.link, '_blank');
+    };
+
+    const iconHover: Function = (siteName: string) => {
+      const siteInList = props.sites.find(
+        (elem: Site) => elem.name === siteName
+      );
+      if (siteInList) {
+        console.log(props.sites.indexOf(siteInList));
+        setIndexIconHovered(props.sites.indexOf(siteInList));
+      }
+    };
+
+    if (site.name === 'github')
+      return (
+        <SiGithub
+          className={iconHoverEffectClass}
+          onClick={() => goToSite()}
+          onMouseOver={() => iconHover(site.name)}
+        />
+      );
+
+    if (site.name === 'linkedin')
+      return (
+        <SiLinkedin
+          className={iconHoverEffectClass}
+          onClick={() => goToSite()}
+          onMouseOver={() => iconHover(site.name)}
+        />
+      );
+
+    if (site.name === 'gmail')
+      return (
+        <SiGmail
+          className={iconHoverEffectClass}
+          onClick={() => goToSite()}
+          onMouseOver={() => iconHover(site.name)}
+        />
+      );
+
+    if (site.name === 'credly')
+      return (
+        <SiAcclaim
+          className={iconHoverEffectClass}
+          onClick={() => goToSite()}
+          onMouseOver={() => iconHover(site.name)}
+        />
+      );
+
+    return (
+      <OpenInNewIcon
+        className={iconHoverEffectClass}
+        onClick={() => goToSite()}
+        onMouseOver={() => iconHover(site.name)}
+      />
+    );
   };
 
-  if (site.name === 'github')
-    return (
-      <SiGithub className={iconHoverEffectClass} onClick={() => goToSite()} />
-    );
+  const [indexIconHovered, setIndexIconHovered] = useState<number>(-1);
 
-  if (site.name === 'linkedin')
-    return (
-      <SiLinkedin className={iconHoverEffectClass} onClick={() => goToSite()} />
-    );
-
-  if (site.name === 'gmail')
-    return (
-      <SiGmail className={iconHoverEffectClass} onClick={() => goToSite()} />
-    );
-
-  if (site.name === 'credly')
-    return (
-      <SiAcclaim className={iconHoverEffectClass} onClick={() => goToSite()} />
-    );
-
-  return (
-    <OpenInNewIcon
-      className={iconHoverEffectClass}
-      onClick={() => goToSite()}
-    />
-  );
-};
-
-export default function SocialsBar(props: SocialsBarProps) {
   return (
     <div className={socialSidebarClass}>
       {props.sites.map((site: Site, index: number) => {
         return (
           <Grow key={index} in={true} timeout={props.growTimeout}>
-            <div>{iconBySite(site)}</div>
+            <div className='flex'>
+              <div className='-rotate-90 transform'>
+                <Grow in={true} timeout={100}>
+                  <div>Icono</div>
+                </Grow>
+              </div>
+              <div>{iconBySite(site)}</div>
+            </div>
           </Grow>
         );
       })}
