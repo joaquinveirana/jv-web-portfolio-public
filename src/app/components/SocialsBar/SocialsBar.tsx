@@ -16,25 +16,25 @@ import { useState } from 'react';
   --- Styles ---
 */
 const socialSidebarClass =
-  'md:fixed md:top-1/3 md:left-0 md:w-32 md:h-1/3 md:z-0 md:py-12 md:flex-col-centered md:justify-around hidden';
-
-const iconHoverEffectClass =
-  'md:w-[26px] md:h-[26px] w-[32px] h-[32px] icon-class';
+  'md:fixed md:top-1/3 md:left-0 md:w-32 md:h-1/3 md:z-0 md:py-12 md:flex md:flex-col md:items-center md:justify-around md:bg-[transparent] w-full bg-dark-primary-color-300 flex flex-row p-4';
+const iconClass = 'w-full md:flex-row-centered flex-col-centered';
+const iconHoverEffectClass = 'md:w-6 md:h-6 w-8 h-8 icon-effect-class';
+const iconHoverTagClass =
+  'md:w-6 md:-translate-y-1 md:-rotate-90 md:transform md:block hidden';
 
 export default function SocialsBar(props: SocialsBarProps) {
+  /* 
+    --- Aux Functions ---
+  */
   const iconBySite = (site: Site) => {
     const goToSite: Function = () => {
       window.open(site.link, '_blank');
     };
-
     const iconHover: Function = (siteName: string) => {
       const siteInList = props.sites.find(
         (elem: Site) => elem.name === siteName
       );
-      if (siteInList) {
-        console.log(props.sites.indexOf(siteInList));
-        setIndexIconHovered(props.sites.indexOf(siteInList));
-      }
+      if (siteInList) setIndexIconHovered(props.sites.indexOf(siteInList));
     };
 
     if (site.name === 'github')
@@ -43,6 +43,7 @@ export default function SocialsBar(props: SocialsBarProps) {
           className={iconHoverEffectClass}
           onClick={() => goToSite()}
           onMouseOver={() => iconHover(site.name)}
+          onMouseOut={() => setIndexIconHovered(-1)}
         />
       );
 
@@ -52,6 +53,7 @@ export default function SocialsBar(props: SocialsBarProps) {
           className={iconHoverEffectClass}
           onClick={() => goToSite()}
           onMouseOver={() => iconHover(site.name)}
+          onMouseOut={() => setIndexIconHovered(-1)}
         />
       );
 
@@ -61,6 +63,7 @@ export default function SocialsBar(props: SocialsBarProps) {
           className={iconHoverEffectClass}
           onClick={() => goToSite()}
           onMouseOver={() => iconHover(site.name)}
+          onMouseOut={() => setIndexIconHovered(-1)}
         />
       );
 
@@ -70,6 +73,7 @@ export default function SocialsBar(props: SocialsBarProps) {
           className={iconHoverEffectClass}
           onClick={() => goToSite()}
           onMouseOver={() => iconHover(site.name)}
+          onMouseOut={() => setIndexIconHovered(-1)}
         />
       );
 
@@ -78,28 +82,41 @@ export default function SocialsBar(props: SocialsBarProps) {
         className={iconHoverEffectClass}
         onClick={() => goToSite()}
         onMouseOver={() => iconHover(site.name)}
+        onMouseOut={() => setIndexIconHovered(-1)}
       />
     );
   };
 
+  /* 
+    --- React Hooks ---
+  */
   const [indexIconHovered, setIndexIconHovered] = useState<number>(-1);
 
+  const iconHoverTag = (site: Site, index: number) => {
+    return (
+      <div className={iconHoverTagClass}>
+        <Grow in={indexIconHovered === index} timeout={500}>
+          <span className='text-cyan-terciary-color-600 text-sm'>
+            {site.name}
+          </span>
+        </Grow>
+      </div>
+    );
+  };
   return (
-    <div className={socialSidebarClass}>
+    <aside className={socialSidebarClass}>
       {props.sites.map((site: Site, index: number) => {
         return (
-          <Grow key={index} in={true} timeout={props.growTimeout}>
-            <div className='flex'>
-              <div className='-rotate-90 transform'>
-                <Grow in={true} timeout={100}>
-                  <div>Icono</div>
-                </Grow>
+          <div key={index} className={iconClass}>
+            <Grow in={true} timeout={props.growTimeout}>
+              <div className='flex-row-centered mr-6'>
+                {iconHoverTag(site, index)}
+                {iconBySite(site)}
               </div>
-              <div>{iconBySite(site)}</div>
-            </div>
-          </Grow>
+            </Grow>
+          </div>
         );
       })}
-    </div>
+    </aside>
   );
 }

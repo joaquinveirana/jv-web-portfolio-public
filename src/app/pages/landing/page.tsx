@@ -3,87 +3,84 @@
 import Grow from '@mui/material/Grow';
 import { LandingProps } from '@/app/props/LandingProps';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 /* 
   --- Styles ---
 */
 const mainLandingClass =
   'md:px-32 md:py-0 pt-[150px] md:items-start w-full h-screen bg-dark-primary-color-300 md:flex-col-centered justify-start';
-const mainHeaderClass1 = 'mb-4 md:text-9xl text-4xl font-bold';
-const mainHeaderClass = 'my-1 md:text-7xl text-4xl font-bold';
+const mainHeaderClass =
+  'xl:text-9xl lg:text-8xl md:text-7xl text-4xl font-bold text-light-primary-color-700';
+const mainHeaderUnderscoreClass =
+  'inline-block relative -top-[0.14em] left-[10px]';
+const secondaryHeaderClass =
+  'my-1 lg:text-7xl md:text-6xl text-4xl font-bold text-light-primary-color-200';
 const mainParagraphClass =
   'xl:w-3/5 lg:w-full md:w-full md:text-lg md:my-8 my-6 text-base text-light-primary-color-200';
+const backgroundImageClass =
+  'xl:w-[800px] lg:right-16 lg:w-[500px] md:px-4 md:right-4 md:w-[400px] px-8 absolute bottom-16 z-0 opacity-20 animate-fade-inout';
 
 export default function Landing(props: LandingProps) {
-  function consoleText(words: any, id: any, colors: any = undefined) {
-    if (colors === undefined) colors = ['#fff'];
-    var visible = true;
-    var con = document.getElementById('console');
-    var letterCount = 1;
-    var x = 1;
-    var waiting = false;
-    var target = document.getElementById(id);
-    if (!target) return;
+  const [mainHeaderLoaded, setMainHeaderLoaded] = useState(false);
+  const [mainHeaderText, setMainHeaderText] = useState(
+    props.textContent.title1
+  );
+  const [consoleWritingIntervalId, setConsoleWritingIntervalId] = useState(-1);
 
-    target.setAttribute('style', 'color:' + colors[0]);
-    window.setInterval(function () {
-      if (!target) return;
+  useEffect(() => {
+    const consoleUnderscoreElement =
+      document.getElementById('console-underscore');
+    const mainHeaderElement = document.getElementById('main-header');
+    let letterCount = 1;
 
-      if (waiting === false) {
-        target.innerHTML = words[0].substring(0, letterCount);
-        letterCount += x;
+    // Write of the main header with console effect
+    const id = window.setInterval(() => {
+      if (!mainHeaderElement) return;
+      if (letterCount <= mainHeaderText.length) {
+        mainHeaderElement.innerHTML = mainHeaderText.substring(0, letterCount);
+        letterCount++;
       }
-    }, 120);
-    window.setInterval(function () {
-      if (!con) return;
-      if (visible === true) {
-        con.className = `${mainHeaderClass1} text-[white] inline-block relative -top-[0.14em] left-[10px] hidden`;
+      if (letterCount === mainHeaderText.length + 1) setMainHeaderLoaded(true);
+    }, 120 + Math.random() * 60);
+
+    setConsoleWritingIntervalId(id);
+
+    // Main header console underscore blink
+    let visible = false;
+    window.setInterval(() => {
+      if (!consoleUnderscoreElement) return;
+      if (visible) {
+        consoleUnderscoreElement.className = `${mainHeaderClass} ${mainHeaderUnderscoreClass} opacity-0`;
         visible = false;
       } else {
-        con.className = `${mainHeaderClass1} text-[white] inline-block relative -top-[0.14em] left-[10px]`;
-
+        consoleUnderscoreElement.className = `${mainHeaderClass} ${mainHeaderUnderscoreClass}`;
         visible = true;
       }
     }, 400);
-  }
+  }, []);
 
   useEffect(() => {
-    consoleText([props.textContent.title1], 'pruebaTexto');
-  }, []);
+    // Turn off the main header writing interval
+    window.clearInterval(consoleWritingIntervalId);
+  }, [mainHeaderLoaded]);
 
   return (
     <section id='#landing' className={mainLandingClass}>
-      {/*       <Grow appear={true} in={true} timeout={300}>
-        <h3 className='text-base text-light-primary-color-600 '>
-          {props.textContent.title0}
-        </h3>
-      </Grow> */}
-
-      <div className='md:p-0 px-6 w-full z-10'>
-        <div className='h-[500px]'>
+      <div className='md:p-2 px-6 w-full z-10'>
+        <h1 className='md:mb-6'>
+          <span id='main-header' className={mainHeaderClass}></span>
           <span
-            id='pruebaTexto'
-            className={`${mainHeaderClass1} text-light-primary-color-600`}
-          ></span>
-          <div
-            className={`${mainHeaderClass1} text-[white] inline-block relative -top-[0.14em] left-[10px]`}
-            id='console'
+            className={`${mainHeaderClass} ${mainHeaderUnderscoreClass} opacity-0`}
+            id='console-underscore'
           >
             &#95;
-          </div>
-        </div>
-        {/*         <Grow in={true} timeout={600}>
-          <h1 className={`${mainHeaderClass1} text-light-primary-color-600`}>
-            {props.textContent.title1}
-          </h1>
-        </Grow> */}
-        <Grow in={true} timeout={1000}>
-          <h1 className={`${mainHeaderClass} text-light-primary-color-200`}>
-            {props.textContent.title2}
-          </h1>
+          </span>
+        </h1>
+        <Grow in={mainHeaderLoaded} timeout={2000}>
+          <h2 className={secondaryHeaderClass}>{props.textContent.title2}</h2>
         </Grow>
-        <Grow in={true} timeout={1300}>
+        <Grow in={mainHeaderLoaded} timeout={3000}>
           <p className={mainParagraphClass}>{props.textContent.description}</p>
         </Grow>
       </div>
@@ -93,7 +90,7 @@ export default function Landing(props: LandingProps) {
         height={800}
         priority
         alt={''}
-        className='px-4 absolute bottom-16 md:right-16 z-0 cursor-pointer transition-all-eio-500 opacity-10'
+        className={backgroundImageClass}
       />
     </section>
   );

@@ -40,14 +40,14 @@ export default async function Main() {
 
   return (
     <>
-      <main className='flex min-h-screen flex-col items-center scroll-smooth'>
+      <main className='flex min-h-screen flex-col items-center scroll-smooth overflow-x-hidden'>
         <Header logo={headerLogo} textContent={dict.header}></Header>
-        <SocialsBar growTimeout={500} sites={otherSites}></SocialsBar>
         <div className='md:px-32 p-0 bg-dark-primary-color-300'>
           <Landing textContent={dict.landing}></Landing>
           <About></About>
           <Experience></Experience>
         </div>
+        <SocialsBar growTimeout={500} sites={otherSites}></SocialsBar>
       </main>
     </>
   );

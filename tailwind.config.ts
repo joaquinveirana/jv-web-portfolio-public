@@ -39,6 +39,7 @@ const config: Config = {
     extend: {
       animation: {
         'fade-in': 'fadeIn 1000ms ease-in-out',
+        'fade-inout': 'fadeInOut 1000ms ease-in-out',
       },
       backdropBlur: {
         xs: '2px',
@@ -55,6 +56,11 @@ const config: Config = {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '100' },
+        },
+        fadeInOut: {
+          '0%': { opacity: '0' },
+          '50%': { opacity: '100' },
+          '100%': { opacity: '20' },
         },
       },
     },

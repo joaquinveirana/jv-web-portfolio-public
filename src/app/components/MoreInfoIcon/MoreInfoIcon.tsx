@@ -10,7 +10,7 @@ export default function MoreInfoIcon(props: IconProps) {
     <Grow in={true} timeout={props.growTimeout}>
       <div>
         <InfoIcon
-          className='md:w-[24px] md:h-[24px] w-[32px] h-[32px] icon-class'
+          className='md:w-[24px] md:h-[24px] w-[32px] h-[32px] icon-effect-class'
           onClick={() => props.callback()}
         ></InfoIcon>
       </div>
