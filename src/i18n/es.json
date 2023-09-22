@@ -35,13 +35,21 @@
   "about": {
     "title": "Sobre Mi",
     "paragraphs": [
-      "Gracias por visitar mi sitio web! Me llamo Joaquín, soy apasionado por la tecnología y disfruto de crear aplicaciones estéticas, centradas en la experiencia del usuario final y con una base de código centrada en buenas prácticas.",
+      "Gracias por visitar mi sitio web!",
+      "Me llamo Joaquín, soy apasionado por la tecnología y disfruto de crear aplicaciones estéticas, centradas en la experiencia del usuario final y con una base de código centrada en buenas prácticas.",
       "Trabajé con distintas tecnologías como Java, Python y JavaScript, siendo esta última mi favorita y en la que tengo más experiencia tanto con frameworks y bibliotecas de frontend como Angular y React como backend con Node.js.",
       "Estudié ingeniería en computación en la Facultad de Ingeniería de la Univarsidad de la República y egresé de la misma en 2023, actualmente me encuentro trabajando como desarrollador full stack en IBM del Uruguay.",
       "En mis tiempos libres también disfruto de aprender en otras áreas que también llaman mi atención, como el machine learning, el desarrollo de videojuegos y el desarrollo mobile.",
       "Estas son las tecnologías con las que principalmente trabajo:"
     ],
-    "techList": "JavaScript,React,Angular,Node.js,TypeScipt,Kubernetes"
+    "techList": [
+      "JavaScript",
+      "React",
+      "Angular",
+      "Node.js",
+      "TypeScipt",
+      "Kubernetes"
+    ]
   },
   "experience": [
     {

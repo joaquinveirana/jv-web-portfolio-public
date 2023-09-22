@@ -4,22 +4,25 @@ import Grow from '@mui/material/Grow';
 import { LandingProps } from '@/app/props/LandingProps';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 /* 
   --- Styles ---
 */
 const mainLandingClass =
-  'md:px-32 md:py-0 pt-[150px] md:items-start w-full h-screen bg-dark-primary-color-300 md:flex-col-centered justify-start';
+  'md:px-64 md:py-0 pt-[150px] md:items-start w-full h-screen bg-dark-300 md:flex-col-centered justify-start';
 const mainHeaderClass =
-  'xl:text-9xl lg:text-8xl md:text-7xl text-4xl font-bold text-light-primary-color-700';
+  'xl:text-9xl lg:text-8xl md:text-7xl z-10 text-4xl font-bold text-light-700';
 const mainHeaderUnderscoreClass =
   'inline-block relative -top-[0.14em] left-[10px]';
 const secondaryHeaderClass =
-  'my-1 lg:text-7xl md:text-6xl text-4xl font-bold text-light-primary-color-200';
+  'my-1 lg:text-7xl md:text-6xl text-4xl font-bold text-light-200';
 const mainParagraphClass =
-  'xl:w-3/5 lg:w-full md:w-full md:text-lg md:my-8 my-6 text-base text-light-primary-color-200';
+  'xl:w-3/5 lg:w-full md:w-full md:my-8 my-6 paragraph-class';
 const backgroundImageClass =
-  'xl:w-[800px] lg:right-16 lg:w-[500px] md:px-4 md:right-4 md:w-[400px] px-8 absolute bottom-16 z-0 opacity-20 animate-fade-inout';
+  'xl:w-[800px] lg:right-16 lg:w-[500px] md:px-4 md:right-4 md:w-[400px] px-8 fixed bottom-16 z-1 animate-fade-in';
+const seeMoreIconClass =
+  'absolute bottom-0 left-0 pb-4 w-full h-[40px] flex-row-centered cursor-pointer [&>*:nth-child(odd)]:hover:direct-cyan-text';
 
 export default function Landing(props: LandingProps) {
   const [mainHeaderLoaded, setMainHeaderLoaded] = useState(false);
@@ -42,7 +45,7 @@ export default function Landing(props: LandingProps) {
         letterCount++;
       }
       if (letterCount === mainHeaderText.length + 1) setMainHeaderLoaded(true);
-    }, 120 + Math.random() * 60);
+    }, 120 + Math.random() * 50);
 
     setConsoleWritingIntervalId(id);
 
@@ -70,18 +73,22 @@ export default function Landing(props: LandingProps) {
       <div className='md:p-2 px-6 w-full z-10'>
         <h1 className='md:mb-6'>
           <span id='main-header' className={mainHeaderClass}></span>
-          <span
-            className={`${mainHeaderClass} ${mainHeaderUnderscoreClass} opacity-0`}
-            id='console-underscore'
-          >
-            &#95;
-          </span>
+          {!mainHeaderLoaded && (
+            <span
+              className={`${mainHeaderClass} ${mainHeaderUnderscoreClass} opacity-0`}
+              id='console-underscore'
+            >
+              &#95;
+            </span>
+          )}
         </h1>
         <Grow in={mainHeaderLoaded} timeout={2000}>
-          <h2 className={secondaryHeaderClass}>{props.textContent.title2}</h2>
-        </Grow>
-        <Grow in={mainHeaderLoaded} timeout={3000}>
-          <p className={mainParagraphClass}>{props.textContent.description}</p>
+          <div>
+            <h2 className={secondaryHeaderClass}>{props.textContent.title2}</h2>
+            <p className={mainParagraphClass}>
+              {props.textContent.description}
+            </p>
+          </div>
         </Grow>
       </div>
       <Image
@@ -92,6 +99,19 @@ export default function Landing(props: LandingProps) {
         alt={''}
         className={backgroundImageClass}
       />
+      <Grow in={mainHeaderLoaded} timeout={3000}>
+        <div className={seeMoreIconClass}>
+          <ExpandMoreIcon
+            className={`w-[40px] h-[40px] text-dark-500`}
+            onClick={() => {
+              document.getElementById('#about')?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+              });
+            }}
+          ></ExpandMoreIcon>
+        </div>
+      </Grow>
     </section>
   );
 }

@@ -18,7 +18,7 @@ export default async function RootLayout({
   return (
     <html lang={getLang()}>
       <body
-        className={`${WorkSans.className} scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-light-secondary-color-200 scrollbar-track-dark-primary-color-300`}
+        className={`${WorkSans.className} scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-light-secondary-color-200 scrollbar-track-dark-300`}
       >
         {children}
       </body>

@@ -30,7 +30,7 @@ export default function GrowOnScroll(props: GrowOnScrollProps) {
       in={trigger || hasAlreadyGrown}
       timeout={props.growTimeout}
     >
-      <div>{props.children}</div>
+      {props.children}
     </Grow>
   );
 }

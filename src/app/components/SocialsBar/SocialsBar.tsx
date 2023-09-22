@@ -16,8 +16,8 @@ import { useState } from 'react';
   --- Styles ---
 */
 const socialSidebarClass =
-  'md:fixed md:top-1/3 md:left-0 md:w-32 md:h-1/3 md:z-0 md:py-12 md:flex md:flex-col md:items-center md:justify-around md:bg-[transparent] w-full bg-dark-primary-color-300 flex flex-row p-4';
-const iconClass = 'w-full md:flex-row-centered flex-col-centered';
+  'md:fixed md:top-1/3 md:left-0 md:w-32 md:h-1/3 md:min-h-[300px] md:z-0 md:py-12 md:flex md:flex-col md:items-center md:justify-around md:bg-[transparent] w-full bg-dark-300 flex flex-row p-4';
+const iconClass = 'md:flex-row-centered md:my-4 w-full flex-col-centered';
 const iconHoverEffectClass = 'md:w-6 md:h-6 w-8 h-8 icon-effect-class';
 const iconHoverTagClass =
   'md:w-6 md:-translate-y-1 md:-rotate-90 md:transform md:block hidden';
@@ -96,9 +96,7 @@ export default function SocialsBar(props: SocialsBarProps) {
     return (
       <div className={iconHoverTagClass}>
         <Grow in={indexIconHovered === index} timeout={500}>
-          <span className='text-cyan-terciary-color-600 text-sm'>
-            {site.name}
-          </span>
+          <span className='text-cyan-600 text-sm'>{site.name}</span>
         </Grow>
       </div>
     );

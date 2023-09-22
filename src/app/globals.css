@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 @layer components {
+  .main-section-class {
+    @apply 2xl:px-96 xl:px-56 lg:px-48 md:flex-col-centered py-8 w-full bg-dark-300;
+  }
+
+  .paragraph-class {
+    @apply text-[20px] text-light-200;
+  }
+
+  .sub-paragraph-class {
+    @apply text-[14px] text-light-200;
+  }
+
   .transition-all-eo-100 {
     @apply transition-all duration-100 ease-out;
   }
@@ -28,10 +40,14 @@
   }
 
   .hover-cyan-text {
-    @apply transition-all duration-300 ease-in-out hover:text-cyan-terciary-color-700;
+    @apply transition-all duration-300 ease-in-out hover:text-cyan-700;
+  }
+
+  .direct-cyan-text {
+    @apply transition-all duration-300 ease-in-out text-cyan-700;
   }
 
   .icon-effect-class {
-    @apply hover:transform hover:-translate-y-1 text-light-primary-color-800 hover:text-cyan-terciary-color-500 hover:fill-cyan-terciary-color-500 transition-all-eio-300 cursor-pointer;
+    @apply hover:transform hover:-translate-y-1 text-light-800 hover:text-cyan-500 hover:fill-cyan-500 transition-all-eio-300 cursor-pointer;
   }
 }

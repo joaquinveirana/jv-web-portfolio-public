@@ -17,15 +17,15 @@ import NavItem from '@/app/components/NavItem/NavItem';
 */
 // Header Main Items Classes
 const mainHeaderClass =
-  'md:px-8 fixed top-0 w-full h-[100px] text-sm bg-dark-primary-color-300 bg-opacity-70';
+  'md:px-8 fixed top-0 w-full h-[100px] z-30 text-sm bg-dark-300 bg-opacity-70';
 const hamburgerIconClass =
-  'md:hidden fixed right-0 w-[50px] h-[50px] z-20 cursor-pointer';
+  'md:hidden fixed right-0 w-[50px] h-[50px] z-50 cursor-pointer';
 
 // Nav Panel Classes
 const blurPanelClass =
   'md:hidden fixed top-0 right-full w-screen h-screen z-15 backdrop-blur-sm';
 const mobileNavPanel =
-  'fixed top-0 left-full w-3/4 h-screen z-10 pt-32 pb-10 bg-dark-primary-color-500';
+  'fixed top-0 left-full w-3/4 h-screen z-40 pt-32 pb-10 bg-dark-500';
 const desktopNavPanel =
   'md:p-0 md:h-[70px] md:w-fit md:sticky md:bg-[transparent]';
 const desktopNavItemList = 'md:h-full md:flex-row-centered';

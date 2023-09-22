@@ -40,13 +40,11 @@ export default async function Main() {
 
   return (
     <>
-      <main className='flex min-h-screen flex-col items-center scroll-smooth overflow-x-hidden'>
+      <main className='flex-col-centered min-h-screen scroll-smooth overflow-x-hidden w-full'>
         <Header logo={headerLogo} textContent={dict.header}></Header>
-        <div className='md:px-32 p-0 bg-dark-primary-color-300'>
-          <Landing textContent={dict.landing}></Landing>
-          <About></About>
-          <Experience></Experience>
-        </div>
+        <Landing textContent={dict.landing}></Landing>
+        <About textContent={dict.about}></About>
+        <Experience></Experience>
         <SocialsBar growTimeout={500} sites={otherSites}></SocialsBar>
       </main>
     </>
