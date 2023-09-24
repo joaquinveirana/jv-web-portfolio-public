@@ -32,6 +32,7 @@ export default function About(props: AboutProps) {
               (paragraph: string, index: number) => {
                 return (
                   <GrowOnScroll
+                    key={index}
                     growTimeout={1500}
                     scrollThreshold={200 + 100 * index}
                     growOneTime={true}

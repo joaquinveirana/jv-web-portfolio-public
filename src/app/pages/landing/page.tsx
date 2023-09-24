@@ -5,12 +5,13 @@ import { LandingProps } from '@/app/props/LandingProps';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import JVLogo3D from '@/app/components/Object3D/JVLogo3D';
 
 /* 
   --- Styles ---
 */
 const mainLandingClass =
-  'md:px-64 md:py-0 pt-[150px] md:items-start w-full h-screen bg-dark-300 md:flex-col-centered justify-start';
+  'lg:px-64 md:px-36 md:py-0 pt-[150px] md:items-start w-full h-screen bg-dark-300 md:flex-col-centered justify-start';
 const mainHeaderClass =
   'xl:text-9xl lg:text-8xl md:text-7xl z-10 text-4xl font-bold text-light-700';
 const mainHeaderUnderscoreClass =
@@ -91,14 +92,17 @@ export default function Landing(props: LandingProps) {
           </div>
         </Grow>
       </div>
-      <Image
+      {/*       <Image
         src={'/my_logos/jv-logo-background.png'}
         width={800}
         height={800}
         priority
         alt={''}
         className={backgroundImageClass}
-      />
+      /> */}
+      <div className='2xl:w-[900px] xl:w-[700px] xl:right-16 lg:w-[500px] lg:right-8 md:w-[500px] md:h-screen md:absolute md:top-0 md:px-4 md:right-4 md:py-24 mx-auto w-2/3 aspect-square z-1 relative animate-fade-in'>
+        <JVLogo3D></JVLogo3D>
+      </div>
       <Grow in={mainHeaderLoaded} timeout={3000}>
         <div className={seeMoreIconClass}>
           <ExpandMoreIcon
