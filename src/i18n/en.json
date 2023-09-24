@@ -1,0 +1,25 @@
+{
+  "products": {
+    "cart": "Add to Cart"
+  },
+  "header": {
+    "navItems": [
+      { "itemId": "#about", "itemName": "Sobre mí", "itemLink": "#about" },
+      {
+        "itemId": "#experience",
+        "itemName": "Experiencia",
+        "itemLink": "#experience"
+      },
+      {
+        "itemId": "#projects",
+        "itemName": "Proyectos",
+        "itemLink": "#projects"
+      },
+      { "itemId": "#contact", "itemName": "Contacto", "itemLink": "#contact" }
+    ],
+    "resume": {
+      "itemName": "Currículum",
+      "itemLink": "#resume"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "conventionalCommits.scopes": [
+        "Config",
+        "i18n",
+        "Header",
+        "Logo",
+        "Effects"
+    ]
+}

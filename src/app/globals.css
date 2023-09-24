@@ -2,26 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .transition-all-eo-100 {
+    @apply transition-all duration-100 ease-out;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .transition-all-eio-100 {
+    @apply transition-all duration-100 ease-in-out;
+  }
+
+  .transition-all-eio-300 {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .transition-all-eio-500 {
+    @apply transition-all duration-500 ease-in-out;
+  }
+
+  .flex-col-centered {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .flex-row-centered {
+    @apply flex flex-row items-center justify-center;
+  }
+
+  .hover-cyan-text {
+    @apply transition-all duration-300 ease-in-out hover:text-cyan-terciary-color-700;
+  }
+
+  .icon-class {
+    @apply hover:transform hover:-translate-y-1 text-light-primary-color-800 hover:text-cyan-terciary-color-500 hover:fill-cyan-terciary-color-500 transition-all-eio-500 cursor-pointer;
+  }
 }
