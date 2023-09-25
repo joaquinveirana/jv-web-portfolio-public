@@ -45,7 +45,7 @@ export default async function Main() {
         <Landing textContent={dict.landing}></Landing>
         <About textContent={dict.about}></About>
         <Experience></Experience>
-        <SocialsBar growTimeout={500} sites={otherSites}></SocialsBar>
+        <SocialsBar growTimeout={600} sites={otherSites}></SocialsBar>
       </main>
     </>
   );

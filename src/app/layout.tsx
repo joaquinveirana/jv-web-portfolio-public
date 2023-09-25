@@ -2,7 +2,6 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Work_Sans } from 'next/font/google';
 import { getLang } from '../i18n/i18n_functions';
-import { Layout } from '@/app/components/Object3D/Wrapper/Layout';
 
 const WorkSans = Work_Sans({ subsets: ['latin'] });
 
@@ -21,7 +20,7 @@ export default async function RootLayout({
       <body
         className={`${WorkSans.className} scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-light-secondary-color-200 scrollbar-track-dark-300`}
       >
-        <Layout>{children}</Layout>
+        {children}
       </body>
     </html>
   );

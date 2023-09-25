@@ -167,7 +167,7 @@ export default function Header(props: HeaderProps) {
                 <NavItem
                   key={index}
                   callback={(id: string) => scrollToSection(id)}
-                  growTimeout={300 * (index + 1)}
+                  growTimeout={500 * (index + 1)}
                   navItem={navItem}
                 ></NavItem>
               );
@@ -177,12 +177,12 @@ export default function Header(props: HeaderProps) {
               text={content.resume.itemName}
               callback={() => openResume()}
               width='32'
-              growTimeout={300 * (content.navItems.length + 1)}
+              growTimeout={500 * (content.navItems.length + 1)}
             ></EffectButton>
           </ul>
 
           <MoreInfoIcon
-            growTimeout={300 * (content.navItems.length + 2)}
+            growTimeout={500 * (content.navItems.length + 2)}
             callback={() => {
               setIsOpenInfoDialog(true);
               setIsOpenNavSlider(false);
