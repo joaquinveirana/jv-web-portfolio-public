@@ -11,7 +11,7 @@ import JVLogo3D from '@/app/components/Object3D/JVLogo3D';
   --- Styles ---
 */
 const mainLandingClass =
-  'lg:px-64 md:px-36 md:py-0 pt-[150px] md:items-start w-full h-screen bg-dark-300 md:flex-col-centered justify-start';
+  'lg:px-64 md:px-36 md:py-0 pt-[150px] md:items-start w-full h-screen bg-dark-300 md:flex-col-centered md:justify-between';
 const mainHeaderClass =
   'xl:text-9xl lg:text-8xl md:text-7xl z-10 text-4xl font-bold text-light-700';
 const mainHeaderUnderscoreClass =
@@ -20,10 +20,11 @@ const secondaryHeaderClass =
   'my-1 lg:text-7xl md:text-6xl text-4xl font-bold text-light-200';
 const mainParagraphClass =
   'xl:w-3/5 lg:w-full md:w-full md:my-8 my-6 paragraph-class';
-const backgroundImageClass =
-  'xl:w-[800px] lg:right-16 lg:w-[500px] md:px-4 md:right-4 md:w-[400px] px-8 fixed bottom-16 z-1 animate-fade-in';
-const seeMoreIconClass =
-  'absolute bottom-0 left-0 pb-4 w-full h-[40px] flex-row-centered cursor-pointer [&>*:nth-child(odd)]:hover:direct-cyan-text';
+const logo3DClass =
+  '2xl:w-[800px] xl:w-[700px] xl:right-16 lg:w-[500px] lg:right-8 md:w-[500px] md:h-screen md:absolute md:top-0 md:right-0 md:py-24 mx-auto w-2/3 aspect-square z-0 relative animate-fade-in';
+const seeMoreContainerClass =
+  'pb-4 w-full h-[40px] flex-row-centered cursor-pointer [&>*:nth-child(odd)]:hover:direct-cyan-text';
+const seeMoreIconClass = 'w-[40px] h-[40px] text-dark-500';
 
 export default function Landing(props: LandingProps) {
   const [mainHeaderLoaded, setMainHeaderLoaded] = useState(false);
@@ -71,7 +72,7 @@ export default function Landing(props: LandingProps) {
 
   return (
     <section id='#landing' className={mainLandingClass}>
-      <div className='md:p-2 px-6 w-full z-10'>
+      <div className='md:my-auto w-full z-10'>
         <h1 className='md:mb-6'>
           <span id='main-header' className={mainHeaderClass}></span>
           {!mainHeaderLoaded && (
@@ -92,21 +93,13 @@ export default function Landing(props: LandingProps) {
           </div>
         </Grow>
       </div>
-      {/*       <Image
-        src={'/my_logos/jv-logo-background.png'}
-        width={800}
-        height={800}
-        priority
-        alt={''}
-        className={backgroundImageClass}
-      /> */}
-      <div className='2xl:w-[900px] xl:w-[700px] xl:right-16 lg:w-[500px] lg:right-8 md:w-[500px] md:h-screen md:absolute md:top-0 md:px-4 md:right-4 md:py-24 mx-auto w-2/3 aspect-square z-1 relative animate-fade-in'>
+      <div className={logo3DClass}>
         <JVLogo3D></JVLogo3D>
       </div>
       <Grow in={mainHeaderLoaded} timeout={3000}>
-        <div className={seeMoreIconClass}>
+        <div className={seeMoreContainerClass}>
           <ExpandMoreIcon
-            className={`w-[40px] h-[40px] text-dark-500`}
+            className={seeMoreIconClass}
             onClick={() => {
               document.getElementById('#about')?.scrollIntoView({
                 behavior: 'smooth',

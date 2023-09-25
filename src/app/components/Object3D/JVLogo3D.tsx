@@ -16,7 +16,7 @@ const Common = dynamic(
 const View = dynamic(() => import('./Canvas/View').then((mod) => mod.View), {
   ssr: false,
   loading: () => (
-    <div className='flex h-96 w-full flex-col items-center justify-center'>
+    <div className='flex w-full h-full flex-col items-center justify-center'>
       <CircularProgress />
     </div>
   ),
@@ -29,7 +29,7 @@ export default function JVLogo3D() {
         <Suspense fallback={null}>
           <Obj
             objPath='/my_logos/jv_logo_sq_cyan_mate-processed.glb'
-            scale={2}
+            scale={2.5}
             position={[0, 0, 0]}
             rotation={[0.0, 1.5, 0]}
             rotationSpeed={0.001}
