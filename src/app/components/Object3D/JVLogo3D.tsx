@@ -1,8 +1,7 @@
 'use client';
 
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
-import CircularProgress from '@mui/material/CircularProgress';
 import { Layout } from './Canvas/Layout';
 
 const Common = dynamic(
@@ -26,10 +25,39 @@ export default function JVLogo3D() {
     }
   );
 
+  const checkWindowsDefined = (): boolean => {
+    return typeof window !== 'undefined';
+  };
+
+  const logoScale = () => {
+    if (width === 0) return 0;
+    if (width > 1750) return 3;
+    else if (width > 1500) {
+      return 2.5;
+    } else if (width > 1300) {
+      return 2;
+    } else if (width > 1200) {
+      return 1.8;
+    } else if (width > 1000) {
+      return 1.9;
+    } else if (width > 756) {
+      return 1.5;
+    } else {
+      return 2.5;
+    }
+  };
+
   /* 
     Hooks
   */
   const [objLoaded, setObjLoaded] = useState(false);
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    if (checkWindowsDefined()) {
+      setWidth(window.innerWidth);
+    }
+  }, []);
 
   return (
     <div className='w-full h-full'>
@@ -38,7 +66,7 @@ export default function JVLogo3D() {
           <Suspense fallback={null}>
             <Obj
               objPath='/my_logos/jv_logo_sq_cyan_mate-processed.glb'
-              scale={2.5}
+              scale={logoScale()}
               position={[0, 0, 0]}
               rotation={[0.0, 1.5, 0]}
               rotationSpeed={0.001}

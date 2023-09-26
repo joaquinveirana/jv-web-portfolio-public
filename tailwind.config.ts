@@ -62,6 +62,12 @@ const config: Config = {
           '100%': { opacity: '100' },
         },
       },
+      screens: {
+        '2xl': '1408px',
+        '3xl': '1536px',
+        '4xl': '1636px',
+        '5xl': '1736px',
+      },
     },
   },
   plugins: [require('tailwind-scrollbar')({ nocompatible: true })],

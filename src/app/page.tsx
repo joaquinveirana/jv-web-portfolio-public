@@ -44,7 +44,7 @@ export default async function Main() {
         <Header logo={headerLogo} textContent={dict.header}></Header>
         <Landing textContent={dict.landing}></Landing>
         <About textContent={dict.about}></About>
-        <Experience></Experience>
+        <Experience textContent={dict.experience}></Experience>
         <SocialsBar growTimeout={600} sites={otherSites}></SocialsBar>
       </main>
     </>

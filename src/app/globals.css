@@ -4,7 +4,7 @@
 
 @layer components {
   .main-section-class {
-    @apply 2xl:px-96 xl:px-56 lg:px-48 md:flex-col-centered py-8 w-full bg-dark-300;
+    @apply 2xl:px-96 xl:px-56 lg:px-48 md:px-40 px-6 md:flex-col-centered pt-4 w-full bg-dark-300;
   }
 
   .paragraph-class {

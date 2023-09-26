@@ -11,7 +11,7 @@ const mainAboutClass = 'main-section-class';
 const sectionContentClass =
   'xl:flex-row-centered xl:items-start w-full pt-8 flex-col-centered';
 const paragraphsListClass = 'xl:pr-12 xl:px-0 xl:w-2/3 flex flex-col';
-const imgContainerClass = 'xl:w-1/3 xl:px-4 xl:py-4 px-24 py-8';
+const imgContainerClass = 'xl:w-1/3 xl:px-4 xl:py-4 px-24 pt-12 pb-8';
 const imgClass =
   'w-full max-w-[370px] z-0 aspect-square outline outline-4 outline-offset-8 outline-cyan-600 hover:outline-offset-0 hover:outline-8 transition-all-eio-300';
 
