@@ -3,7 +3,7 @@ import Header from './pages/header/page';
 // I18n lang
 import { getDictionary, getLang } from '../i18n/i18n_functions';
 import About from './pages/about/page';
-import Experience from './pages/experience/page';
+import { Experience } from './pages/experience/page';
 import Landing from './pages/landing/page';
 import SocialsBar from './components/SocialsBar/SocialsBar';
 import { LogoType } from './props/HeaderProps';
@@ -40,12 +40,14 @@ export default async function Main() {
 
   return (
     <>
-      <main className='flex-col-centered min-h-screen scroll-smooth overflow-x-hidden w-full '>
+      <main className='flex-col-centered scroll-smooth overflow-x-hidden w-full '>
         <Header logo={headerLogo} textContent={dict.header}></Header>
         <Landing textContent={dict.landing}></Landing>
-        <About textContent={dict.about}></About>
-        <Experience textContent={dict.experience}></Experience>
-        <SocialsBar growTimeout={600} sites={otherSites}></SocialsBar>
+        <section className='main-section-class'>
+          <About textContent={dict.about}></About>
+          <Experience textContent={dict.experience}></Experience>
+          <SocialsBar growTimeout={600} sites={otherSites}></SocialsBar>
+        </section>
       </main>
     </>
   );

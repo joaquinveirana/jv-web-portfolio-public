@@ -4,15 +4,31 @@
 
 @layer components {
   .main-section-class {
-    @apply 2xl:px-96 xl:px-56 lg:px-48 md:px-40 px-6 md:flex-col-centered pt-4 w-full bg-dark-300;
+    @apply 4xl:px-96 3xl:px-80 2xl:px-64 xl:px-56 lg:px-28 md:px-28 px-8 md:flex-col-centered pt-4 w-full bg-dark-300;
+  }
+
+  .article-class {
+    @apply xl:max-w-5xl lg:max-w-4xl w-full mx-auto pt-20;
+  }
+
+  .title-class {
+    @apply text-[white] font-semibold text-3xl;
+  }
+
+  .subtitle-class {
+    @apply text-[white] font-semibold text-xl;
   }
 
   .paragraph-class {
-    @apply text-[20px] text-light-200;
+    @apply text-[18px] text-light-200;
   }
 
   .sub-paragraph-class {
     @apply text-[14px] text-light-200;
+  }
+
+  .secondary-sub-paragraph-class {
+    @apply text-[14px] text-light-sec-200;
   }
 
   .transition-all-eo-100 {

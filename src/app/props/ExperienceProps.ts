@@ -5,6 +5,7 @@ export type ExperienceProps = {
 export type ExperienceContent = {
   title: string;
   jobs: JobExperience[];
+  aria: AriaTablist;
 };
 
 export type JobExperience = {
@@ -14,4 +15,9 @@ export type JobExperience = {
   startDate: string;
   endDate: string;
   keyPoints: string[];
+};
+
+export type AriaTablist = {
+  panel: string;
+  tab: string;
 };

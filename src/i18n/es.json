@@ -38,8 +38,8 @@
       "Gracias por visitar mi sitio web!",
       "Me llamo Joaquín, soy apasionado por la tecnología y disfruto de crear aplicaciones estéticas, centradas en la experiencia del usuario final y con una base de código centrada en buenas prácticas.",
       "Trabajé con distintas tecnologías como Java, Python y JavaScript, siendo esta última mi favorita y en la que tengo más experiencia tanto con frameworks y bibliotecas de frontend como Angular y React como backend con Node.js.",
-      "Estudié ingeniería en computación en la Facultad de Ingeniería de la Univarsidad de la República y egresé de la misma en 2023, actualmente me encuentro trabajando como desarrollador full stack en IBM del Uruguay.",
-      "En mis tiempos libres también disfruto de aprender en otras áreas que también llaman mi atención, como el machine learning, el desarrollo de videojuegos y el desarrollo mobile.",
+      "Estudié ingeniería en computación en la Facultad de Ingeniería de la Univarsidad de la República y egresé de la misma en 2023. Actualmente me encuentro trabajando como desarrollador full stack en IBM del Uruguay.",
+      "En mis tiempos libres también disfruto de aprender en otras áreas como el machine learning, el desarrollo de videojuegos y el desarrollo mobile.",
       "Estas son las tecnologías con las que principalmente trabajo:"
     ],
     "techList": [
@@ -53,11 +53,15 @@
   },
   "experience": {
     "title": "Experiencia",
+    "aria": {
+      "panel": "TabList de experiencia laboral",
+      "tab": "TabList-Entrada"
+    },
     "jobs": [
       {
         "company": "Facultad de Ingeniería, UdelaR",
         "companyShortName": "FIng UdelaR",
-        "position": "Ayudante Grado 1",
+        "position": "Ayudante de Proyecto",
         "startDate": "Julio 2023",
         "endDate": "Presente",
         "keyPoints": [
@@ -69,7 +73,7 @@
       {
         "company": "IBM del Uruguay",
         "companyShortName": "IBM",
-        "position": "Desarrollador Full stack",
+        "position": "Full Stack Dev",
         "startDate": "Enero 2022",
         "endDate": "Presente",
         "keyPoints": [
@@ -82,8 +86,8 @@
       },
       {
         "company": "IBM del Uruguay",
-        "companyShortName": "IBM",
-        "position": "Desarrollador Cloud como Student",
+        "companyShortName": "IBM Student",
+        "position": "Cloud Dev Student",
         "startDate": "Enero 2021",
         "endDate": "Diciembre 2021",
         "keyPoints": [

@@ -31,15 +31,15 @@ export default function JVLogo3D() {
 
   const logoScale = () => {
     if (width === 0) return 0;
-    if (width > 1750) return 3;
+    if (width > 1750) return 2.7;
     else if (width > 1500) {
       return 2.5;
     } else if (width > 1300) {
-      return 2;
+      return 2.2;
     } else if (width > 1200) {
-      return 1.8;
+      return 2;
     } else if (width > 1000) {
-      return 1.9;
+      return 1.8;
     } else if (width > 756) {
       return 1.5;
     } else {

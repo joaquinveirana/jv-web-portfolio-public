@@ -16,9 +16,9 @@ import { useState } from 'react';
   --- Styles ---
 */
 const socialSidebarClass =
-  'md:fixed md:top-1/3 md:left-0 md:w-32 md:h-1/3 md:min-h-[300px] md:z-0 md:py-12 md:flex md:flex-col md:items-center md:justify-around md:bg-[transparent] w-full bg-dark-300 flex flex-row p-4';
+  'xl:w-32 lg:w-24 md:fixed md:top-1/3 md:left-0 md:w-24 md:h-1/3 md:min-h-[300px] md:z-0 md:py-12 md:flex md:flex-col md:items-center md:justify-around md:bg-[transparent] w-full bg-dark-300 flex flex-row p-4';
 const iconClass = 'md:flex-row-centered md:my-4 w-full flex-col-centered';
-const iconHoverEffectClass = 'md:w-6 md:h-6 w-8 h-8 icon-effect-class';
+const iconHoverEffectClass = 'w-6 h-6 icon-effect-class';
 const iconHoverTagClass =
   'md:w-6 md:-translate-y-1 md:-rotate-90 md:transform md:block hidden';
 
@@ -107,7 +107,7 @@ export default function SocialsBar(props: SocialsBarProps) {
         return (
           <div key={index} className={iconClass}>
             <Grow in={true} timeout={props.growTimeout}>
-              <div className='flex-row-centered mr-6'>
+              <div className='md:mr-6 flex-row-centered'>
                 {iconHoverTag(site, index)}
                 {iconBySite(site)}
               </div>
