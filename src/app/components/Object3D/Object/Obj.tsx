@@ -10,7 +10,7 @@ export function Obj(props: Obj3DProps) {
   const [rotationClockwise, setRotationClockwise] = useState(true);
   useFrame((state, delta) => {
     if (scene.rotation.y > 2.5) setRotationClockwise(false);
-    if (scene.rotation.y < 0.4) setRotationClockwise(true);
+    if (scene.rotation.y < 0.5) setRotationClockwise(true);
     rotationClockwise
       ? (scene.rotation.y += props.rotationSpeed)
       : (scene.rotation.y -= props.rotationSpeed);

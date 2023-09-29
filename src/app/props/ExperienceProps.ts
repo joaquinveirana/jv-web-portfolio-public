@@ -1,3 +1,5 @@
+import { AriaTablist } from './AriaProps';
+
 export type ExperienceProps = {
   textContent: ExperienceContent;
 };
@@ -15,9 +17,4 @@ export type JobExperience = {
   startDate: string;
   endDate: string;
   keyPoints: string[];
-};
-
-export type AriaTablist = {
-  panel: string;
-  tab: string;
 };

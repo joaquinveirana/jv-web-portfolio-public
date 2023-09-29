@@ -14,14 +14,14 @@ const imgContainerClass = 'lg:px-8 lg:w-5/12 py-12 w-full';
 const imgClass =
   'lg:max-w-[310px] lg:w-full m-auto max-w-[300px] w-8/12 z-0 aspect-square outline outline-4 outline-offset-8 outline-cyan-600 hover:outline-offset-0 hover:outline-8 transition-all-eio-300';
 
-export default function About(props: AboutProps) {
+export const About = (props: AboutProps) => {
   return (
     <article id='#about' className='article-class'>
       {/* Title */}
       <SectionTitle
         title={props.textContent.title}
         growTimeout={1500}
-        scrollThreshold={100}
+        extraScrollThreshold={50}
         growOneTime={true}
       />
 
@@ -34,7 +34,7 @@ export default function About(props: AboutProps) {
                 <GrowOnScroll
                   key={index}
                   growTimeout={1500}
-                  scrollThreshold={200 + 100 * index}
+                  extraScrollThreshold={50 * (index + 1)}
                   growOneTime={true}
                 >
                   <p key={index} className='py-2 paragraph-class'>
@@ -48,7 +48,7 @@ export default function About(props: AboutProps) {
           {/* Tech list */}
           <GrowOnScroll
             growTimeout={1500}
-            scrollThreshold={200 + 100 * props.textContent.paragraphs.length}
+            extraScrollThreshold={50 * props.textContent.paragraphs.length}
             growOneTime={true}
           >
             <ul className='w-fit columns-2'>
@@ -66,14 +66,18 @@ export default function About(props: AboutProps) {
         {/* Profile Pic */}
         <GrowOnScroll
           growTimeout={1500}
-          scrollThreshold={200}
+          extraScrollThreshold={100}
           growOneTime={true}
         >
           <div className={imgContainerClass}>
-            <img className={imgClass} src='./me.jpg' alt='Picture of me' />
+            <img
+              className={imgClass}
+              src={props.textContent.photoSrc}
+              alt={props.textContent.photoAlt}
+            />
           </div>
         </GrowOnScroll>
       </div>
     </article>
   );
-}
+};

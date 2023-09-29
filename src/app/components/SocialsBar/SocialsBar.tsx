@@ -22,7 +22,7 @@ const iconHoverEffectClass = 'w-6 h-6 icon-effect-class';
 const iconHoverTagClass =
   'md:w-6 md:-translate-y-1 md:-rotate-90 md:transform md:block hidden';
 
-export default function SocialsBar(props: SocialsBarProps) {
+export const SocialsBar = (props: SocialsBarProps) => {
   /* 
     --- Aux Functions ---
   */
@@ -117,4 +117,4 @@ export default function SocialsBar(props: SocialsBarProps) {
       })}
     </aside>
   );
-}
+};

@@ -13,7 +13,7 @@ const View = dynamic(() => import('./Scene/View').then((mod) => mod.View), {
   ssr: false,
 });
 
-export default function JVLogo3D() {
+export const JVLogo3D = () => {
   const Obj = dynamic(
     () =>
       import('./Object/Obj').then((mod) => {
@@ -25,22 +25,20 @@ export default function JVLogo3D() {
     }
   );
 
-  const checkWindowsDefined = (): boolean => {
-    return typeof window !== 'undefined';
-  };
-
   const logoScale = () => {
-    if (width === 0) return 0;
-    if (width > 1750) return 2.7;
-    else if (width > 1500) {
+    if (windowWidth === 0) return 0;
+    if (windowWidth > 1750) return 3.1;
+    else if (windowWidth > 1600) {
+      return 2.8;
+    } else if (windowWidth > 1500) {
       return 2.5;
-    } else if (width > 1300) {
+    } else if (windowWidth > 1300) {
       return 2.2;
-    } else if (width > 1200) {
+    } else if (windowWidth > 1200) {
       return 2;
-    } else if (width > 1000) {
+    } else if (windowWidth > 1000) {
       return 1.8;
-    } else if (width > 756) {
+    } else if (windowWidth > 756) {
       return 1.5;
     } else {
       return 2.5;
@@ -51,12 +49,21 @@ export default function JVLogo3D() {
     Hooks
   */
   const [objLoaded, setObjLoaded] = useState(false);
-  const [width, setWidth] = useState(0);
-
+  const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {
-    if (checkWindowsDefined()) {
-      setWidth(window.innerWidth);
-    }
+    const handleWindowWidthChange = () => {
+      if (window.outerWidth) {
+        setWindowWidth(window.outerWidth - 16);
+      }
+      console.log(window.outerWidth);
+
+      console.log(windowWidth);
+    };
+    handleWindowWidthChange();
+    window.addEventListener('resize', handleWindowWidthChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowWidthChange);
+    };
   }, []);
 
   return (
@@ -67,17 +74,16 @@ export default function JVLogo3D() {
             <Obj
               objPath='/my_logos/jv_logo_sq_cyan_mate-processed.glb'
               scale={logoScale()}
-              position={[0, 0, 0]}
+              position={[-0.15, 0, 0.15]}
               rotation={[0.0, 1.5, 0]}
               rotationSpeed={0.001}
             />
             <Common
               light={{
-                ambient: [{ intensity: 0.5, color: 'white' }],
+                ambient: [{ intensity: 0.35, color: 'white' }],
                 point: [
-                  { position: [8, 3, 3], intensity: 2, color: 'red' },
-                  { position: [8, -3, -3], intensity: 2, color: 'purple' },
-                  { position: [-8, 0, -3], intensity: 1, color: 'white' },
+                  { position: [1, 0, 1], intensity: 10, color: 'purple' },
+                  { position: [18, 0, 0], intensity: 0.2, color: 'white' },
                 ],
               }}
             />
@@ -86,4 +92,4 @@ export default function JVLogo3D() {
       </Layout>
     </div>
   );
-}
+};

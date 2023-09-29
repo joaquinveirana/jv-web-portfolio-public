@@ -7,7 +7,7 @@ export default function SectionTitle(props: SectionTitleProps) {
   return (
     <GrowOnScroll
       growTimeout={props.growTimeout}
-      scrollThreshold={props.scrollThreshold}
+      extraScrollThreshold={props.extraScrollThreshold}
       growOneTime={props.growOneTime}
     >
       <div className='w-full flex-row-centered justify-start title-class'>

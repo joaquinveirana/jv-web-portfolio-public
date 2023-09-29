@@ -5,6 +5,7 @@ import { ExperienceProps, JobExperience } from '@/app/props/ExperienceProps';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { useEffect, useState } from 'react';
+import GrowOnScroll from '@/app/components/GrowOnScroll/GrowOnScroll';
 
 /* 
   --- Styles ---
@@ -44,12 +45,12 @@ export const Experience = (props: ExperienceProps) => {
   });
 
   return (
-    <article id='#about' className='article-class'>
+    <article id='#experience' className='article-class'>
       {/* Title */}
       <SectionTitle
         title={props.textContent.title}
         growTimeout={1500}
-        scrollThreshold={100}
+        extraScrollThreshold={500}
         growOneTime={true}
       />
 
@@ -80,33 +81,39 @@ export const Experience = (props: ExperienceProps) => {
         </div>
 
         {/* TabPanel with company content */}
-        <div className={tabPanelContainerClass}>
-          {props.textContent.jobs.map((job: JobExperience, index: number) => {
-            return (
-              <div
-                key={index}
-                className={`${tabValue === index ? 'block' : 'hidden'}`}
-              >
-                <h1 className='subtitle-class'>
-                  {job.position} @ {job.company}
-                </h1>
-                <h6 className='pb-2 secondary-sub-paragraph-class'>
-                  {job.startDate} - {job.endDate}
-                </h6>
-                {job.keyPoints.map((keyPoint: string, index: number) => {
-                  return (
-                    <div key={index} className='py-2 flex items-start'>
-                      <span className='text-cyan-600'>&#9724;</span>
-                      <p className='text-base pl-2 paragraph-class'>
-                        {keyPoint}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-            );
-          })}
-        </div>
+        <GrowOnScroll
+          growTimeout={1500}
+          extraScrollThreshold={600}
+          growOneTime={true}
+        >
+          <div className={tabPanelContainerClass}>
+            {props.textContent.jobs.map((job: JobExperience, index: number) => {
+              return (
+                <div
+                  key={index}
+                  className={`${tabValue === index ? 'block' : 'hidden'}`}
+                >
+                  <h1 className='subtitle-class'>
+                    {job.position} @ {job.company}
+                  </h1>
+                  <h6 className='pb-2 secondary-sub-paragraph-class'>
+                    {job.startDate} - {job.endDate}
+                  </h6>
+                  {job.keyPoints.map((keyPoint: string, index: number) => {
+                    return (
+                      <div key={index} className='py-2 flex items-start'>
+                        <span className='text-cyan-600'>&#9724;</span>
+                        <p className='text-base pl-2 paragraph-class'>
+                          {keyPoint}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })}
+          </div>
+        </GrowOnScroll>
       </div>
     </article>
   );

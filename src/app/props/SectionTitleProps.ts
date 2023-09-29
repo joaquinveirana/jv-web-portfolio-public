@@ -1,6 +1,6 @@
 export type SectionTitleProps = {
   title: string;
   growTimeout: number;
-  scrollThreshold: number;
+  extraScrollThreshold: number;
   growOneTime: boolean;
 };

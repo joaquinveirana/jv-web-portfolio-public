@@ -4,6 +4,8 @@ export type AboutProps = {
 
 type AboutTextContent = {
   title: string;
+  photoAlt: string;
+  photoSrc: string;
   paragraphs: string[];
   techList: string[];
 };

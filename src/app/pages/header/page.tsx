@@ -46,7 +46,6 @@ export default function Header(props: HeaderProps) {
   }
 
   const scrollToSection = (sectionId: string) => () => {
-    console.log(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
       setIsOpenNavSlider(false);
