@@ -34,6 +34,8 @@
   },
   "about": {
     "title": "Sobre Mi",
+    "photoAlt": "Foto de mí",
+    "photoSrc": "./me.jpg",
     "paragraphs": [
       "Gracias por visitar mi sitio web!",
       "Me llamo Joaquín, soy apasionado por la tecnología y disfruto de crear aplicaciones estéticas, centradas en la experiencia del usuario final y con una base de código centrada en buenas prácticas.",
@@ -91,41 +93,58 @@
         "startDate": "Enero 2021",
         "endDate": "Diciembre 2021",
         "keyPoints": [
-          "Partición extensa en el desarrollo de una aplicacion web para un conocido periódico nacional. Construída con React, Node.js y MongoDB, esta aplicación se centraba en el procesamiento y disposición de distintas métricas en las publicaciones del periódico.",
+          "Participación extensa en el desarrollo de una aplicacion web para un conocido periódico nacional. Construída con React, Node.js y MongoDB, esta aplicación se centraba en el procesamiento y disposición de distintas métricas en las publicaciones del periódico.",
           "Integración de servicios de machine learning alojados en IBM Cloud en aplicaciones web mediante la utilización de los SDKs y las API REST de dichos servicios.",
           "Despliegue de aplicaciones web contenerizadas en Kubernetes y CloudFoundry sobre IBM Cloud."
         ]
       }
     ]
   },
-  "projects": [
-    {
-      "name": "Smart FIng",
-      "supraName": "Proyecto de grado",
-      "date": "2022 - 2023",
-      "link": "https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/37192",
-      "repoLink": "",
-      "description": "Proyecto centrado en las aplicaciones del Internet de las Cosas (IoT) que aborda un caso de estudio completo en el diseño e implementación de un primer prototipo de campus inteligente a pequeña escala en la Facultad de Ingeniería. Se tratan temáticas que van desde la programación de los microcontroladores y fabricación de sensores hasta el despliegue del software encargado de recolectar y procesar en los servidores los datos generados por los sensores.",
-      "techList": [
-        "C++",
-        "FreeRTOS",
-        "PlatformIO",
-        "ThingsBoard",
-        "Sistemas Embebidos",
-        "Kubernetes"
-      ],
-      "imagesPaths": []
+  "projects": {
+    "title": "Proyectos",
+    "aria": {
+      "panel": "TabList de experiencia laboral",
+      "tab": "TabList-Entrada"
     },
-    {
-      "name": "Faux",
-      "supraName": "Proyecto personal",
-      "date": "2020",
-      "link": "https://play.google.com/store/apps/details?id=pack.faux_the_game",
-      "repoLink": "https://github.com/joaquinveirana/Proyecto-Faux",
-      "description": "Faux es una aplicación disponible en la Play Store de Android desarrollada en Flutter en la que se pueden crear y jugar partidas de un entretenido party game de dibujo y roles ocultos. Está inspirada en el juego A Fake Artist Goes to New York creado por Jun Sasaki.",
-      "techList": ["Flutter"],
-      "imagesPaths": []
-    }
-  ],
+    "projects": [
+      {
+        "name": "JV Web Portfolio",
+        "supraName": "Proyecto personal",
+        "date": "2023",
+        "link": "",
+        "repoLink": "",
+        "description": "Proyecto centrado en las aplicaciones del Internet de las Cosas (IoT) que aborda un caso de estudio completo en el diseño e implementación de un primer prototipo de campus inteligente a pequeña escala en la Facultad de Ingeniería. Se tratan temáticas que van desde la programación de los microcontroladores y fabricación de sensores hasta el despliegue del software encargado de recolectar y procesar en los servidores los datos generados por los sensores.",
+        "techList": ["React", "Next.js", "TypeScript", "Tailwind", "Three.js"],
+        "imagesPaths": ["./projects/jv_web_portfolio_cover.png"]
+      },
+      {
+        "name": "Smart FIng",
+        "supraName": "Proyecto de grado",
+        "date": "2022",
+        "link": "https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/37192",
+        "repoLink": "",
+        "description": "Proyecto centrado en las aplicaciones del Internet de las Cosas (IoT) que aborda un caso de estudio completo en el diseño e implementación de un primer prototipo de campus inteligente a pequeña escala en la Facultad de Ingeniería. Se tratan temáticas que van desde la programación de los microcontroladores y fabricación de sensores hasta el despliegue del software encargado de recolectar y procesar en los servidores los datos generados por los sensores.",
+        "techList": [
+          "C++",
+          "FreeRTOS",
+          "PlatformIO",
+          "ThingsBoard",
+          "Sistemas Embebidos",
+          "Kubernetes"
+        ],
+        "imagesPaths": ["./projects/smartfing_cover.png"]
+      },
+      {
+        "name": "Faux",
+        "supraName": "Proyecto personal",
+        "date": "2020",
+        "link": "https://play.google.com/store/apps/details?id=pack.faux_the_game",
+        "repoLink": "https://github.com/joaquinveirana/Proyecto-Faux",
+        "description": "Faux es una aplicación disponible en la Play Store de Android desarrollada en Flutter en la que se pueden crear y jugar partidas de un entretenido party game de dibujo y roles ocultos. Está inspirada en el juego A Fake Artist Goes to New York creado por Jun Sasaki.",
+        "techList": ["Flutter"],
+        "imagesPaths": ["./projects/faux_cover.png", "faux_demo.gif"]
+      }
+    ]
+  },
   "learning": {}
 }
