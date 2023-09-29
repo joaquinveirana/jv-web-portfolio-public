@@ -55,6 +55,7 @@ const config: Config = {
         20: '20%',
         30: '30%',
         50: '50%',
+        70: '70%',
       },
       keyframes: {
         fadeIn: {

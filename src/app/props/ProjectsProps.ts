@@ -11,9 +11,11 @@ export type Project = {
   name: string;
   supraName: string;
   date: string;
-  link: string;
+  imageLink: string;
+  websiteLink: string;
   repoLink: string;
   description: string;
   techList: string[];
-  imagesPaths: string[];
+  imagePath: string;
+  videoPath: string;
 };

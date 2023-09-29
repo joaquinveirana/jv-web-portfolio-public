@@ -52,12 +52,7 @@ export const JVLogo3D = () => {
   const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {
     const handleWindowWidthChange = () => {
-      if (window.outerWidth) {
-        setWindowWidth(window.outerWidth - 16);
-      }
-      console.log(window.outerWidth);
-
-      console.log(windowWidth);
+      if (window.outerWidth) setWindowWidth(window.outerWidth - 16);
     };
     handleWindowWidthChange();
     window.addEventListener('resize', handleWindowWidthChange);
