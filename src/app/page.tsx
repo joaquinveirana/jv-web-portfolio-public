@@ -1,13 +1,14 @@
 // Pages/Components
-import Header from './pages/header/page';
+import Header from './pages/Header/page';
 // I18n lang
 import { getDictionary, getLang } from '../i18n/i18n_functions';
-import About from './pages/about/page';
-import { Experience } from './pages/experience/page';
-import Landing from './pages/landing/page';
-import SocialsBar from './components/SocialsBar/SocialsBar';
+import { Landing } from './pages/Landing/page';
+import { SocialsBar } from './components/SocialsBar/SocialsBar';
+import { About } from './pages/About/page';
+import { Experience } from './pages/Experience/page';
 import { LogoType } from './props/HeaderProps';
 import { Site } from './props/SocialsBarProps';
+import { Projects } from './pages/Projects/page';
 
 const headerLogo: LogoType = {
   imageLogo: '/my_logos/logo_jv_bold_cyan_white_sq.svg',
@@ -40,12 +41,13 @@ export default async function Main() {
 
   return (
     <>
-      <main className='flex-col-centered scroll-smooth overflow-x-hidden w-full '>
+      <main className='flex-col-centered min-h-screen scroll-smooth overflow-x-hidden w-full '>
         <Header logo={headerLogo} textContent={dict.header}></Header>
         <Landing textContent={dict.landing}></Landing>
         <section className='main-section-class'>
           <About textContent={dict.about}></About>
           <Experience textContent={dict.experience}></Experience>
+          <Projects textContent={dict.projects}></Projects>
           <SocialsBar growTimeout={600} sites={otherSites}></SocialsBar>
         </section>
       </main>
