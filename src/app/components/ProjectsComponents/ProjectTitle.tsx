@@ -27,7 +27,7 @@ export const ProjectTitle = (props: ProjectTitleProps) => {
         <h6 className={dateTextClass}>{props.date}</h6>
       </div>
       <div className={`flex-row-end ${!props.odd && 'flex-row-reverse'}`}>
-        <h1 className={`${titleTextClass} ${!props.odd && 'pl-2 pr-0'}`}>
+        <h1 className={`${titleTextClass} ${!props.odd && 'md:pl-2 pr-0'}`}>
           {props.name}
         </h1>
       </div>

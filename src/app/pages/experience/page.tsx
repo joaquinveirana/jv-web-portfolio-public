@@ -5,7 +5,7 @@ import { ExperienceProps, JobExperience } from '@/app/props/ExperienceProps';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { useEffect, useState } from 'react';
-import GrowOnScroll from '@/app/components/GrowOnScroll/GrowOnScroll';
+import { GrowOnScroll } from '@/app/components/GrowOnScroll/GrowOnScroll';
 
 /* 
   --- Styles ---

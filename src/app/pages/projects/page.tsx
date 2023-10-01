@@ -1,7 +1,7 @@
 'use client';
 
 import SectionTitle from '@/app/components/SectionTitle/SectionTitle';
-import GrowOnScroll from '@/app/components/GrowOnScroll/GrowOnScroll';
+import { GrowOnScroll } from '@/app/components/GrowOnScroll/GrowOnScroll';
 import { Project, ProjectsProps } from '@/app/props/ProjectsProps';
 import ProjectDisplay from '@/app/components/ProjectsComponents/ProjectDisplay';
 
