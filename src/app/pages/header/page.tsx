@@ -193,10 +193,7 @@ export default function Header(props: HeaderProps) {
       {isOpenInfoDialog && (
         <Dialog
           callback={() => setIsOpenInfoDialog(false)}
-          content={{
-            title: props.textContent.moreInfo.title,
-            paragraph: props.textContent.moreInfo.paragraph,
-          }}
+          content={props.textContent.moreInfo}
         ></Dialog>
       )}
     </header>

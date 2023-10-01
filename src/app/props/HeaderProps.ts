@@ -19,7 +19,16 @@ export type NavItemType = {
   itemLink: string;
 };
 
-type MoreInfo = {
+export type MoreInfo = {
   title: string;
-  paragraph: string;
+  paragraphs: string[];
+  linksTitle: string;
+  references: Reference[];
 };
+
+export type Reference = {
+  referenceName: string;
+  refereneceLinks: RefLink[];
+};
+
+export type RefLink = { ref: string; link: string };

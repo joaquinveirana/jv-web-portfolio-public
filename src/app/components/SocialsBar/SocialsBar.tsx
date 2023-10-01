@@ -21,9 +21,6 @@ export const SocialsBar = (props: SocialsBarProps) => {
     --- Aux Functions ---
   */
   const iconBySite = (site: Site) => {
-    const goToSite: Function = () => {
-      window.open(site.link, '_blank');
-    };
     const iconHover: Function = (siteName: string) => {
       const siteInList = props.sites.find(
         (elem: Site) => elem.name === siteName
@@ -33,51 +30,56 @@ export const SocialsBar = (props: SocialsBarProps) => {
 
     if (site.name === 'github')
       return (
-        <SiGithub
-          className={iconHoverEffectClass}
-          onClick={() => goToSite()}
-          onMouseOver={() => iconHover(site.name)}
-          onMouseOut={() => setIndexIconHovered(-1)}
-        />
+        <a href={site.link} target='_blank'>
+          <SiGithub
+            className={iconHoverEffectClass}
+            onMouseOver={() => iconHover(site.name)}
+            onMouseOut={() => setIndexIconHovered(-1)}
+          />
+        </a>
       );
 
     if (site.name === 'linkedin')
       return (
-        <SiLinkedin
-          className={iconHoverEffectClass}
-          onClick={() => goToSite()}
-          onMouseOver={() => iconHover(site.name)}
-          onMouseOut={() => setIndexIconHovered(-1)}
-        />
+        <a href={site.link} target='_blank'>
+          <SiLinkedin
+            className={iconHoverEffectClass}
+            onMouseOver={() => iconHover(site.name)}
+            onMouseOut={() => setIndexIconHovered(-1)}
+          />
+        </a>
       );
 
     if (site.name === 'gmail')
       return (
-        <SiGmail
-          className={iconHoverEffectClass}
-          onClick={() => goToSite()}
-          onMouseOver={() => iconHover(site.name)}
-          onMouseOut={() => setIndexIconHovered(-1)}
-        />
+        <a href={site.link} target='_blank'>
+          <SiGmail
+            className={iconHoverEffectClass}
+            onMouseOver={() => iconHover(site.name)}
+            onMouseOut={() => setIndexIconHovered(-1)}
+          />
+        </a>
       );
 
     if (site.name === 'credly')
       return (
-        <SiAcclaim
-          className={iconHoverEffectClass}
-          onClick={() => goToSite()}
-          onMouseOver={() => iconHover(site.name)}
-          onMouseOut={() => setIndexIconHovered(-1)}
-        />
+        <a href={site.link} target='_blank'>
+          <SiAcclaim
+            className={iconHoverEffectClass}
+            onMouseOver={() => iconHover(site.name)}
+            onMouseOut={() => setIndexIconHovered(-1)}
+          />
+        </a>
       );
 
     return (
-      <OpenInNewIcon
-        className={iconHoverEffectClass}
-        onClick={() => goToSite()}
-        onMouseOver={() => iconHover(site.name)}
-        onMouseOut={() => setIndexIconHovered(-1)}
-      />
+      <a href={site.link} target='_blank'>
+        <OpenInNewIcon
+          className={iconHoverEffectClass}
+          onMouseOver={() => iconHover(site.name)}
+          onMouseOut={() => setIndexIconHovered(-1)}
+        />
+      </a>
     );
   };
 

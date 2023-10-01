@@ -23,7 +23,41 @@
     },
     "moreInfo": {
       "title": "Sobre este sitio...",
-      "paragraph": "Este sitio se basa en bla bla bla usa la tecnologia bla bla bla"
+      "paragraphs": [
+        "Este sitio fue desarrollado por Joaquín Veirana utilizando React, TypeScipt, Next.js, Tailwind y Three.js.",
+        "El diseño está basado en el sitio web v4.brittanychiang.com creado por Brittany Chiang.",
+        "Para los objetos 3D renderizados por Three.js se utilizó como referencia el código del repositorio create-r3f-app creado por Utsubo.",
+        "Para el efecto de texto de terminal de comandos en la sección principal fue tomado como referencia el ejemplo 'Terminal Text Effect' creado por @Tbgse."
+      ],
+      "linksTitle": "Links a todas las referencias:",
+      "references": [
+        {
+          "referenceName": "Brittany Chiang:",
+          "refereneceLinks": [
+            { "ref": "[Sitio web]", "link": "https://v4.brittanychiang.com/" },
+            { "ref": "[Repo]", "link": "https://github.com/bchiang7/v4" }
+          ]
+        },
+        {
+          "referenceName": "Utsubo:",
+          "refereneceLinks": [
+            {
+              "ref": "[Repo]",
+              "link": "https://github.com/utsuboco/create-r3f-app"
+            }
+          ]
+        },
+        {
+          "referenceName": "Tbgse:",
+          "refereneceLinks": [
+            {
+              "ref": "[codepen]",
+              "link": "https://codepen.io/Tbgse/pen/dYaJyJ"
+            },
+            { "ref": "[Perfil]", "link": "https://codepen.io/Tbgse" }
+          ]
+        }
+      ]
     }
   },
   "landing": {
@@ -113,7 +147,7 @@
         "date": "2023",
         "imageLink": "",
         "websiteLink": "",
-        "repoLink": "",
+        "repoLink": "https://github.com/joaquinveirana/jv-web-portfolio",
         "description": "JV Web Portfolio es mi sitio web personal desarrollado en React.",
         "techList": ["React", "Next.js", "TypeScript", "Tailwind", "Three.js"],
         "imagePath": "./projects/jv_web_portfolio_cover.png",
@@ -151,5 +185,33 @@
       }
     ]
   },
-  "learning": {}
+  "learning": {},
+  "contact": {
+    "title": "Contáctame",
+    "mainParagraph": "No dudes en enviarme un email para ponerte en contácto conmigo, trataré de responderte tan pronto sea posible :)",
+    "email": "mailto:joaquin.veirana@gmail.com",
+    "footer1": "Creado por Joaquín Veirana, ",
+    "footer2": "diseño inspirado en v4.brittanychiang.com",
+    "buttonText": "Contacto",
+    "footerRepoLink": "https://github.com/joaquinveirana/jv-web-portfolio",
+    "footerReferenceLink": "https://v4.brittanychiang.com/"
+  },
+  "socials": [
+    {
+      "name": "linkedin",
+      "link": "https://www.linkedin.com/in/joaquin-veirana/"
+    },
+    {
+      "name": "github",
+      "link": "https://github.com/joaquinveirana"
+    },
+    {
+      "name": "gmail",
+      "link": "mailto:joaquin.veirana@gmail.com"
+    },
+    {
+      "name": "credly",
+      "link": "https://www.credly.com/users/joaquin-veirana/badges?sort=-state_updated_at&page=1"
+    }
+  ]
 }

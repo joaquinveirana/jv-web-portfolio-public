@@ -7,33 +7,14 @@ import { SocialsBar } from './components/SocialsBar/SocialsBar';
 import { About } from './pages/About/page';
 import { Experience } from './pages/Experience/page';
 import { LogoType } from './props/HeaderProps';
-import { Site } from './props/SocialsBarProps';
 import { Projects } from './pages/Projects/page';
+import { Contact } from './pages/Contact/page';
 
 const headerLogo: LogoType = {
   imageLogo: '/my_logos/logo_jv_bold_cyan_white_sq.svg',
   imageLogoSecondary: '/my_logos/logo_jv_bold_cyan_sq.svg',
   altLogo: 'JV Logo',
 };
-
-const otherSites: Site[] = [
-  {
-    name: 'linkedin',
-    link: 'https://www.linkedin.com/in/joaquin-veirana/',
-  },
-  {
-    name: 'github',
-    link: 'https://github.com/joaquinveirana',
-  },
-  {
-    name: 'gmail',
-    link: 'mailto:joaquin.veirana@gmail.com',
-  },
-  {
-    name: 'credly',
-    link: 'https://www.credly.com/users/joaquin-veirana/badges?sort=-state_updated_at&page=1',
-  },
-];
 
 export default async function Main() {
   const lang = await getLang();
@@ -48,7 +29,8 @@ export default async function Main() {
           <About textContent={dict.about}></About>
           <Experience textContent={dict.experience}></Experience>
           <Projects textContent={dict.projects}></Projects>
-          <SocialsBar growTimeout={600} sites={otherSites}></SocialsBar>
+          <Contact textContent={dict.contact}></Contact>
+          <SocialsBar growTimeout={600} sites={dict.socials}></SocialsBar>
         </section>
       </main>
     </>
