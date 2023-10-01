@@ -1,25 +1,215 @@
 {
-  "products": {
-    "cart": "Add to Cart"
-  },
   "header": {
     "navItems": [
-      { "itemId": "#about", "itemName": "Sobre mí", "itemLink": "#about" },
+      { "itemId": "#about", "itemName": "About", "itemLink": "#about" },
       {
         "itemId": "#experience",
-        "itemName": "Experiencia",
+        "itemName": "Experience",
         "itemLink": "#experience"
       },
       {
         "itemId": "#projects",
-        "itemName": "Proyectos",
+        "itemName": "Projects",
         "itemLink": "#projects"
       },
-      { "itemId": "#contact", "itemName": "Contacto", "itemLink": "#contact" }
+      { "itemId": "#contact", "itemName": "Contact", "itemLink": "#contact" }
     ],
     "resume": {
-      "itemName": "Currículum",
+      "itemName": "Resume",
       "itemLink": "#resume"
+    },
+    "moreInfo": {
+      "title": "About this site...",
+      "paragraphs": [
+        "This site was developed by Joaquín Veirana using React, TypeScript, Next.js, Tailwind and Three.js.",
+        "The design is based on the website v4.brittanychiang.com created by Brittany Chiang.",
+        "The create-r3f-app repository created by Utsubo was used as a reference for the 3D objects rendered by Three.js.",
+        "The 'Terminal Text Effect' example created by @Tbgse was taken as a reference for the terminal text effect in the main section."
+      ],
+      "linksTitle": "Links to every reference:",
+      "references": [
+        {
+          "referenceName": "Brittany Chiang:",
+          "refereneceLinks": [
+            { "ref": "[Website]", "link": "https://v4.brittanychiang.com/" },
+            { "ref": "[Repo]", "link": "https://github.com/bchiang7/v4" }
+          ]
+        },
+        {
+          "referenceName": "Utsubo:",
+          "refereneceLinks": [
+            {
+              "ref": "[Repo]",
+              "link": "https://github.com/utsuboco/create-r3f-app"
+            }
+          ]
+        },
+        {
+          "referenceName": "Tbgse:",
+          "refereneceLinks": [
+            {
+              "ref": "[codepen]",
+              "link": "https://codepen.io/Tbgse/pen/dYaJyJ"
+            },
+            { "ref": "[Profile]", "link": "https://codepen.io/Tbgse" }
+          ]
+        }
+      ]
     }
-  }
+  },
+  "landing": {
+    "title0": "Hi, my name is",
+    "title1": "Joaquín Veirana.",
+    "title2": "Software developer.",
+    "description": "I'm a computer engineer passionate about software development with a frontend-oriented profile. Currently I'm working as a full stack developer at IBM Uruguay, having worked on a wide variety of projects."
+  },
+  "about": {
+    "title": "About",
+    "photoAlt": "Pic of me",
+    "photoSrc": "./me.jpg",
+    "paragraphs": [
+      "Thank you for visiting my website!",
+      "My name is Joaquín, I'm a technology enthusiast and I enjoy creating cool software solutions, focused on the end user experience and with good practices on the source code.",
+      "I worked with different technologies such as Java, Python and JavaScript, with the latter being my favorite and the one I have the most experience with. I worked both on frontend frameworks and libraries such as Angular and React, and also on backend with Node.js.",
+      "I studied computer engineering at the University of the Republic in Uruguay and graduated in 2023. Currently, I'm working as a full stack developer at IBM Uruguay.",
+      "In my free time I also enjoy learning in other tech areas such as machine learning, video game development and mobile development.",
+      "These are the technologies I mainly work with:"
+    ],
+    "techList": [
+      "JavaScript",
+      "React",
+      "Angular",
+      "Node.js",
+      "TypeScript",
+      "Docker",
+      "Kubernetes"
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "aria": {
+      "panel": "TabList of my experience",
+      "tab": "TabList-Entry"
+    },
+    "jobs": [
+      {
+        "company": "Faculty of Engineering, UdelaR",
+        "companyShortName": "FIng UdelaR",
+        "position": "Project Assistant",
+        "startDate": "July 2023",
+        "endDate": "Present",
+        "keyPoints": [
+          "Continuation of the Smart Campus and Internet of Things work carried out in my degree project, with the aim of carrying out a productive deployment in the Faculty using the prototype developed in the degree project.",
+          "Maintenance and coding updates for the sensors devices created, using C++, Espressif and PlatformIO.",
+          "Maintenance of ThingsBoard, the Internet of Things platform used for the Smart Campus."
+        ]
+      },
+      {
+        "company": "IBM Uruguay",
+        "companyShortName": "IBM",
+        "position": "Full Stack Dev",
+        "startDate": "January 2022",
+        "endDate": "Present",
+        "keyPoints": [
+          "Frontend development of internal client management web applications in Angular. Rebuilding them with more modern technology and improving their user experience and interface.",
+          "Development of libraries in Angular from components commonly used in different applications in order to speed up development through the reuse of components.",
+          "Backend development of batch applications and small REST APIs in Java 8 and 11 in conjunction with frameworks such as Spring Boot and Apache Camel.",
+          "Maintenance of applications hosted both on IBM Cloud and On-premise on the client servers, making improvements and error corrections.",
+          "Management of cloud services used by the client on different software solutions."
+        ]
+      },
+      {
+        "company": "IBM Uruguay",
+        "companyShortName": "IBM Student",
+        "position": "Cloud Dev Student",
+        "startDate": "January 2021",
+        "endDate": "December 2021",
+        "keyPoints": [
+          "Extensive participation in the development of a web application for a well-known national newspaper. Built with React, Node.js and MongoDB, this application focused on the processing and arrangement of different metrics in the newspaper's publications.",
+          "Integration of machine learning services hosted on IBM Cloud into web applications through the use of the SDKs and REST APIs of said services.",
+          "Deployment of containerized web applications in Kubernetes and CloudFoundry on IBM Cloud."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "aria": {
+      "panel": "",
+      "tab": ""
+    },
+    "projects": [
+      {
+        "name": "JV Web Portfolio",
+        "supraName": "Personal project",
+        "date": "2023",
+        "imageLink": "",
+        "websiteLink": "",
+        "repoLink": "https://github.com/joaquinveirana/jv-web-portfolio",
+        "description": "JV Web Portfolio is my personal website developed in React.",
+        "techList": ["React", "Next.js", "TypeScript", "Tailwind", "Three.js"],
+        "imagePath": "./projects/jv_web_portfolio_cover.png",
+        "videoPath": ""
+      },
+      {
+        "name": "Smart FIng",
+        "supraName": "Graduation project",
+        "date": "2022",
+        "imageLink": "https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/37192",
+        "websiteLink": "https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/37192",
+        "repoLink": "",
+        "description": "Project focused on Internet of Things (IoT) technologies, in which a design and implementation of a small-scale smart campus prototype in the Faculty of Engineering is addressed.",
+        "techList": [
+          "C++",
+          "FreeRTOS",
+          "PlatformIO",
+          "ThingsBoard",
+          "Embedded Systems"
+        ],
+        "imagePath": "./projects/smartfing_cover.png",
+        "videoPath": ""
+      },
+      {
+        "name": "Faux The Game",
+        "supraName": "Personal project",
+        "date": "2020",
+        "imageLink": "https://play.google.com/store/apps/details?id=pack.faux_the_game",
+        "websiteLink": "https://play.google.com/store/apps/details?id=pack.faux_the_game",
+        "repoLink": "https://github.com/joaquinveirana/Proyecto-Faux",
+        "description": "Faux is a mobile app developed in Flutter available in the Google Play Store. In Faux you can create and play matches of an entertaining party game of drawing and hidden roles. It is inspired by the game 'A Fake Artist Goes to New York' created by Jun Sasaki.",
+        "techList": ["Flutter"],
+        "imagePath": "./projects/faux_cover.png",
+        "videoPath": "./projects/faux_demo.mp4"
+      }
+    ]
+  },
+  "learning": {},
+  "contact": {
+    "title": "Contact",
+    "mainParagraph": "Do not hesitate to send me an email to contact me, I will try to respond as soon as possible :)",
+    "email": "mailto:joaquin.veirana@gmail.com",
+    "footer1": "Built by Joaquín Veirana, ",
+    "footer2": "design inspired by v4.brittanychiang.com",
+    "buttonText": "Contact",
+    "footerRepoLink": "https://github.com/joaquinveirana/jv-web-portfolio",
+    "footerReferenceLink": "https://v4.brittanychiang.com/"
+  },
+  "socials": [
+    {
+      "name": "linkedin",
+      "link": "https://www.linkedin.com/in/joaquin-veirana/"
+    },
+    {
+      "name": "github",
+      "link": "https://github.com/joaquinveirana"
+    },
+    {
+      "name": "gmail",
+      "link": "mailto:joaquin.veirana@gmail.com"
+    },
+    {
+      "name": "credly",
+      "link": "https://www.credly.com/users/joaquin-veirana/badges?sort=-state_updated_at&page=1"
+    }
+  ]
 }
