@@ -1,6 +1,6 @@
 'use client';
 
-import GrowOnScroll from '@/app/components/GrowOnScroll/GrowOnScroll';
+import { GrowOnScroll } from '@/app/components/GrowOnScroll/GrowOnScroll';
 import { AboutProps } from '@/app/props/AboutProps';
 import SectionTitle from '@/app/components/SectionTitle/SectionTitle';
 

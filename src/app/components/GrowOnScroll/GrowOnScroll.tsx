@@ -5,7 +5,7 @@ import Grow from '@mui/material/Grow';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { useEffect, useRef, useState } from 'react';
 
-export default function GrowOnScroll(props: GrowOnScrollProps) {
+export const GrowOnScroll = (props: GrowOnScrollProps) => {
   /* 
     --- React Hooks 1 ---
   */
@@ -42,4 +42,4 @@ export default function GrowOnScroll(props: GrowOnScrollProps) {
       {props.children}
     </Grow>
   );
-}
+};

@@ -1,7 +1,7 @@
 'use client';
 
 import { SectionTitleProps } from '@/app/props/SectionTitleProps';
-import GrowOnScroll from '../GrowOnScroll/GrowOnScroll';
+import { GrowOnScroll } from '../GrowOnScroll/GrowOnScroll';
 
 export default function SectionTitle(props: SectionTitleProps) {
   return (

@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { useState } from 'react';
 
-export function Obj(props: Obj3DProps) {
+export const Obj = (props: Obj3DProps) => {
   const { scene } = useGLTF(props.objPath);
   const [rotationClockwise, setRotationClockwise] = useState(true);
   useFrame((state, delta) => {
@@ -23,4 +23,4 @@ export function Obj(props: Obj3DProps) {
       rotation={props.rotation}
     />
   );
-}
+};
