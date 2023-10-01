@@ -12,10 +12,18 @@
   }
 
   .title-class {
-    @apply text-[white] font-semibold text-3xl;
+    @apply text-[white] font-semibold text-4xl;
   }
 
   .subtitle-class {
+    @apply text-[white] font-semibold text-3xl;
+  }
+
+  .subsubtitle-class {
+    @apply text-[white] font-semibold text-2xl;
+  }
+
+  .subsubsubtitle-class {
     @apply text-[white] font-semibold text-xl;
   }
 
@@ -29,6 +37,14 @@
 
   .secondary-sub-paragraph-class {
     @apply text-[14px] text-light-sec-200;
+  }
+
+  .secondary-sub-paragraph-light-class {
+    @apply text-[14px] text-light-sec-400;
+  }
+
+  .terciary-sub-paragraph-light-class {
+    @apply text-[12px] text-light-sec-400;
   }
 
   .transition-all-eo-100 {
@@ -63,6 +79,22 @@
     @apply flex flex-row items-center justify-center;
   }
 
+  .flex-col-start {
+    @apply flex flex-col items-start justify-start;
+  }
+
+  .flex-row-start {
+    @apply flex flex-row items-start justify-start;
+  }
+
+  .flex-col-end {
+    @apply flex flex-col items-end justify-end;
+  }
+
+  .flex-row-end {
+    @apply flex flex-row items-end justify-end;
+  }
+
   .hover-cyan-text {
     @apply transition-all duration-300 ease-in-out hover:text-cyan-700;
   }
@@ -72,6 +104,10 @@
   }
 
   .icon-effect-class {
-    @apply hover:transform hover:-translate-y-1 text-light-800 hover:text-cyan-500 hover:fill-cyan-500 transition-all-eio-300 cursor-pointer;
+    @apply hover:transform hover:-translate-y-1 text-light-800 hover:text-cyan-500 transition-all-eio-300 cursor-pointer;
+  }
+
+  .custom-scrollbar {
+    @apply scrollbar scrollbar-w-[5px] scrollbar-thumb-rounded scrollbar-thumb-light-200 scrollbar-track-dark-300 scroll-smooth overflow-x-hidden;
   }
 }

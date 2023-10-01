@@ -114,7 +114,7 @@
         "imageLink": "",
         "websiteLink": "",
         "repoLink": "",
-        "description": ".",
+        "description": "JV Web Portfolio es mi sitio web personal desarrollado en React.",
         "techList": ["React", "Next.js", "TypeScript", "Tailwind", "Three.js"],
         "imagePath": "./projects/jv_web_portfolio_cover.png",
         "videoPath": ""
@@ -123,29 +123,28 @@
         "name": "Smart FIng",
         "supraName": "Proyecto de grado",
         "date": "2022",
-        "imageLink": "",
+        "imageLink": "https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/37192",
         "websiteLink": "https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/37192",
         "repoLink": "",
-        "description": "Proyecto centrado en las aplicaciones del Internet de las Cosas (IoT) que aborda un caso de estudio completo en el diseño e implementación de un primer prototipo de campus inteligente a pequeña escala en la Facultad de Ingeniería. Se tratan temáticas que van desde la programación de los microcontroladores y fabricación de sensores hasta el despliegue del software encargado de recolectar y procesar en los servidores los datos generados por los sensores.",
+        "description": "Proyecto centrado en el Internet de las Cosas (IoT) donde se aborda un caso de diseño e implementación de un prototipo de campus inteligente a pequeña escala en la Facultad de Ingeniería.",
         "techList": [
           "C++",
           "FreeRTOS",
           "PlatformIO",
           "ThingsBoard",
-          "Sistemas Embebidos",
-          "Kubernetes"
+          "Sistemas Embebidos"
         ],
         "imagePath": "./projects/smartfing_cover.png",
         "videoPath": ""
       },
       {
-        "name": "Faux",
+        "name": "Faux The Game",
         "supraName": "Proyecto personal",
         "date": "2020",
-        "imageLink": "",
+        "imageLink": "https://play.google.com/store/apps/details?id=pack.faux_the_game",
         "websiteLink": "https://play.google.com/store/apps/details?id=pack.faux_the_game",
         "repoLink": "https://github.com/joaquinveirana/Proyecto-Faux",
-        "description": "Faux es una aplicación disponible en la Play Store de Android desarrollada en Flutter en la que se pueden crear y jugar partidas de un entretenido party game de dibujo y roles ocultos. Está inspirada en el juego A Fake Artist Goes to New York creado por Jun Sasaki.",
+        "description": "Faux es una aplicación desarrollada en Flutter que se encuentra disponible en la Google Play Store. En ella se pueden crear y jugar partidas de un entretenido party game de dibujo y roles ocultos. Está inspirada en el juego 'A Fake Artist Goes to New York' creado por Jun Sasaki.",
         "techList": ["Flutter"],
         "imagePath": "./projects/faux_cover.png",
         "videoPath": "./projects/faux_demo.mp4"

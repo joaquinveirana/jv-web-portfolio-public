@@ -62,7 +62,7 @@ export const JVLogo3D = () => {
   }, []);
 
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-full cursor-grab'>
       <Layout showFadeIn={true} startFadeIn={objLoaded}>
         <View orbit={true} className='h-full w-full'>
           <Suspense fallback={null}>

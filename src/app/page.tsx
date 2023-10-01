@@ -41,7 +41,7 @@ export default async function Main() {
 
   return (
     <>
-      <main className='flex-col-centered min-h-screen scroll-smooth overflow-x-hidden w-full '>
+      <main className='flex-col-centered min-h-screen w-full'>
         <Header logo={headerLogo} textContent={dict.header}></Header>
         <Landing textContent={dict.landing}></Landing>
         <section className='main-section-class'>

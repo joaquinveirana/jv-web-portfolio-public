@@ -27,7 +27,7 @@ const tabPanelContainerClass = 'md:w-4/5 md:p-4 pt-6';
 
 export const Experience = (props: ExperienceProps) => {
   /* 
-    Hooks
+    --- React Hooks ---
   */
   const [tabValue, setTabValue] = useState(0);
   const [tabListVerticalOrientation, setTablistVerticalOrientation] =
@@ -56,29 +56,39 @@ export const Experience = (props: ExperienceProps) => {
 
       <div className={sectionContentClass}>
         {/* TabList of Companies */}
-        <div className={tabListContainerClass}>
-          <Tabs
-            aria-label={props.textContent.aria.panel}
-            onChange={(event: React.SyntheticEvent, newValue: number) =>
-              setTabValue(newValue)
-            }
-            orientation={tabListVerticalOrientation ? 'vertical' : 'horizontal'}
-            sx={tabListStyles}
-            value={tabValue}
-            variant='scrollable'
-          >
-            {props.textContent.jobs.map((job: JobExperience, index: number) => {
-              return (
-                <Tab
-                  aria-controls={`${props.textContent.aria.tab}-${index}`}
-                  className={tabListItemClass}
-                  key={index}
-                  label={job.companyShortName}
-                />
-              );
-            })}
-          </Tabs>
-        </div>
+        <GrowOnScroll
+          growTimeout={1500}
+          extraScrollThreshold={600}
+          growOneTime={true}
+        >
+          <div className={tabListContainerClass}>
+            <Tabs
+              aria-label={props.textContent.aria.panel}
+              onChange={(event: React.SyntheticEvent, newValue: number) =>
+                setTabValue(newValue)
+              }
+              orientation={
+                tabListVerticalOrientation ? 'vertical' : 'horizontal'
+              }
+              sx={tabListStyles}
+              value={tabValue}
+              variant='scrollable'
+            >
+              {props.textContent.jobs.map(
+                (job: JobExperience, index: number) => {
+                  return (
+                    <Tab
+                      aria-controls={`${props.textContent.aria.tab}-${index}`}
+                      className={tabListItemClass}
+                      key={index}
+                      label={job.companyShortName}
+                    />
+                  );
+                }
+              )}
+            </Tabs>
+          </div>
+        </GrowOnScroll>
 
         {/* TabPanel with company content */}
         <GrowOnScroll
@@ -93,7 +103,7 @@ export const Experience = (props: ExperienceProps) => {
                   key={index}
                   className={`${tabValue === index ? 'block' : 'hidden'}`}
                 >
-                  <h1 className='subtitle-class'>
+                  <h1 className='subsubtitle-class'>
                     {job.position} @ {job.company}
                   </h1>
                   <h6 className='pb-2 secondary-sub-paragraph-class'>

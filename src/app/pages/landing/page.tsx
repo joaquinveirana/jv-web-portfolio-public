@@ -20,12 +20,15 @@ const secondaryTitleClass =
   '5xl:text-7xl 4xl:text-6xl 2xl:text-6xl xl:text-4xl text-3xl my-1 font-bold text-light-200';
 const mainParagraphClass = 'lg:w-3/5 md:w-8/12 md:my-8 my-6 paragraph-class';
 const logo3DClass =
-  'xl:right-16 lg:w-2/5 lg:right-8 md:w-5/12 md:h-screen md:absolute md:top-0 md:right-0 md:py-24 mx-auto w-2/3 aspect-square z-0 relative cursor-grab animate-fade-in';
+  'xl:right-16 lg:w-2/5 lg:right-8 md:w-5/12 md:h-screen md:absolute md:top-0 md:right-0 py-24 mx-auto w-2/3 aspect-square z-0 relative animate-fade-in';
 const seeMoreContainerClass =
-  'pb-4 w-full h-[40px] flex-row-centered cursor-pointer [&>*:nth-child(odd)]:hover:direct-cyan-text';
-const seeMoreIconClass = 'w-[40px] h-[40px] text-dark-500';
+  'pb-4 w-full h-[40px] flex-row-centered [&>*:nth-child(odd)]:hover:direct-cyan-text';
+const seeMoreIconClass = 'w-[40px] h-[40px] text-dark-500 cursor-pointer';
 
 export const Landing = (props: LandingProps) => {
+  /* 
+    --- React Hooks ---
+  */
   const [mainHeaderLoaded, setMainHeaderLoaded] = useState(false);
   const [mainHeaderText, setMainHeaderText] = useState(
     props.textContent.title1
@@ -46,7 +49,7 @@ export const Landing = (props: LandingProps) => {
         letterCount++;
       }
       if (letterCount === mainHeaderText.length + 1) setMainHeaderLoaded(true);
-    }, 120 + Math.random() * 50);
+    }, 100 + Math.random() * 50);
 
     setConsoleWritingIntervalId(id);
 
@@ -61,7 +64,7 @@ export const Landing = (props: LandingProps) => {
         consoleUnderscoreElement.className = `${mainTitleClass} ${mainTitleUnderscoreClass}`;
         visible = true;
       }
-    }, 400);
+    }, 300);
   }, []);
 
   useEffect(() => {
@@ -93,10 +96,12 @@ export const Landing = (props: LandingProps) => {
           </div>
         </Grow>
       </div>
+
       {/* 3D Logo with Three */}
       <div className={logo3DClass}>
         <JVLogo3D></JVLogo3D>
       </div>
+
       {/* Little arrow icon to scroll down on click */}
       <Grow in={mainHeaderLoaded} timeout={3000}>
         <div className={seeMoreContainerClass}>

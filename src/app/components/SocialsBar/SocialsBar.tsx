@@ -2,13 +2,7 @@
 
 import Grow from '@mui/material/Grow';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import {
-  SiCredly,
-  SiGmail,
-  SiLinkedin,
-  SiGithub,
-  SiAcclaim,
-} from 'react-icons/si';
+import { SiGmail, SiLinkedin, SiGithub, SiAcclaim } from 'react-icons/si';
 import { Site, SocialsBarProps } from '@/app/props/SocialsBarProps';
 import { useState } from 'react';
 
