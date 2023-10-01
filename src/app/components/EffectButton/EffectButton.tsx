@@ -7,7 +7,7 @@ import Grow from '@mui/material/Grow';
   --- Styles ---
 */
 const effectButtonClass =
-  'md:text-sm m-6 px-6 py-2 border-solid border-2 border-cyan-terciary-color-600 text-light-primary-color-800 text-2xl transition-all-eio-300 hover:text-cyan-terciary-color-700';
+  'md:text-sm m-6 px-6 py-2 border-solid border-2 border-cyan-600 text-light-800 text-2xl transition-all-eio-300 hover:text-cyan-700';
 
 export default function EffectButton(props: EffectButtonProps) {
   return (

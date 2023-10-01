@@ -3,34 +3,43 @@
 import { GrowOnScrollProps } from '@/app/props/GrowOnScrollProps';
 import Grow from '@mui/material/Grow';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function GrowOnScroll(props: GrowOnScrollProps) {
   /* 
-    --- Aux Variables ---
+    --- React Hooks 1 ---
+  */
+  const ref = useRef<HTMLElement>(null);
+  const [hasAlreadyGrown, setHasAlreadyGrown] = useState<boolean>(false);
+  const [elementYPosition, setElementYPosition] = useState<number>(0);
+  useEffect(() => {
+    if (ref.current?.offsetTop) setElementYPosition(ref.current?.offsetTop);
+  });
+
+  /* 
+    --- Aux Hooks ---
   */
   const trigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: props.scrollThreshold,
+    threshold: elementYPosition / 5 + props.extraScrollThreshold,
     target: props.window ? props.window() : undefined,
   });
 
   /* 
-    --- React Hooks ---
+    --- React Hooks 2 ---
   */
-  const [hasAlreadyGrown, setHasAlreadyGrown] = useState<boolean>(false);
-
   useEffect(() => {
     if (props.growOneTime && trigger) setHasAlreadyGrown(true);
   }, [trigger]);
 
   return (
     <Grow
+      ref={ref}
       appear={true}
       in={trigger || hasAlreadyGrown}
       timeout={props.growTimeout}
     >
-      <div>{props.children}</div>
+      {props.children}
     </Grow>
   );
 }

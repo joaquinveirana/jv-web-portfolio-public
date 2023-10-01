@@ -17,15 +17,15 @@ import NavItem from '@/app/components/NavItem/NavItem';
 */
 // Header Main Items Classes
 const mainHeaderClass =
-  'md:px-8 fixed top-0 w-full h-[100px] text-sm bg-dark-primary-color-300 bg-opacity-70';
+  'md:px-8 fixed top-0 w-full h-[100px] z-30 text-sm bg-dark-300 bg-opacity-70';
 const hamburgerIconClass =
-  'md:hidden fixed right-0 w-[50px] h-[50px] z-20 cursor-pointer';
+  'md:hidden fixed right-0 w-[50px] h-[50px] z-50 cursor-pointer';
 
 // Nav Panel Classes
 const blurPanelClass =
   'md:hidden fixed top-0 right-full w-screen h-screen z-15 backdrop-blur-sm';
 const mobileNavPanel =
-  'fixed top-0 left-full w-3/4 h-screen z-10 pt-32 pb-10 bg-dark-primary-color-500';
+  'fixed top-0 left-full w-3/4 h-screen z-40 pt-32 pb-10 bg-dark-500';
 const desktopNavPanel =
   'md:p-0 md:h-[70px] md:w-fit md:sticky md:bg-[transparent]';
 const desktopNavItemList = 'md:h-full md:flex-row-centered';
@@ -46,7 +46,6 @@ export default function Header(props: HeaderProps) {
   }
 
   const scrollToSection = (sectionId: string) => () => {
-    console.log(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
       setIsOpenNavSlider(false);
@@ -167,7 +166,7 @@ export default function Header(props: HeaderProps) {
                 <NavItem
                   key={index}
                   callback={(id: string) => scrollToSection(id)}
-                  growTimeout={300 * (index + 1)}
+                  growTimeout={500 * (index + 1)}
                   navItem={navItem}
                 ></NavItem>
               );
@@ -177,12 +176,12 @@ export default function Header(props: HeaderProps) {
               text={content.resume.itemName}
               callback={() => openResume()}
               width='32'
-              growTimeout={300 * (content.navItems.length + 1)}
+              growTimeout={500 * (content.navItems.length + 1)}
             ></EffectButton>
           </ul>
 
           <MoreInfoIcon
-            growTimeout={300 * (content.navItems.length + 2)}
+            growTimeout={500 * (content.navItems.length + 2)}
             callback={() => {
               setIsOpenInfoDialog(true);
               setIsOpenNavSlider(false);
@@ -194,10 +193,7 @@ export default function Header(props: HeaderProps) {
       {isOpenInfoDialog && (
         <Dialog
           callback={() => setIsOpenInfoDialog(false)}
-          content={{
-            title: props.textContent.moreInfo.title,
-            paragraph: props.textContent.moreInfo.paragraph,
-          }}
+          content={props.textContent.moreInfo}
         ></Dialog>
       )}
     </header>

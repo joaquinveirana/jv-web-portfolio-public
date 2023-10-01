@@ -3,6 +3,50 @@
 @tailwind utilities;
 
 @layer components {
+  .main-section-class {
+    @apply 4xl:px-96 3xl:px-80 2xl:px-64 xl:px-56 lg:px-28 md:px-28 px-8 md:flex-col-centered pt-4 w-full bg-dark-300;
+  }
+
+  .article-class {
+    @apply xl:max-w-5xl lg:max-w-4xl w-full mx-auto pt-20;
+  }
+
+  .title-class {
+    @apply text-[white] font-semibold text-4xl;
+  }
+
+  .subtitle-class {
+    @apply text-[white] font-semibold text-3xl;
+  }
+
+  .subsubtitle-class {
+    @apply text-[white] font-semibold text-2xl;
+  }
+
+  .subsubsubtitle-class {
+    @apply text-[white] font-semibold text-xl;
+  }
+
+  .paragraph-class {
+    @apply text-[18px] text-light-200;
+  }
+
+  .sub-paragraph-class {
+    @apply text-[14px] text-light-200;
+  }
+
+  .secondary-sub-paragraph-class {
+    @apply text-[14px] text-light-sec-200;
+  }
+
+  .secondary-sub-paragraph-light-class {
+    @apply text-[14px] text-light-sec-400;
+  }
+
+  .terciary-sub-paragraph-light-class {
+    @apply text-[12px] text-light-sec-400;
+  }
+
   .transition-all-eo-100 {
     @apply transition-all duration-100 ease-out;
   }
@@ -19,6 +63,14 @@
     @apply transition-all duration-500 ease-in-out;
   }
 
+  .transition-all-eio-5000 {
+    @apply transition-all duration-[5000ms] ease-in-out;
+  }
+
+  .transition-all-eio-10000 {
+    @apply transition-all duration-[10000ms] ease-in-out;
+  }
+
   .flex-col-centered {
     @apply flex flex-col items-center justify-center;
   }
@@ -27,11 +79,35 @@
     @apply flex flex-row items-center justify-center;
   }
 
-  .hover-cyan-text {
-    @apply transition-all duration-300 ease-in-out hover:text-cyan-terciary-color-700;
+  .flex-col-start {
+    @apply flex flex-col items-start justify-start;
   }
 
-  .icon-class {
-    @apply hover:transform hover:-translate-y-1 text-light-primary-color-800 hover:text-cyan-terciary-color-500 hover:fill-cyan-terciary-color-500 transition-all-eio-500 cursor-pointer;
+  .flex-row-start {
+    @apply flex flex-row items-start justify-start;
+  }
+
+  .flex-col-end {
+    @apply flex flex-col items-end justify-end;
+  }
+
+  .flex-row-end {
+    @apply flex flex-row items-end justify-end;
+  }
+
+  .hover-cyan-text {
+    @apply transition-all duration-300 ease-in-out hover:text-cyan-700;
+  }
+
+  .direct-cyan-text {
+    @apply transition-all duration-300 ease-in-out text-cyan-700;
+  }
+
+  .icon-effect-class {
+    @apply hover:transform hover:-translate-y-1 text-light-800 hover:text-cyan-500 transition-all-eio-300 cursor-pointer;
+  }
+
+  .custom-scrollbar {
+    @apply scrollbar scrollbar-w-[5px] scrollbar-thumb-rounded scrollbar-thumb-light-200 scrollbar-track-dark-300 scroll-smooth overflow-x-hidden;
   }
 }
