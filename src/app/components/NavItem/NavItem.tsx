@@ -8,7 +8,7 @@ import { NavItemProps } from '@/app/props/NavItemProps';
 */
 const navLinksClass = 'md:m-4 md:text-sm m-6 text-2xl text-light-700';
 
-export default function NavItem(props: NavItemProps) {
+export const NavItem = (props: NavItemProps) => {
   return (
     <Grow in={true} timeout={props.growTimeout}>
       <div>
@@ -23,4 +23,4 @@ export default function NavItem(props: NavItemProps) {
       </div>
     </Grow>
   );
-}
+};

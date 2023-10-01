@@ -5,7 +5,7 @@ import InfoIcon from '@mui/icons-material/InfoOutlined';
 
 import { IconProps } from '@/app/props/IconProps';
 
-export default function MoreInfoIcon(props: IconProps) {
+export const MoreInfoIcon = (props: IconProps) => {
   return (
     <Grow in={true} timeout={props.growTimeout}>
       <div>
@@ -16,4 +16,4 @@ export default function MoreInfoIcon(props: IconProps) {
       </div>
     </Grow>
   );
-}
+};

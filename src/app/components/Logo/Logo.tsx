@@ -11,7 +11,7 @@ const logoDivClass =
 const logoImageClass =
   'px-4 absolute top-50% md:left-6 left-0 cursor-pointer transition-all-eio-500';
 
-export default function Logo(props: LogoProps) {
+export const Logo = (props: LogoProps) => {
   return (
     <div className={logoDivClass} onClick={props.callback()}>
       <Image
@@ -32,4 +32,4 @@ export default function Logo(props: LogoProps) {
       />
     </div>
   );
-}
+};

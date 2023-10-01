@@ -6,11 +6,11 @@ import { BurgerClose } from 'react-burger-icons';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 import { HeaderProps, NavItemType } from '@/app/props/HeaderProps';
-import EffectButton from '@/app/components/EffectButton/EffectButton';
-import Logo from '@/app/components/Logo/Logo';
-import Dialog from '@/app/components/Dialog/Dialog';
-import MoreInfoIcon from '@/app/components/MoreInfoIcon/MoreInfoIcon';
-import NavItem from '@/app/components/NavItem/NavItem';
+import { EffectButton } from '@/app/components/EffectButton/EffectButton';
+import { Logo } from '@/app/components/Logo/Logo';
+import { Dialog } from '@/app/components/Dialog/Dialog';
+import { MoreInfoIcon } from '@/app/components/MoreInfoIcon/MoreInfoIcon';
+import { NavItem } from '@/app/components/NavItem/NavItem';
 
 /* 
   --- Styles ---

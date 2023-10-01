@@ -5,18 +5,28 @@ import { RefLink, Reference } from '@/app/props/HeaderProps';
 import { useClickAway } from '@uidotdev/usehooks';
 import { LegacyRef } from 'react';
 
-export default function EffectButton(props: DialogProps) {
+/* 
+  --- Styles ---
+*/
+const mainDialogContainerClass =
+  'absolute top-0 left-0 w-full h-screen z-50 bg-[transparent] bg-opacity-30 backdrop-blur-sm flex-col-centered';
+const dialogContentClass =
+  'md:w-1/2 p-8 w-3/4 h-3/4 z-60 bg-dark-400 rounded-md';
+
+export const Dialog = (props: DialogProps) => {
   const refDialog = useClickAway(() => {
     props.callback();
   });
 
   return (
-    <div className='absolute top-0 left-0 w-full h-screen z-50 bg-[transparent] bg-opacity-30 backdrop-blur-sm flex-col-centered'>
+    <div className={mainDialogContainerClass}>
       <div
         ref={refDialog as LegacyRef<HTMLDivElement>}
-        className='md:w-1/2 p-8 w-3/4 h-1/2 z-60 bg-dark-400 rounded-md'
+        className={dialogContentClass}
       >
-        <h1 className='pb-4 subtitle-class'>{props.content.title}</h1>
+        <h1 className='pb-4 md:subtitle-class subsubtitle-class'>
+          {props.content.title}
+        </h1>
         {props.content.paragraphs.map((sentence: string, index: number) => {
           return (
             <p key={index} className='pb-2 sub-paragraph-class'>
@@ -48,4 +58,4 @@ export default function EffectButton(props: DialogProps) {
       </div>
     </div>
   );
-}
+};

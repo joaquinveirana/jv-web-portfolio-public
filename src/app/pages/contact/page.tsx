@@ -1,10 +1,8 @@
 'use client';
 
-import GrowOnScroll from '@/app/components/GrowOnScroll/GrowOnScroll';
-import { AboutProps } from '@/app/props/AboutProps';
-import SectionTitle from '@/app/components/SectionTitle/SectionTitle';
+import { GrowOnScroll } from '@/app/components/GrowOnScroll/GrowOnScroll';
 import { ContactProps } from '@/app/props/ContactProps';
-import EffectButton from '@/app/components/EffectButton/EffectButton';
+import { EffectButton } from '@/app/components/EffectButton/EffectButton';
 
 /* 
   --- Styles ---
@@ -21,7 +19,7 @@ export const Contact = (props: ContactProps) => {
       >
         <div className='flex-col-centered'>
           <h1 className='pb-6 title-class'>{props.textContent.title}</h1>
-          <p className='w-1/2 paragraph-class'>
+          <p className='md:w-1/2 px-2 w-full paragraph-class'>
             {props.textContent.mainParagraph}
           </p>
           <a href={props.textContent.email} target='_blank'>
