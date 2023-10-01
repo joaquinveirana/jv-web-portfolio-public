@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player';
   --- Styles ---
 */
 const imageContainerClass =
-  'md:my-0 md:z-10 my-2 w-full order-2 shadow-lg aspect-video grayscale-70 transition-all-eio-300 hover:grayscale-0';
+  'md:my-0 md:z-10 mt-2 mb-6 w-full order-2 shadow-lg aspect-video outline-hover-effect transition-all-eio-300';
 
 export const ProjectImage = (props: ProjectImageProps) => {
   return (

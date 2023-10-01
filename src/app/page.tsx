@@ -2,13 +2,13 @@
 import Header from './pages/Header/page';
 // I18n lang
 import { getDictionary, getLang } from '../i18n/i18n_functions';
-import { Landing } from './pages/Landing/page';
-import { SocialsBar } from './components/SocialsBar/SocialsBar';
-import { About } from './pages/About/page';
-import { Experience } from './pages/Experience/page';
-import { LogoType } from './props/HeaderProps';
-import { Projects } from './pages/Projects/page';
-import { Contact } from './pages/Contact/page';
+import { Landing } from '@/app/pages/Landing/page';
+import { SocialsBar } from '@/app/components/SocialsBar/SocialsBar';
+import { About } from '@/app/pages/About/page';
+import { Experience } from '@/app/pages/Experience/page';
+import { LogoType } from '@/app/props/HeaderProps';
+import { Projects } from '@/app/pages/Projects/page';
+import { Contact } from '@/app/pages/Contact/page';
 
 const headerLogo: LogoType = {
   imageLogo: '/my_logos/logo_jv_bold_cyan_white_sq.svg',

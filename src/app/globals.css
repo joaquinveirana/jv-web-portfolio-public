@@ -110,4 +110,8 @@
   .custom-scrollbar {
     @apply scrollbar scrollbar-w-[5px] scrollbar-thumb-rounded scrollbar-thumb-light-200 scrollbar-track-dark-300 scroll-smooth overflow-x-hidden;
   }
+
+  .outline-hover-effect {
+    @apply outline outline-2 outline-offset-8 outline-cyan-600 hover:outline-offset-0 hover:outline-8;
+  }
 }

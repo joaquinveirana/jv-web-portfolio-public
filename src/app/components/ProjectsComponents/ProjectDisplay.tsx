@@ -9,9 +9,9 @@ import { ProjectImage } from './ProjectImage';
   --- Styles ---
 */
 const projectsContainerClass =
-  'md:w-full md:justify-between md:flex-row-start mt-8 flex-col-centered';
+  'md:mb-12 md:w-full md:justify-between md:flex-row-start mt-8 flex-col-centered';
 
-export default function Project(props: { project: Project; index: number }) {
+export const ProjectDisplay = (props: { project: Project; index: number }) => {
   /* 
     --- React Hooks ---
   */
@@ -83,4 +83,4 @@ export default function Project(props: { project: Project; index: number }) {
       </div>
     </div>
   );
-}
+};
