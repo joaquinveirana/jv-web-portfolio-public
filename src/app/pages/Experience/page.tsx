@@ -14,6 +14,14 @@ const sectionContentClass =
   'md:flex-row-centered md:items-start flex-col-centered w-full';
 const tabListContainerClass = 'md:pt-6 md:w-1/5 pt-2 w-full flex-row-centered';
 const tabListStyles = {
+  '.MuiTab-root': {
+    borderLeft: 3,
+    borderBottom: 3,
+    borderColor: '#27374d',
+  },
+  '.MuiTab-textColorPrimary': {
+    color: '#abc1d3',
+  },
   '.MuiTabs-indicator': {
     left: 0,
     width: '3px',
@@ -22,7 +30,7 @@ const tabListStyles = {
   '& .Mui-selected': { color: '#34bbff' },
 };
 const tabListItemClass =
-  'md:border-l-[3px] md:border-b-0 text-light-200 transition-all-eio-300 hover:text-cyan-600 hover:bg-dark-500 border-solid border-b-[3px] border-dark-500';
+  'transition-all-eio-300 hover:text-cyan-600 hover:bg-dark-500';
 const tabPanelContainerClass = 'md:w-4/5 md:p-4 pt-6';
 
 export const Experience = (props: ExperienceProps) => {
@@ -34,8 +42,17 @@ export const Experience = (props: ExperienceProps) => {
     useState(false);
   useEffect(() => {
     const tabListOrientationChange = () => {
-      if (window.innerWidth > 768) setTablistVerticalOrientation(true);
-      else setTablistVerticalOrientation(false);
+      // Styling and orientation of the TabList depending ogf the screen width
+      if (window.innerWidth > 768) {
+        tabListStyles['.MuiTab-root'].borderBottom = 0;
+        tabListStyles['.MuiTab-root'].borderLeft = 3;
+
+        setTablistVerticalOrientation(true);
+      } else {
+        tabListStyles['.MuiTab-root'].borderBottom = 3;
+        tabListStyles['.MuiTab-root'].borderLeft = 0;
+        setTablistVerticalOrientation(false);
+      }
     };
     tabListOrientationChange();
     window.addEventListener('resize', tabListOrientationChange);
@@ -78,8 +95,8 @@ export const Experience = (props: ExperienceProps) => {
                 (job: JobExperience, index: number) => {
                   return (
                     <Tab
-                      aria-controls={`${props.textContent.aria.tab}-${index}`}
                       className={tabListItemClass}
+                      aria-controls={`${props.textContent.aria.tab}-${index}`}
                       key={index}
                       label={job.companyShortName}
                     />

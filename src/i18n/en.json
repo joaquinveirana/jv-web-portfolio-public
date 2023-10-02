@@ -93,18 +93,6 @@
     },
     "jobs": [
       {
-        "company": "Faculty of Engineering, UdelaR",
-        "companyShortName": "FIng UdelaR",
-        "position": "Project Assistant",
-        "startDate": "July 2023",
-        "endDate": "Present",
-        "keyPoints": [
-          "Continuation of the Smart Campus and Internet of Things work carried out in my degree project, with the aim of carrying out a productive deployment in the Faculty using the prototype developed in the degree project.",
-          "Maintenance and coding updates for the sensors devices created, using C++, Espressif and PlatformIO.",
-          "Maintenance of ThingsBoard, the Internet of Things platform used for the Smart Campus."
-        ]
-      },
-      {
         "company": "IBM Uruguay",
         "companyShortName": "IBM",
         "position": "Full Stack Dev",
@@ -116,6 +104,18 @@
           "Backend development of batch applications and small REST APIs in Java 8 and 11 in conjunction with frameworks such as Spring Boot and Apache Camel.",
           "Maintenance of applications hosted both on IBM Cloud and On-premise on the client servers, making improvements and error corrections.",
           "Management of cloud services used by the client on different software solutions."
+        ]
+      },
+      {
+        "company": "Faculty of Engineering, UdelaR",
+        "companyShortName": "FIng UdelaR",
+        "position": "Project Assistant",
+        "startDate": "July 2023",
+        "endDate": "Present",
+        "keyPoints": [
+          "Continuation of the Smart Campus and Internet of Things work carried out in my degree project, with the aim of carrying out a productive deployment in the Faculty using the prototype developed in the degree project.",
+          "Maintenance and coding updates for the sensors devices created, using C++, Espressif and PlatformIO.",
+          "Maintenance of ThingsBoard, the Internet of Things platform used for the Smart Campus."
         ]
       },
       {

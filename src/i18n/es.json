@@ -93,18 +93,6 @@
     },
     "jobs": [
       {
-        "company": "Facultad de Ingeniería, UdelaR",
-        "companyShortName": "FIng UdelaR",
-        "position": "Ayudante de Proyecto",
-        "startDate": "Julio 2023",
-        "endDate": "Presente",
-        "keyPoints": [
-          "Continuación con el trabajo de Smart Campus e Internet de las Cosas realizado en mi proyecto de grado, con la finalidad de realizar un despliegue productivo en la Facultad del prototipo de Smart Campus desarrollado en el proyecto de grado.",
-          "Mantenimiento y programación de mejoras en los sensores ya desarrollados, utilizando C++, Espressif y PlatformIO.",
-          "Mantenimiento de ThingsBoard, la plataforma de Internet de las Cosas utilizada para el Smart Campus."
-        ]
-      },
-      {
         "company": "IBM del Uruguay",
         "companyShortName": "IBM",
         "position": "Full Stack Dev",
@@ -116,6 +104,18 @@
           "Desarrollo backend de aplicaciones batch y API REST de menor porte en Java 8 y 11 en conjunto con frameworks como Spring Boot y Apache Camel.",
           "Mantenimiento de aplicaciones alojadas tanto en la nube IBM Cloud como On-premise en servidores del cliente, realizando mejoras y correcciones de errores.",
           "Gestión de los servicios de nube utilizados por el cliente y el despliegue de las aplicaciones en la misma."
+        ]
+      },
+      {
+        "company": "Facultad de Ingeniería, UdelaR",
+        "companyShortName": "FIng UdelaR",
+        "position": "Ayudante de Proyecto",
+        "startDate": "Julio 2023",
+        "endDate": "Presente",
+        "keyPoints": [
+          "Continuación con el trabajo de Smart Campus e Internet de las Cosas realizado en mi proyecto de grado, con la finalidad de realizar un despliegue productivo en la Facultad del prototipo de Smart Campus desarrollado en el proyecto de grado.",
+          "Mantenimiento y programación de mejoras en los sensores ya desarrollados, utilizando C++, Espressif y PlatformIO.",
+          "Mantenimiento de ThingsBoard, la plataforma de Internet de las Cosas utilizada para el Smart Campus."
         ]
       },
       {
