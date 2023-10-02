@@ -17,6 +17,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang={getLang()}>
+      <head />
       <body className={`${WorkSans.className} custom-scrollbar`}>
         {children}
       </body>
