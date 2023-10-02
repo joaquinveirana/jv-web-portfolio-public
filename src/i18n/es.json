@@ -21,7 +21,7 @@
     "moreInfo": {
       "title": "Sobre este sitio...",
       "paragraphs": [
-        "Este sitio fue desarrollado por Joaquín Veirana utilizando React, TypeScript, Next.js, Tailwind y Three.js.",
+        "Este sitio fue desarrollado por Joaquín Veirana utilizando React, Next.js, TypeScript, Tailwind y Three.js.",
         "El diseño está basado en el sitio web v4.brittanychiang.com creado por Brittany Chiang.",
         "Para los objetos 3D renderizados por Three.js se utilizó como referencia el código del repositorio create-r3f-app creado por Utsubo.",
         "Para el efecto de texto de terminal de comandos en la sección principal fue tomado como referencia el ejemplo 'Terminal Text Effect' creado por @Tbgse."
@@ -31,7 +31,7 @@
         {
           "referenceName": "Brittany Chiang:",
           "refereneceLinks": [
-            { "ref": "[Sitio web]", "link": "https://v4.brittanychiang.com/" },
+            { "ref": "[Sitio web]", "link": "https://brittanychiang.com/" },
             { "ref": "[Repo]", "link": "https://github.com/bchiang7/v4" }
           ]
         },

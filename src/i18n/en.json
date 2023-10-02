@@ -21,7 +21,7 @@
     "moreInfo": {
       "title": "About this site...",
       "paragraphs": [
-        "This site was developed by Joaquín Veirana using React, TypeScript, Next.js, Tailwind and Three.js.",
+        "This site was developed by Joaquín Veirana using React, Next.js, TypeScript, Tailwind and Three.js.",
         "The design is based on the website v4.brittanychiang.com created by Brittany Chiang.",
         "The create-r3f-app repository created by Utsubo was used as a reference for the 3D objects rendered by Three.js.",
         "The 'Terminal Text Effect' example created by @Tbgse was taken as a reference for the terminal text effect in the main section."
@@ -31,7 +31,7 @@
         {
           "referenceName": "Brittany Chiang:",
           "refereneceLinks": [
-            { "ref": "[Website]", "link": "https://v4.brittanychiang.com/" },
+            { "ref": "[Website]", "link": "https://brittanychiang.com/" },
             { "ref": "[Repo]", "link": "https://github.com/bchiang7/v4" }
           ]
         },
