@@ -1,4 +1,5 @@
 {
+  "loading": "Cargando página principal...",
   "header": {
     "navItems": [
       { "itemId": "#about", "itemName": "Sobre mí", "itemLink": "#about" },
@@ -16,7 +17,7 @@
     ],
     "resume": {
       "itemName": "Currículum",
-      "itemLink": "#resume"
+      "itemLink": "./Resume.pdf"
     },
     "moreInfo": {
       "title": "Sobre este sitio...",
@@ -95,32 +96,35 @@
       {
         "company": "IBM del Uruguay",
         "companyShortName": "IBM",
+        "companyWebsite": "https://www.ibm.com",
         "position": "Full Stack Dev",
         "startDate": "Enero 2022",
         "endDate": "Presente",
         "keyPoints": [
           "Desarrollo frontend de aplicaciones web de gestión internas del cliente en Angular con el fin de reconstruirlas con una tecnología más moderna y mejorar la experiencia de usuario y interfaz de las mismas.",
-          "Desarrollo de librerías en Angular a partir de componentes utilizados comúnmente en distintas aplicaciones con el fin de agilizar el desarrollo mediante la reutilización de componentes a nivel de proyectos.",
+          "Desarrollo de bibliotecas de componentes Angular utilizados en múltiples aplicaciones con el fin de agilizar el desarrollo mediante la reutilización de componentes a nivel de proyectos.",
           "Desarrollo backend de aplicaciones batch y API REST de menor porte en Java 8 y 11 en conjunto con frameworks como Spring Boot y Apache Camel.",
           "Mantenimiento de aplicaciones alojadas tanto en la nube IBM Cloud como On-premise en servidores del cliente, realizando mejoras y correcciones de errores.",
-          "Gestión de los servicios de nube utilizados por el cliente y el despliegue de las aplicaciones en la misma."
+          "Gestión de servicios de IBM Cloud utilizados por el cliente y despliegue de aplicaciones en la misma."
         ]
       },
       {
-        "company": "Facultad de Ingeniería, UdelaR",
-        "companyShortName": "FIng UdelaR",
+        "company": "Instituto de Computación, Facultad de Ingeniería, Universidad de la República",
+        "companyShortName": "FIng InCo",
+        "companyWebsite": "https://www.fing.edu.uy/es/inco",
         "position": "Ayudante de Proyecto",
         "startDate": "Julio 2023",
         "endDate": "Presente",
         "keyPoints": [
-          "Continuación con el trabajo de Smart Campus e Internet de las Cosas realizado en mi proyecto de grado, con la finalidad de realizar un despliegue productivo en la Facultad del prototipo de Smart Campus desarrollado en el proyecto de grado.",
+          "Continuación del trabajo de Smart Campus e Internet de las Cosas realizado en mi proyecto de grado, con la finalidad de realizar un despliegue productivo en la Facultad del prototipo de Smart Campus desarrollado en el proyecto de grado.",
           "Mantenimiento y programación de mejoras en los sensores ya desarrollados, utilizando C++, Espressif y PlatformIO.",
-          "Mantenimiento de ThingsBoard, la plataforma de Internet de las Cosas utilizada para el Smart Campus."
+          "Gestión de ThingsBoard, la plataforma de Internet de las Cosas utilizada para el Smart Campus."
         ]
       },
       {
         "company": "IBM del Uruguay",
         "companyShortName": "IBM Student",
+        "companyWebsite": "https://www.ibm.com",
         "position": "Cloud Dev Student",
         "startDate": "Enero 2021",
         "endDate": "Diciembre 2021",
@@ -176,7 +180,7 @@
         "imageLink": "https://play.google.com/store/apps/details?id=pack.faux_the_game",
         "websiteLink": "https://play.google.com/store/apps/details?id=pack.faux_the_game",
         "repoLink": "https://github.com/joaquinveirana/Proyecto-Faux",
-        "description": "Faux es una aplicación desarrollada en Flutter que se encuentra disponible en la Google Play Store. En ella se pueden crear y jugar partidas de un entretenido party game de dibujo y roles ocultos. Está inspirada en el juego 'A Fake Artist Goes to New York' creado por Jun Sasaki.",
+        "description": "Faux es una aplicación desarrollada en Flutter que se encuentra disponible en la Google Play Store. En ella se pueden jugar partidas de un entretenido party game de dibujo y roles ocultos. Está inspirada en el juego 'A Fake Artist Goes to New York' de Jun Sasaki.",
         "techList": ["Flutter"],
         "imagePath": "./projects/faux_cover.png",
         "videoPath": "./projects/faux_demo.mp4"

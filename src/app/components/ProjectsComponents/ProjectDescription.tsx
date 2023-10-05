@@ -10,9 +10,9 @@ import { FiExternalLink } from 'react-icons/fi';
 const descriptionContainerClass =
   'md:my-0 md:pt-2 md:w-[300px] md:z-20 md:relative mb-4 w-full flex-col-start';
 const descriptionTextClass =
-  'md:p-6 md:w-[450px] p-4 rounded-md shadow-lg bg-dark-400 text-base secondary-sub-paragraph-light-class';
+  'md:p-6 md:w-[330px] p-4 rounded-md shadow-lg bg-dark-400 text-base secondary-sub-paragraph-light-class';
 const technologiesListClass =
-  'md:w-[450px] p-2 secondary-sub-paragraph-light-class flex-row-end';
+  'md:w-[260px] p-2 secondary-sub-paragraph-light-class flex-row-end';
 
 export const ProjectDescription = (props: ProjectDescriptionProps) => {
   return (

@@ -121,7 +121,15 @@ export const Experience = (props: ExperienceProps) => {
                   className={`${tabValue === index ? 'block' : 'hidden'}`}
                 >
                   <h1 className='subsubtitle-class'>
-                    {job.position} @ {job.company}
+                    {job.position}
+                    <span className='text-cyan-600'> @ </span>
+                    <a
+                      className='hover-cyan-text'
+                      href={job.companyWebsite}
+                      target='_blank'
+                    >
+                      {job.company}
+                    </a>
                   </h1>
                   <h6 className='pb-2 secondary-sub-paragraph-class'>
                     {job.startDate} - {job.endDate}

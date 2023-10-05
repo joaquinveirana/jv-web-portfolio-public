@@ -13,6 +13,7 @@ export type ExperienceContent = {
 export type JobExperience = {
   company: string;
   companyShortName: string;
+  companyWebsite: string;
   position: string;
   startDate: string;
   endDate: string;

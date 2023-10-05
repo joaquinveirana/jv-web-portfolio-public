@@ -96,7 +96,7 @@
   }
 
   .hover-cyan-text {
-    @apply transition-all duration-300 ease-in-out hover:text-cyan-700;
+    @apply transition-all duration-300 ease-in-out hover:text-cyan-600;
   }
 
   .direct-cyan-text {
