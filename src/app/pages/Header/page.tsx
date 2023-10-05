@@ -64,7 +64,7 @@ export default function Header(props: HeaderProps) {
   };
 
   const openResume = () => {
-    if (checkWindowsDefined()) window.open('/resume.pdf');
+    if (checkWindowsDefined()) window.open(props.textContent.resume.itemLink);
   };
 
   /* 
