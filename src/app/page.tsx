@@ -11,8 +11,8 @@ import { Projects } from '@/app/pages/Projects/page';
 import { Contact } from '@/app/pages/Contact/page';
 
 const headerLogo: LogoType = {
-  imageLogo: '/my_logos/logo_jv_bold_cyan_white_sq.svg',
-  imageLogoSecondary: '/my_logos/logo_jv_bold_cyan_sq.svg',
+  imageLogo: '/my_logos/jv_logo_128.png',
+  imageLogoSecondary: '/my_logos/jv_logo_cyan_128.png',
   altLogo: 'JV Logo',
 };
 

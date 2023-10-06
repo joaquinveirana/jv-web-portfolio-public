@@ -1,6 +1,5 @@
 'use client';
-import { LegacyRef, useEffect, useRef, useState } from 'react';
-import { useClickAway } from '@uidotdev/usehooks';
+import { useEffect, useRef, useState } from 'react';
 
 import { BurgerClose } from 'react-burger-icons';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
@@ -73,7 +72,6 @@ export default function Header(props: HeaderProps) {
   const [isOpenNavSlider, setIsOpenNavSlider] = useState<boolean>(false);
   const [isOpenInfoDialog, setIsOpenInfoDialog] = useState<boolean>(false);
 
-  const refSlider = useClickAway(() => setIsOpenNavSlider(false));
   const refHeader = useRef<HTMLInputElement>(null);
 
   // Hide header on scroll down + change header height on scroll + disable shadows when header on top
@@ -138,28 +136,28 @@ export default function Header(props: HeaderProps) {
 
       {/* Hamburguer Menu Icon */}
       <button
-        onMouseDownCapture={(
-          e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-        ) => openCloseSlidingPanel(e)}
-        className={`${hamburgerIconClass}`}
+        onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>
+          openCloseSlidingPanel(e)
+        }
+        className={hamburgerIconClass}
       >
         <BurgerClose isClosed={isOpenNavSlider} />
       </button>
 
       {/* Blur behind Nav Sliding Panel */}
       <div
+        onClick={() => setIsOpenNavSlider(false)}
         className={`${blurPanelClass} 
         ${isOpenNavSlider && 'transform translate-x-full'}`}
       ></div>
 
       {/* Sliding Nav Panel */}
       <section
-        ref={refSlider as LegacyRef<HTMLDivElement>}
         className={`${mobileNavPanel} ${desktopNavPanel} transition-all-eio-500
         ${isOpenNavSlider && 'transform -translate-x-full'}
         `}
       >
-        <nav className='md:p-0 md:flex-row-centered h-full flex-col-centered justify-between'>
+        <nav className='md:p-0 md:flex-row-centered pb-12 h-full flex-col-centered justify-between'>
           <ul className={`${desktopNavItemList} flex-col-centered`}>
             {content.navItems.map((navItem: NavItemType, index: number) => {
               return (

@@ -10,7 +10,7 @@ import { JVLogo3D } from '@/app/components/Object3D/JVLogo3D';
   --- Styles ---
 */
 const mainLandingClass =
-  '2xl:px-48 xl:px-40 lg:px-36 md:px-28 sm:px-12 px-6 md:py-0 pt-[150px] md:items-start flex-col-centered justify-between w-full h-screen bg-dark-300';
+  '2xl:px-48 xl:px-40 lg:px-36 md:px-28 sm:px-12 px-6 md:py-0 pt-[150px] pb-12 md:items-start flex-col-centered justify-between w-full h-screen bg-dark-300';
 const mainTitleContainerClass = 'xl:w-9/12 lg:w-2/3 md:my-auto w-full z-10';
 const mainTitleUnderscoreClass =
   'inline-block relative -top-[0.14em] left-[10px]';
