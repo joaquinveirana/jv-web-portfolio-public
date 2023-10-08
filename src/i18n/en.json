@@ -67,7 +67,7 @@
   "about": {
     "title": "About",
     "photoAlt": "Pic of me",
-    "photoSrc": "./me.jpg",
+    "photoSrc": "./me.webp",
     "paragraphs": [
       "Thank you for visiting my website!",
       "My name is Joaquín, I'm a technology enthusiast and I enjoy creating cool software solutions, focused on the end user experience and with good practices on the source code.",
@@ -152,7 +152,7 @@
         "repoLink": "https://github.com/joaquinveirana/jv-web-portfolio",
         "description": "JV Web Portfolio is my personal website developed in React.",
         "techList": ["React", "Next.js", "TypeScript", "Tailwind", "Three.js"],
-        "imagePath": "./projects/jv_web_portfolio_cover.png",
+        "imagePath": "./projects/jv_web_portfolio_cover.webp",
         "videoPath": ""
       },
       {
@@ -170,7 +170,7 @@
           "ThingsBoard",
           "Embedded Systems"
         ],
-        "imagePath": "./projects/smartfing_cover.png",
+        "imagePath": "./projects/smartfing_cover.webp",
         "videoPath": ""
       },
       {
@@ -182,7 +182,7 @@
         "repoLink": "https://github.com/joaquinveirana/Proyecto-Faux",
         "description": "Faux is a mobile app developed in Flutter available in the Google Play Store. In Faux you can create and play matches of an entertaining party game of drawing and hidden roles. It is inspired by the game 'A Fake Artist Goes to New York' created by Jun Sasaki.",
         "techList": ["Flutter"],
-        "imagePath": "./projects/faux_cover.png",
+        "imagePath": "./projects/faux_cover.webp",
         "videoPath": "./projects/faux_demo.mp4"
       }
     ]
