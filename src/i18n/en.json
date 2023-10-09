@@ -24,23 +24,29 @@
       "paragraphs": [
         "This site was developed by Joaquín Veirana using React, Next.js, TypeScript, Tailwind and Three.js.",
         "The design is based on the website v4.brittanychiang.com created by Brittany Chiang.",
-        "The create-r3f-app repository created by Utsubo was used as a reference for the 3D objects rendered by Three.js.",
-        "The 'Terminal Text Effect' example created by @Tbgse was taken as a reference for the terminal text effect in the main section."
+        "The repository 'create-r3f-app' created by Utsubo was used as a reference for the 3D objects rendered by Three.js.",
+        "The example 'Terminal Text Effect' created by @Tbgse was used as a reference for the terminal text effect in the main section."
       ],
       "linksTitle": "Links to every reference:",
       "references": [
         {
           "referenceName": "Brittany Chiang:",
           "refereneceLinks": [
-            { "ref": "[Website]", "link": "https://brittanychiang.com/" },
-            { "ref": "[Repo]", "link": "https://github.com/bchiang7/v4" }
+            {
+              "ref": "[brittanychiang.com]",
+              "link": "https://brittanychiang.com/"
+            },
+            {
+              "ref": "[github.com/bchiang7/v4]",
+              "link": "https://github.com/bchiang7/v4"
+            }
           ]
         },
         {
           "referenceName": "Utsubo:",
           "refereneceLinks": [
             {
-              "ref": "[Repo]",
+              "ref": "[github.com/utsuboco/create-r3f-app]",
               "link": "https://github.com/utsuboco/create-r3f-app"
             }
           ]
@@ -49,10 +55,10 @@
           "referenceName": "Tbgse:",
           "refereneceLinks": [
             {
-              "ref": "[codepen]",
+              "ref": "[codepen.io/Tbgse/pen/dYaJyJ]",
               "link": "https://codepen.io/Tbgse/pen/dYaJyJ"
             },
-            { "ref": "[Profile]", "link": "https://codepen.io/Tbgse" }
+            { "ref": "[codepen.io/Tbgse]", "link": "https://codepen.io/Tbgse" }
           ]
         }
       ]
