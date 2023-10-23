@@ -44,7 +44,7 @@ const Layout = ({
           height: '100vh',
           pointerEvents: 'none',
         }}
-        className={`${hiddenOrfadeIn} transition-all-eio-10000`}
+        className={`${hiddenOrfadeIn} transition-all-eio-11000`}
         eventSource={ref as unknown as MutableRefObject<HTMLElement>}
         eventPrefix='client'
       >

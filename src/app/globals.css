@@ -71,6 +71,10 @@
     @apply transition-all duration-[10000ms] ease-in-out;
   }
 
+  .transition-all-eio-11000 {
+    @apply transition-all duration-[11000ms] ease-in-out;
+  }
+
   .flex-col-centered {
     @apply flex flex-col items-center justify-center;
   }
