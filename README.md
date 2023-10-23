@@ -24,7 +24,7 @@
 </p>
 
 <div align="center">
-  <img alt="Logo" src="public/projects/jv_web_portfolio_cover.png" />
+  <img alt="Logo" src="public/projects/jv_web_portfolio_cover.webp" />
 </div>
 
 ## Instalación
