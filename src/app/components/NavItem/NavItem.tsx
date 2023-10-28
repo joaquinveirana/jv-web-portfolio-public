@@ -6,7 +6,7 @@ import { NavItemProps } from '@/app/props/NavItemProps';
 /* 
   --- Styles ---
 */
-const navLinksClass = 'md:m-4 md:text-sm m-6 text-2xl text-light-700';
+const navLinksClass = 'md:m-4 md:text-sm m-6 text-2xl text-light-200';
 
 export const NavItem = (props: NavItemProps) => {
   return (

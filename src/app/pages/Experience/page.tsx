@@ -67,17 +67,12 @@ export const Experience = (props: ExperienceProps) => {
       <SectionTitle
         title={props.textContent.title}
         growTimeout={1500}
-        extraScrollThreshold={500}
         growOneTime={true}
       />
 
       <div className={sectionContentClass}>
         {/* TabList of Companies */}
-        <GrowOnScroll
-          growTimeout={1500}
-          extraScrollThreshold={600}
-          growOneTime={true}
-        >
+        <GrowOnScroll growTimeout={1500} growOneTime={true}>
           <div className={tabListContainerClass}>
             <Tabs
               aria-label={props.textContent.aria.panel}
@@ -108,11 +103,7 @@ export const Experience = (props: ExperienceProps) => {
         </GrowOnScroll>
 
         {/* TabPanel with company content */}
-        <GrowOnScroll
-          growTimeout={1500}
-          extraScrollThreshold={600}
-          growOneTime={true}
-        >
+        <GrowOnScroll growTimeout={1500} growOneTime={true}>
           <div className={tabPanelContainerClass}>
             {props.textContent.jobs.map((job: JobExperience, index: number) => {
               return (

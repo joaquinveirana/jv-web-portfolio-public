@@ -12,11 +12,7 @@ export const Contact = (props: ContactProps) => {
   return (
     <article id='#contact' className='pt-16 article-class'>
       {/* Contact section */}
-      <GrowOnScroll
-        growTimeout={1500}
-        extraScrollThreshold={2000}
-        growOneTime={true}
-      >
+      <GrowOnScroll growTimeout={1500} growOneTime={true}>
         <div className='flex-col-centered'>
           <h1 className='pb-6 title-class'>{props.textContent.title}</h1>
           <p className='md:w-1/2 px-2 w-full paragraph-class'>

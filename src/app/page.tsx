@@ -30,7 +30,7 @@ export default async function Main() {
           <Experience textContent={dict.experience}></Experience>
           <Projects textContent={dict.projects}></Projects>
           <Contact textContent={dict.contact}></Contact>
-          <SocialsBar growTimeout={600} sites={dict.socials}></SocialsBar>
+          <SocialsBar growTimeout={1000} sites={dict.socials}></SocialsBar>
         </section>
       </main>
     </>

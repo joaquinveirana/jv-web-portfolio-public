@@ -1,5 +1,5 @@
 {
-  "loading": "Loading main page...",
+  "loading": "Loading main page",
   "header": {
     "navItems": [
       { "itemId": "#about", "itemName": "About", "itemLink": "#about" },

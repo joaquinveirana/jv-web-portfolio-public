@@ -12,19 +12,13 @@ export const Projects = (props: ProjectsProps) => {
       <SectionTitle
         title={props.textContent.title}
         growTimeout={1500}
-        extraScrollThreshold={1000}
         growOneTime={true}
       />
 
       <div className='mt-8 flex-col-centered'>
         {props.textContent.projects.map((project: Project, index: number) => {
           return (
-            <GrowOnScroll
-              key={index}
-              growOneTime={true}
-              growTimeout={1500}
-              extraScrollThreshold={1000 + (index + 1 * 200)}
-            >
+            <GrowOnScroll key={index} growOneTime={true} growTimeout={1500}>
               <div>
                 <ProjectDisplay
                   index={index}

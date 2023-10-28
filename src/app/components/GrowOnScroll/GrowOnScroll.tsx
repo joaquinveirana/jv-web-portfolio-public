@@ -13,7 +13,9 @@ export const GrowOnScroll = (props: GrowOnScrollProps) => {
   const [hasAlreadyGrown, setHasAlreadyGrown] = useState<boolean>(false);
   const [elementYPosition, setElementYPosition] = useState<number>(0);
   useEffect(() => {
-    if (ref.current?.offsetTop) setElementYPosition(ref.current?.offsetTop);
+    const { innerHeight: height } = window;
+    if (ref.current?.offsetTop)
+      setElementYPosition(ref.current?.offsetTop - height * 0.95);
   });
 
   /* 
@@ -21,7 +23,7 @@ export const GrowOnScroll = (props: GrowOnScrollProps) => {
   */
   const trigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: elementYPosition / 5 + props.extraScrollThreshold,
+    threshold: elementYPosition + (props.extraScrollThreshold || 0),
     target: props.window ? props.window() : undefined,
   });
 

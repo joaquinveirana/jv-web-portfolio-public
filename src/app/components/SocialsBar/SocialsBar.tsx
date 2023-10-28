@@ -12,9 +12,11 @@ import { useState } from 'react';
 const socialSidebarClass =
   'xl:w-32 lg:w-24 md:fixed md:top-1/3 md:left-0 md:w-24 md:h-1/3 md:min-h-[300px] md:z-0 md:py-12 md:flex md:flex-col md:items-center md:justify-around md:bg-[transparent] w-full bg-dark-300 flex flex-row p-4';
 const iconClass = 'md:flex-row-centered md:my-4 w-full flex-col-centered';
-const iconHoverEffectClass = 'w-6 h-6 icon-effect-class';
+const iconHoverEffectClass = 'w-6 h-6 text-light-200 icon-effect-class';
 const iconHoverTagClass =
   'md:w-6 md:-translate-y-1 md:-rotate-90 md:transform md:block hidden';
+const decorativeLine =
+  'md:w-[10px] md:flex md:border-[1px] md:border-light-200 md:rounded hidden';
 
 export const SocialsBar = (props: SocialsBarProps) => {
   /* 
@@ -88,6 +90,12 @@ export const SocialsBar = (props: SocialsBarProps) => {
   */
   const [indexIconHovered, setIndexIconHovered] = useState<number>(-1);
 
+  const decorativeDiv = (
+    <Grow in={true} timeout={props.growTimeout}>
+      <div className={decorativeLine}></div>
+    </Grow>
+  );
+
   const iconHoverTag = (site: Site, index: number) => {
     return (
       <div className={iconHoverTagClass}>
@@ -99,6 +107,7 @@ export const SocialsBar = (props: SocialsBarProps) => {
   };
   return (
     <aside className={socialSidebarClass}>
+      {decorativeDiv}
       {props.sites.map((site: Site, index: number) => {
         return (
           <div key={index} className={iconClass}>
@@ -111,6 +120,7 @@ export const SocialsBar = (props: SocialsBarProps) => {
           </div>
         );
       })}
+      {decorativeDiv}
     </aside>
   );
 };

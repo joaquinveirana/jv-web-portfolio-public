@@ -21,7 +21,6 @@ export const About = (props: AboutProps) => {
       <SectionTitle
         title={props.textContent.title}
         growTimeout={1500}
-        extraScrollThreshold={50}
         growOneTime={true}
       />
 
@@ -31,12 +30,7 @@ export const About = (props: AboutProps) => {
           {props.textContent.paragraphs.map(
             (paragraph: string, index: number) => {
               return (
-                <GrowOnScroll
-                  key={index}
-                  growTimeout={1500}
-                  extraScrollThreshold={50 * (index + 1)}
-                  growOneTime={true}
-                >
+                <GrowOnScroll key={index} growTimeout={1500} growOneTime={true}>
                   <p key={index} className='py-2 paragraph-class'>
                     {paragraph}
                   </p>
@@ -46,11 +40,7 @@ export const About = (props: AboutProps) => {
           )}
 
           {/* Tech list */}
-          <GrowOnScroll
-            growTimeout={1500}
-            extraScrollThreshold={50 * props.textContent.paragraphs.length}
-            growOneTime={true}
-          >
+          <GrowOnScroll growTimeout={1500} growOneTime={true}>
             <ul className='w-fit columns-2'>
               {props.textContent.techList.map((tech: string, index: number) => {
                 return (
@@ -64,11 +54,7 @@ export const About = (props: AboutProps) => {
         </div>
 
         {/* Profile Pic */}
-        <GrowOnScroll
-          growTimeout={1500}
-          extraScrollThreshold={100}
-          growOneTime={true}
-        >
+        <GrowOnScroll growTimeout={1500} growOneTime={true}>
           <div className={imgContainerClass}>
             <img
               className={imgClass}

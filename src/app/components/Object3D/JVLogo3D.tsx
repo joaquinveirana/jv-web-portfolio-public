@@ -3,6 +3,7 @@
 import { Suspense, useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { Layout } from './Canvas/Layout';
+import { JVLogo3DProps } from '@/app/props/JVLogo3DProps';
 
 const Common = dynamic(
   () => import('./Scene/Common').then((mod) => mod.Common),
@@ -13,7 +14,7 @@ const View = dynamic(() => import('./Scene/View').then((mod) => mod.View), {
   ssr: false,
 });
 
-export const JVLogo3D = () => {
+export const JVLogo3D = (props: JVLogo3DProps) => {
   const Obj = dynamic(
     () =>
       import('./Object/Obj').then((mod) => {
@@ -63,7 +64,7 @@ export const JVLogo3D = () => {
 
   return (
     <div className='w-full h-full pointer-events-none'>
-      <Layout showFadeIn={true} startFadeIn={objLoaded}>
+      <Layout showFadeIn={true} startFadeIn={props.in && objLoaded}>
         <View orbit={true} className='h-full w-full'>
           <Suspense fallback={null}>
             <Obj

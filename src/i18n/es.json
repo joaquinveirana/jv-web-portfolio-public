@@ -1,5 +1,5 @@
 {
-  "loading": "Cargando página principal...",
+  "loading": "Cargando página principal",
   "header": {
     "navItems": [
       { "itemId": "#about", "itemName": "Sobre mí", "itemLink": "#about" },
