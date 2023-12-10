@@ -9,6 +9,7 @@ import { Experience } from '@/app/pages/Experience/page';
 import { LogoType } from '@/app/props/HeaderProps';
 import { Projects } from '@/app/pages/Projects/page';
 import { Contact } from '@/app/pages/Contact/page';
+import { getResumeStorageURL } from './lib/firebase/firebase';
 
 const headerLogo: LogoType = {
   imageLogo: '/my_logos/jv_logo_128.png',
@@ -16,9 +17,15 @@ const headerLogo: LogoType = {
   altLogo: 'JV Logo',
 };
 
+const loadResumeLink = async (dict: { [key: string]: any }) => {
+  const responseURL = await getResumeStorageURL();
+  if (responseURL) dict['header']['resume']['itemLink'] = responseURL;
+};
+
 export default async function Main() {
   const lang = await getLang();
   const dict = await getDictionary(lang);
+  loadResumeLink(dict);
 
   return (
     <>

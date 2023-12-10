@@ -3,4 +3,5 @@ export type EffectButtonProps = {
   callback: Function;
   width: string;
   growTimeout: number;
+  disabled?: boolean;
 };

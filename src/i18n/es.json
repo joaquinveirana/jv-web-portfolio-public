@@ -17,7 +17,7 @@
     ],
     "resume": {
       "itemName": "Currículum",
-      "itemLink": "./files/Resume.pdf"
+      "itemLink": null
     },
     "moreInfo": {
       "title": "Sobre este sitio...",
@@ -68,7 +68,7 @@
     "title0": "Hola, mi nombre es",
     "title1": "Joaquín Veirana.",
     "title2": "Desarrollador de software.",
-    "description": "Soy un ingeniero en computación apasionado por el desarrollo de software y con perfil orientado al frontend. Actualmente me desempeño como desarrollador full stack en IBM del Uruguay, habiendo trabajado en una amplia variedad de proyectos."
+    "description": "Soy un ingeniero en computación apasionado por el desarrollo de software y con perfil orientado al front end. Actualmente me desempeño como desarrollador full stack en IBM del Uruguay, habiendo trabajado en una amplia variedad de proyectos."
   },
   "about": {
     "title": "Sobre Mi",
@@ -77,7 +77,7 @@
     "paragraphs": [
       "Gracias por visitar mi sitio web!",
       "Me llamo Joaquín, soy apasionado por la tecnología y disfruto de crear aplicaciones estéticas, centradas en la experiencia del usuario final y con una base de código centrada en buenas prácticas.",
-      "Trabajé con distintas tecnologías como Java, Python y JavaScript, siendo esta última mi favorita y en la que tengo más experiencia tanto con frameworks y bibliotecas de frontend como Angular y React como backend con Node.js.",
+      "Trabajé con distintas tecnologías como Java, Python y JavaScript, siendo esta última mi favorita y en la que tengo más experiencia tanto con frameworks y bibliotecas de front end como Angular y React como back end con Node.js.",
       "Estudié ingeniería en computación en la Facultad de Ingeniería de la Universidad de la República y egresé de la misma en 2023. Actualmente me encuentro trabajando como desarrollador full stack en IBM del Uruguay.",
       "En mis tiempos libres también disfruto de aprender en otras áreas como el machine learning, el desarrollo de videojuegos y el desarrollo mobile.",
       "Estas son las tecnologías con las que principalmente trabajo:"
@@ -107,9 +107,9 @@
         "startDate": "Enero 2022",
         "endDate": "Presente",
         "keyPoints": [
-          "Desarrollo frontend de aplicaciones web de gestión internas del cliente en Angular con el fin de reconstruirlas con una tecnología más moderna y mejorar la experiencia de usuario y interfaz de las mismas.",
+          "Desarrollo front end de aplicaciones web de gestión internas del cliente en Angular con el fin de reconstruirlas con una tecnología más moderna y mejorar la experiencia de usuario y interfaz de las mismas.",
           "Desarrollo de bibliotecas de componentes Angular utilizados en múltiples aplicaciones con el fin de agilizar el desarrollo mediante la reutilización de componentes a nivel de proyectos.",
-          "Desarrollo backend de aplicaciones batch y API REST de menor porte en Java 8 y 11 en conjunto con frameworks como Spring Boot y Apache Camel.",
+          "Desarrollo back end de aplicaciones batch y API REST de menor porte en Java 8 y 11 en conjunto con frameworks como Spring Boot y Apache Camel.",
           "Mantenimiento de aplicaciones alojadas tanto en la nube IBM Cloud como On-premise en servidores del cliente, realizando mejoras y correcciones de errores.",
           "Gestión de servicios de IBM Cloud utilizados por el cliente y despliegue de aplicaciones en la misma."
         ]

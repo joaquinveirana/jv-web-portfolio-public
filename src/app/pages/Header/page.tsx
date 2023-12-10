@@ -32,7 +32,7 @@ const desktopNavItemList = 'md:h-full md:flex-row-centered';
 export default function Header(props: HeaderProps) {
   const content = props.textContent;
 
-  /* 
+  /*
     --- Aux Functions ---
   */
   const checkWindowsDefined = (): boolean => {
@@ -63,7 +63,8 @@ export default function Header(props: HeaderProps) {
   };
 
   const openResume = () => {
-    if (checkWindowsDefined()) window.open(props.textContent.resume.itemLink);
+    if (checkWindowsDefined() && props.textContent.resume.itemLink !== null)
+      window.open(props.textContent.resume.itemLink);
   };
 
   /* 
@@ -175,6 +176,7 @@ export default function Header(props: HeaderProps) {
               callback={() => openResume()}
               width='32'
               growTimeout={500 * (content.navItems.length + 1)}
+              disabled={props.textContent.resume.itemLink === null}
             ></EffectButton>
           </ul>
 

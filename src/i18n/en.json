@@ -17,7 +17,7 @@
     ],
     "resume": {
       "itemName": "Resume",
-      "itemLink": "./files/Resume.pdf"
+      "itemLink": null
     },
     "moreInfo": {
       "title": "About this site...",
@@ -68,7 +68,7 @@
     "title0": "Hi, my name is",
     "title1": "Joaquín Veirana.",
     "title2": "Software developer.",
-    "description": "I'm a computer engineer passionate about software development with a frontend-oriented profile. Currently I'm working as a full stack developer at IBM Uruguay, having worked on a wide variety of projects."
+    "description": "I'm a computer engineer passionate about software development with a front end-oriented profile. Currently I'm working as a full stack developer at IBM Uruguay, having worked on a wide variety of projects."
   },
   "about": {
     "title": "About",
@@ -77,7 +77,7 @@
     "paragraphs": [
       "Thank you for visiting my website!",
       "My name is Joaquín, I'm a technology enthusiast and I enjoy creating cool software solutions, focused on the end user experience and with good practices on the source code.",
-      "I worked with different technologies such as Java, Python and JavaScript, with the latter being my favorite and the one I have the most experience with. I worked both on frontend frameworks and libraries such as Angular and React, and also on backend with Node.js.",
+      "I worked with different technologies such as Java, Python and JavaScript, with the latter being my favorite and the one I have the most experience with. I worked both on front end frameworks and libraries such as Angular and React, and also on back end with Node.js.",
       "I studied computer engineering at the University of the Republic in Uruguay and graduated in 2023. Currently, I'm working as a full stack developer at IBM Uruguay.",
       "In my free time I also enjoy learning in other tech areas such as machine learning, video game development and mobile development.",
       "These are the technologies I mainly work with:"
@@ -107,9 +107,9 @@
         "startDate": "January 2022",
         "endDate": "Present",
         "keyPoints": [
-          "Frontend development of internal client management web applications in Angular. Rebuilding them with more modern technology and improving their user experience and interface.",
+          "front end development of internal client management web applications in Angular. Rebuilding them with more modern technology and improving their user experience and interface.",
           "Development of libraries in Angular from components commonly used in different applications in order to speed up development through the reuse of components.",
-          "Backend development of batch applications and small REST APIs in Java 8 and 11 in conjunction with frameworks such as Spring Boot and Apache Camel.",
+          "back end development of batch applications and small REST APIs in Java 8 and 11 in conjunction with frameworks such as Spring Boot and Apache Camel.",
           "Maintenance of applications hosted both on IBM Cloud and On-premise on the client servers, making improvements and error corrections.",
           "Management of cloud services on IBM Cloud used by the client on different software solutions."
         ]

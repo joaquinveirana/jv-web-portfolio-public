@@ -22,6 +22,7 @@
     "autoprefixer": "10.4.15",
     "body-scroll-lock": "^4.0.0-beta.0",
     "eslint-config-next": "13.4.16",
+    "firebase": "^10.7.1",
     "negotiator": "^0.6.3",
     "next": "13.4.16",
     "postcss": "8.4.28",
