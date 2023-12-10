@@ -3,16 +3,56 @@
 @tailwind utilities;
 
 @layer components {
-  .main-section-class {
-    @apply 4xl:px-96 3xl:px-80 2xl:px-64 xl:px-56 lg:px-28 md:px-28 px-8 md:flex-col-centered pt-4 w-full bg-dark-300;
-  }
-
   .article-class {
     @apply xl:max-w-5xl lg:max-w-4xl w-full mx-auto pt-20;
   }
 
-  .title-class {
-    @apply text-[white] font-semibold text-4xl;
+  .custom-scrollbar {
+    @apply scrollbar scrollbar-w-[5px] scrollbar-thumb-rounded scrollbar-thumb-light-200 scrollbar-track-dark-300 scroll-smooth overflow-x-hidden;
+  }
+
+  .direct-cyan-text {
+    @apply transition-all duration-300 ease-in-out text-cyan-700;
+  }
+
+  .flex-col-centered {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .flex-row-centered {
+    @apply flex flex-row items-center justify-center;
+  }
+
+  .flex-col-start {
+    @apply flex flex-col items-start justify-start;
+  }
+
+  .flex-row-start {
+    @apply flex flex-row items-start justify-start;
+  }
+
+  .flex-col-end {
+    @apply flex flex-col items-end justify-end;
+  }
+
+  .flex-row-end {
+    @apply flex flex-row items-end justify-end;
+  }
+
+  .hover-cyan-text {
+    @apply transition-all duration-300 ease-in-out hover:text-cyan-600;
+  }
+
+  .icon-effect-class {
+    @apply hover:transform hover:-translate-y-1 text-light-800 hover:text-cyan-500 transition-all-eio-300 cursor-pointer;
+  }
+
+  .main-section-class {
+    @apply 4xl:px-96 3xl:px-80 2xl:px-64 xl:px-56 lg:px-28 md:px-28 px-8 md:flex-col-centered pt-4 w-full bg-dark-300;
+  }
+
+  .outline-hover-effect {
+    @apply outline outline-2 outline-offset-8 outline-cyan-600 hover:outline-offset-0 hover:outline-8;
   }
 
   .subtitle-class {
@@ -47,6 +87,10 @@
     @apply text-[12px] text-light-sec-400;
   }
 
+  .title-class {
+    @apply text-[white] font-semibold text-4xl;
+  }
+
   .transition-all-eo-100 {
     @apply transition-all duration-100 ease-out;
   }
@@ -73,49 +117,5 @@
 
   .transition-all-eio-11000 {
     @apply transition-all duration-[11000ms] ease-in-out;
-  }
-
-  .flex-col-centered {
-    @apply flex flex-col items-center justify-center;
-  }
-
-  .flex-row-centered {
-    @apply flex flex-row items-center justify-center;
-  }
-
-  .flex-col-start {
-    @apply flex flex-col items-start justify-start;
-  }
-
-  .flex-row-start {
-    @apply flex flex-row items-start justify-start;
-  }
-
-  .flex-col-end {
-    @apply flex flex-col items-end justify-end;
-  }
-
-  .flex-row-end {
-    @apply flex flex-row items-end justify-end;
-  }
-
-  .hover-cyan-text {
-    @apply transition-all duration-300 ease-in-out hover:text-cyan-600;
-  }
-
-  .direct-cyan-text {
-    @apply transition-all duration-300 ease-in-out text-cyan-700;
-  }
-
-  .icon-effect-class {
-    @apply hover:transform hover:-translate-y-1 text-light-800 hover:text-cyan-500 transition-all-eio-300 cursor-pointer;
-  }
-
-  .custom-scrollbar {
-    @apply scrollbar scrollbar-w-[5px] scrollbar-thumb-rounded scrollbar-thumb-light-200 scrollbar-track-dark-300 scroll-smooth overflow-x-hidden;
-  }
-
-  .outline-hover-effect {
-    @apply outline outline-2 outline-offset-8 outline-cyan-600 hover:outline-offset-0 hover:outline-8;
   }
 }

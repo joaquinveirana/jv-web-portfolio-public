@@ -25,7 +25,7 @@ const loadResumeLink = async (dict: { [key: string]: any }) => {
 export default async function Main() {
   const lang = await getLang();
   const dict = await getDictionary(lang);
-  loadResumeLink(dict);
+  await loadResumeLink(dict);
 
   return (
     <>
