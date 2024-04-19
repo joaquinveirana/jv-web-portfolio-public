@@ -13,6 +13,11 @@
         "itemName": "Projects",
         "itemLink": "#projects"
       },
+      {
+        "itemId": "#learning",
+        "itemName": "Learning",
+        "itemLink": "#learning"
+      },
       { "itemId": "#contact", "itemName": "Contact", "itemLink": "#contact" }
     ],
     "resume": {
@@ -193,10 +198,12 @@
       }
     ]
   },
-  "learning": {},
+  "learning": {
+    "title": "Learning"
+  },
   "contact": {
     "title": "Contact",
-    "mainParagraph": "Do not hesitate to send me an email to contact me, I will try to respond as soon as possible :)",
+    "mainParagraph": "Do not hesitate to send me an email to contact me, I will respond as soon as possible :)",
     "email": "mailto:joaquin.veirana@gmail.com",
     "footer1": "Built by Joaquín Veirana, ",
     "footer2": "design inspired by v4.brittanychiang.com",

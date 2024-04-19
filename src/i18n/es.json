@@ -13,6 +13,11 @@
         "itemName": "Proyectos",
         "itemLink": "#projects"
       },
+      {
+        "itemId": "#learning",
+        "itemName": "Educación",
+        "itemLink": "#learning"
+      },
       { "itemId": "#contact", "itemName": "Contacto", "itemLink": "#contact" }
     ],
     "resume": {
@@ -193,7 +198,9 @@
       }
     ]
   },
-  "learning": {},
+  "learning": {
+    "title": "Educación"
+  },
   "contact": {
     "title": "Contáctame",
     "mainParagraph": "No dudes en enviarme un email para ponerte en contacto conmigo, trataré de responderte tan pronto sea posible :)",
