@@ -5,4 +5,5 @@ export interface LearningItem {
   issuedBy: string;
   authorizedBy: string;
   date: string;
+  imgData?: string;
 }
