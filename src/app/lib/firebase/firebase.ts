@@ -1,10 +1,10 @@
-"use server";
+'use server';
 
-import { initializeApp, getApps } from "firebase/app";
-import { getStorage, ref, getDownloadURL } from "firebase/storage";
-import { collection, getDocs, getFirestore } from "firebase/firestore";
-import { LearningItem } from "@/interfaces/db-entities";
-import dayjs from "dayjs";
+import { initializeApp, getApps } from 'firebase/app';
+import { getStorage, ref, getDownloadURL } from 'firebase/storage';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
+import { LearningItem } from '@/interfaces/db-entities';
+import dayjs from 'dayjs';
 
 const firebaseConfig = {
   apiKey: process.env.firebase_apiKey,
@@ -15,7 +15,8 @@ const firebaseConfig = {
   appId: process.env.firebase_appId,
 };
 
-const firebaseApp = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+const firebaseApp =
+  getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 
 const storage = getStorage(firebaseApp);
 const db = getFirestore(firebaseApp);
@@ -36,11 +37,11 @@ export const getFileStorageURL = (file: string) => {
 export const getDbBadges = async () => {
   const badgesArray: LearningItem[] = [];
   try {
-    const querySnapshot = await getDocs(collection(db, "badge"));
-    querySnapshot.forEach((doc) => badgesArray.push(doc.data() as LearningItem));
+    const querySnapshot = await getDocs(collection(db, 'badge'));
+    querySnapshot.forEach(doc => badgesArray.push(doc.data() as LearningItem));
     const sortedObjects = badgesArray.sort((a, b) => {
-      const dateA = dayjs(a.date, "DD/MM/YYYY");
-      const dateB = dayjs(b.date, "DD/MM/YYYY");
+      const dateA = dayjs(a.date, 'DD/MM/YYYY');
+      const dateB = dayjs(b.date, 'DD/MM/YYYY');
       return dateB.date() - dateA.date();
     });
     return sortedObjects;
@@ -53,11 +54,11 @@ export const getDbBadges = async () => {
 export const getDbCertificates = async () => {
   const certsArray: LearningItem[] = [];
   try {
-    const querySnapshot = await getDocs(collection(db, "certificado"));
-    querySnapshot.forEach((doc) => certsArray.push(doc.data() as LearningItem));
+    const querySnapshot = await getDocs(collection(db, 'certificado'));
+    querySnapshot.forEach(doc => certsArray.push(doc.data() as LearningItem));
     const sortedObjects = certsArray.sort((a, b) => {
-      const dateA = dayjs(a.date, "DD/MM/YYYY");
-      const dateB = dayjs(b.date, "DD/MM/YYYY");
+      const dateA = dayjs(a.date, 'DD/MM/YYYY');
+      const dateB = dayjs(b.date, 'DD/MM/YYYY');
       return dateB.date() - dateA.date();
     });
     return sortedObjects;

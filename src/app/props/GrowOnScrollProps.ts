@@ -1,6 +1,8 @@
+import { ReactElement } from 'react';
+
 export type GrowOnScrollProps = {
   growOneTime: boolean;
-  children: React.ReactElement;
+  children: ReactElement;
   growTimeout: number;
   extraScrollThreshold?: number;
   window?: () => Window;

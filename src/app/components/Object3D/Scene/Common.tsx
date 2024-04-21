@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Suspense } from 'react';
 import { PerspectiveCamera } from '@react-three/drei';
 import {
@@ -9,7 +10,7 @@ import {
 export const Common = (props: CommonProps) => (
   <Suspense fallback={null}>
     {props.backgroundColor && (
-      <color attach='background' args={[props.backgroundColor]} />
+      <color attach="background" args={[props.backgroundColor]} />
     )}
     {props.light.ambient.map((light: AmbientLightProps, index: number) => {
       return (

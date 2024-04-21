@@ -1,5 +1,5 @@
 'use client';
-
+import * as React from 'react';
 import { GrowOnScroll } from '@/app/components/GrowOnScroll/GrowOnScroll';
 import { AboutProps } from '@/app/props/AboutProps';
 import SectionTitle from '@/app/components/SectionTitle/SectionTitle';
@@ -16,7 +16,7 @@ const imgClass =
 
 export const About = (props: AboutProps) => {
   return (
-    <article id='#about' className='article-class'>
+    <article id="#about" className="article-class">
       {/* Title */}
       <SectionTitle
         title={props.textContent.title}
@@ -31,21 +31,21 @@ export const About = (props: AboutProps) => {
             (paragraph: string, index: number) => {
               return (
                 <GrowOnScroll key={index} growTimeout={1500} growOneTime={true}>
-                  <p key={index} className='py-2 paragraph-class'>
+                  <p key={index} className="py-2 paragraph-class">
                     {paragraph}
                   </p>
                 </GrowOnScroll>
               );
-            }
+            },
           )}
 
           {/* Tech list */}
           <GrowOnScroll growTimeout={1500} growOneTime={true}>
-            <ul className='w-fit columns-2'>
+            <ul className="w-fit columns-2">
               {props.textContent.techList.map((tech: string, index: number) => {
                 return (
-                  <li key={index} className='pt-2 pr-16 sub-paragraph-class'>
-                    <span className='text-cyan-600'>&#9724;</span> {tech}
+                  <li key={index} className="pt-2 pr-16 sub-paragraph-class">
+                    <span className="text-cyan-600">&#9724;</span> {tech}
                   </li>
                 );
               })}

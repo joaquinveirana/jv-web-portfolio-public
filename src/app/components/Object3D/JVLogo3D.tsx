@@ -1,29 +1,28 @@
 'use client';
-
+import * as React from 'react';
 import { Suspense, useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { Layout } from './Canvas/Layout';
 import { JVLogo3DProps } from '@/app/props/JVLogo3DProps';
 
-const Common = dynamic(
-  () => import('./Scene/Common').then((mod) => mod.Common),
-  { ssr: false }
-);
+const Common = dynamic(() => import('./Scene/Common').then(mod => mod.Common), {
+  ssr: false,
+});
 
-const View = dynamic(() => import('./Scene/View').then((mod) => mod.View), {
+const View = dynamic(() => import('./Scene/View').then(mod => mod.View), {
   ssr: false,
 });
 
 export const JVLogo3D = (props: JVLogo3DProps) => {
   const Obj = dynamic(
     () =>
-      import('./Object/Obj').then((mod) => {
+      import('./Object/Obj').then(mod => {
         setObjLoaded(true);
         return mod.Obj;
       }),
     {
       ssr: false,
-    }
+    },
   );
 
   const logoScale = () => {
@@ -63,12 +62,12 @@ export const JVLogo3D = (props: JVLogo3DProps) => {
   }, []);
 
   return (
-    <div className='w-full h-full pointer-events-none'>
+    <div className="w-full h-full pointer-events-none">
       <Layout showFadeIn={true} startFadeIn={props.in && objLoaded}>
-        <View orbit={true} className='h-full w-full'>
+        <View orbit={true} className="h-full w-full">
           <Suspense fallback={null}>
             <Obj
-              objPath='/my_logos/jv_logo_sq_cyan_mate-processed.glb'
+              objPath="/my_logos/jv_logo_sq_cyan_mate-processed.glb"
               scale={logoScale()}
               position={[-0.15, 0, 0.15]}
               rotation={[0.0, 1.5, 0]}

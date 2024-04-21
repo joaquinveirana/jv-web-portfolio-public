@@ -12,7 +12,7 @@ const imageContainerClass =
 export const ProjectImage = (props: ProjectImageProps) => {
   return (
     <div className={imageContainerClass}>
-      <a href={props.imageLink} target='_blank'>
+      <a href={props.imageLink} target="_blank">
         {props.videoPath.length === 0 ? (
           <img
             src={props.imagePath}
@@ -22,8 +22,8 @@ export const ProjectImage = (props: ProjectImageProps) => {
           props.isClient && (
             <ReactPlayer
               url={props.videoPath}
-              width='100%'
-              height='100%'
+              width="100%"
+              height="100%"
               loop={true}
               muted={true}
               onMouseOver={(event: MouseEvent) =>

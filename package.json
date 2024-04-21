@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\""
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -52,6 +53,6 @@
     "eslint-plugin-ft-flow": "^2.0.3",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
-    "hermes-eslint": "^0.15.1"
+    "prettier": "^3.2.5"
   }
 }

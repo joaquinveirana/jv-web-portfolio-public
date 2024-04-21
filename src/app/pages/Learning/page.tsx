@@ -1,12 +1,12 @@
-import SectionTitle from "@/app/components/SectionTitle/SectionTitle";
-import { ProjectsProps } from "@/app/props/ProjectsProps";
+import * as React from 'react';
+import SectionTitle from '@/app/components/SectionTitle/SectionTitle';
+import { ProjectsProps } from '@/app/props/ProjectsProps';
 import {
   selectAllBadgesAction,
   selectAllCertificatesAction,
-} from "@/app/lib/server-actions/server-actions";
-import { LearningItem } from "@/interfaces/db-entities";
-import { LearningCards } from "@/app/components/LearningCard/LearningCard";
-import dayjs from "dayjs";
+} from '@/app/lib/server-actions/server-actions';
+import { LearningItem } from '@/interfaces/db-entities';
+import { LearningCards } from '@/app/components/LearningCard/LearningCard';
 
 export const Learning = async (props: ProjectsProps) => {
   const getAllBadges = async () => {
@@ -25,7 +25,11 @@ export const Learning = async (props: ProjectsProps) => {
   return (
     <article id="#learning" className="article-class">
       {/* Title */}
-      <SectionTitle title={props.textContent.title} growTimeout={1500} growOneTime={true} />
+      <SectionTitle
+        title={props.textContent.title}
+        growTimeout={1500}
+        growOneTime={true}
+      />
 
       <div className="mt-8 flex-col-centered flex flex-col gap-6">
         <LearningCards items={certs} isBadge={false} />

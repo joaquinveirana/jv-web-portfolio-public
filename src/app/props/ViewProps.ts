@@ -1,5 +1,7 @@
+import { ReactNode } from 'react';
+
 export type ViewProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   orbit: boolean;
   className?: string;
 };

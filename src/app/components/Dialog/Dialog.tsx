@@ -24,12 +24,12 @@ export const Dialog = (props: DialogProps) => {
         ref={refDialog as LegacyRef<HTMLDivElement>}
         className={dialogContentClass}
       >
-        <h1 className='pb-4 md:subtitle-class subsubtitle-class'>
+        <h1 className="pb-4 md:subtitle-class subsubtitle-class">
           {props.content.title}
         </h1>
         {props.content.paragraphs.map((sentence: string, index: number) => {
           return (
-            <p key={index} className='pb-2 sub-paragraph-class'>
+            <p key={index} className="pb-2 sub-paragraph-class">
               {sentence}
             </p>
           );
@@ -37,16 +37,16 @@ export const Dialog = (props: DialogProps) => {
 
         {props.content.references.map((ref: Reference, index: number) => {
           return (
-            <div key={index} className='pb-2 sub-paragraph-class'>
-              <span className='text-cyan-600'>&#9724; </span>
+            <div key={index} className="pb-2 sub-paragraph-class">
+              <span className="text-cyan-600">&#9724; </span>
               {ref.referenceName}
               {ref.refereneceLinks.map((refLink: RefLink, subIndex: number) => {
                 return (
                   <a
-                    className='px-1 hover-cyan-text'
+                    className="px-1 hover-cyan-text"
                     key={subIndex}
                     href={refLink.link}
-                    target='_blank'
+                    target="_blank"
                   >
                     <span>{refLink.ref}</span>
                   </a>

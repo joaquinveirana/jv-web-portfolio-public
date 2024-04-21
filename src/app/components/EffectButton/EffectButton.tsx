@@ -1,5 +1,5 @@
 'use client';
-
+import * as React from 'react';
 import { EffectButtonProps } from '@/app/props/EffectButtonProps';
 import Grow from '@mui/material/Grow';
 
@@ -18,7 +18,9 @@ export const EffectButton = (props: EffectButtonProps) => {
       <div>
         <button
           onClick={() => {
-            if (!props.disabled) props.callback();
+            if (!props.disabled) {
+              props.callback();
+            }
           }}
           className={`${effectButtonClass} ${
             props.disabled

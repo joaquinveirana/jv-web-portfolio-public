@@ -1,4 +1,4 @@
-import { LearningItem } from "@/interfaces/db-entities";
+import { LearningItem } from '@/interfaces/db-entities';
 
 export type LearningCardsProps = {
   isBadge: boolean;

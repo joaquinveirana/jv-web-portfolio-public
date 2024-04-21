@@ -1,5 +1,5 @@
 'use client';
-
+import * as React from 'react';
 import Grow from '@mui/material/Grow';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { SiGmail, SiLinkedin, SiGithub, SiAcclaim } from 'react-icons/si';
@@ -25,14 +25,16 @@ export const SocialsBar = (props: SocialsBarProps) => {
   const iconBySite = (site: Site) => {
     const iconHover: Function = (siteName: string) => {
       const siteInList = props.sites.find(
-        (elem: Site) => elem.name === siteName
+        (elem: Site) => elem.name === siteName,
       );
-      if (siteInList) setIndexIconHovered(props.sites.indexOf(siteInList));
+      if (siteInList) {
+        setIndexIconHovered(props.sites.indexOf(siteInList));
+      }
     };
 
-    if (site.name === 'github')
+    if (site.name === 'github') {
       return (
-        <a href={site.link} target='_blank'>
+        <a href={site.link} target="_blank">
           <SiGithub
             className={iconHoverEffectClass}
             onMouseOver={() => iconHover(site.name)}
@@ -40,10 +42,11 @@ export const SocialsBar = (props: SocialsBarProps) => {
           />
         </a>
       );
+    }
 
-    if (site.name === 'linkedin')
+    if (site.name === 'linkedin') {
       return (
-        <a href={site.link} target='_blank'>
+        <a href={site.link} target="_blank">
           <SiLinkedin
             className={iconHoverEffectClass}
             onMouseOver={() => iconHover(site.name)}
@@ -51,10 +54,11 @@ export const SocialsBar = (props: SocialsBarProps) => {
           />
         </a>
       );
+    }
 
-    if (site.name === 'gmail')
+    if (site.name === 'gmail') {
       return (
-        <a href={site.link} target='_blank'>
+        <a href={site.link} target="_blank">
           <SiGmail
             className={iconHoverEffectClass}
             onMouseOver={() => iconHover(site.name)}
@@ -62,10 +66,11 @@ export const SocialsBar = (props: SocialsBarProps) => {
           />
         </a>
       );
+    }
 
-    if (site.name === 'credly')
+    if (site.name === 'credly') {
       return (
-        <a href={site.link} target='_blank'>
+        <a href={site.link} target="_blank">
           <SiAcclaim
             className={iconHoverEffectClass}
             onMouseOver={() => iconHover(site.name)}
@@ -73,9 +78,10 @@ export const SocialsBar = (props: SocialsBarProps) => {
           />
         </a>
       );
+    }
 
     return (
-      <a href={site.link} target='_blank'>
+      <a href={site.link} target="_blank">
         <OpenInNewIcon
           className={iconHoverEffectClass}
           onMouseOver={() => iconHover(site.name)}
@@ -100,7 +106,7 @@ export const SocialsBar = (props: SocialsBarProps) => {
     return (
       <div className={iconHoverTagClass}>
         <Grow in={indexIconHovered === index} timeout={500}>
-          <span className='text-cyan-600 text-sm'>{site.name}</span>
+          <span className="text-cyan-600 text-sm">{site.name}</span>
         </Grow>
       </div>
     );
@@ -112,7 +118,7 @@ export const SocialsBar = (props: SocialsBarProps) => {
         return (
           <div key={index} className={iconClass}>
             <Grow in={true} timeout={props.growTimeout}>
-              <div className='md:mr-6 flex-row-centered'>
+              <div className="md:mr-6 flex-row-centered">
                 {iconHoverTag(site, index)}
                 {iconBySite(site)}
               </div>

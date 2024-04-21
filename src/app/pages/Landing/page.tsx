@@ -1,5 +1,5 @@
 'use client';
-
+import * as React from 'react';
 import Grow from '@mui/material/Grow';
 import { LandingProps } from '@/app/props/LandingProps';
 import { useEffect, useState } from 'react';
@@ -30,9 +30,7 @@ export const Landing = (props: LandingProps) => {
     --- React Hooks ---
   */
   const [mainHeaderLoaded, setMainHeaderLoaded] = useState(false);
-  const [mainHeaderText, setMainHeaderText] = useState(
-    props.textContent.title1
-  );
+  const [mainHeaderText] = useState(props.textContent.title1);
   const [consoleWritingIntervalId, setConsoleWritingIntervalId] = useState(-1);
 
   useEffect(() => {
@@ -42,21 +40,33 @@ export const Landing = (props: LandingProps) => {
     let letterCount = 1;
 
     // Write of the main header with console effect
-    const id = window.setInterval(() => {
-      if (!mainHeaderElement) return;
-      if (letterCount <= mainHeaderText.length) {
-        mainHeaderElement.innerHTML = mainHeaderText.substring(0, letterCount);
-        letterCount++;
-      }
-      if (letterCount === mainHeaderText.length + 1) setMainHeaderLoaded(true);
-    }, 100 + Math.random() * 50);
+    const id = window.setInterval(
+      () => {
+        if (!mainHeaderElement) {
+          return;
+        }
+        if (letterCount <= mainHeaderText.length) {
+          mainHeaderElement.innerHTML = mainHeaderText.substring(
+            0,
+            letterCount,
+          );
+          letterCount++;
+        }
+        if (letterCount === mainHeaderText.length + 1) {
+          setMainHeaderLoaded(true);
+        }
+      },
+      100 + Math.random() * 50,
+    );
 
     setConsoleWritingIntervalId(id);
 
     // Main header console underscore blink
     let visible = false;
     window.setInterval(() => {
-      if (!consoleUnderscoreElement) return;
+      if (!consoleUnderscoreElement) {
+        return;
+      }
       if (visible) {
         consoleUnderscoreElement.className = `${mainTitleClass} ${mainTitleUnderscoreClass} opacity-0`;
         visible = false;
@@ -73,15 +83,15 @@ export const Landing = (props: LandingProps) => {
   }, [mainHeaderLoaded]);
 
   return (
-    <section id='#landing' className={mainLandingClass}>
+    <section id="#landing" className={mainLandingClass}>
       {/* Main text */}
       <div className={mainTitleContainerClass}>
-        <h1 className='lg:mb-6 md:mb-4'>
-          <span id='main-header' className={mainTitleClass}></span>
+        <h1 className="lg:mb-6 md:mb-4">
+          <span id="main-header" className={mainTitleClass}></span>
           {!mainHeaderLoaded && (
             <span
               className={`${mainTitleClass} ${mainTitleUnderscoreClass} opacity-0`}
-              id='console-underscore'
+              id="console-underscore"
             >
               &#95;
             </span>

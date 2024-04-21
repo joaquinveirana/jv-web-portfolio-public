@@ -1,1 +1,3 @@
-export type LayoutProps = { children: React.ReactNode };
+import { ReactNode } from 'react';
+
+export type LayoutProps = { children: ReactNode };

@@ -1,5 +1,10 @@
-import React, { PropsWithChildren, useCallback, useEffect, useState } from "react";
-import { EmblaCarouselType } from "embla-carousel";
+import React, {
+  PropsWithChildren,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react';
+import { EmblaCarouselType } from 'embla-carousel';
 
 type UsePrevNextButtonsType = {
   prevBtnDisabled: boolean;
@@ -9,18 +14,22 @@ type UsePrevNextButtonsType = {
 };
 
 export const usePrevNextButtons = (
-  emblaApi: EmblaCarouselType | undefined
+  emblaApi: EmblaCarouselType | undefined,
 ): UsePrevNextButtonsType => {
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
 
   const onPrevButtonClick = useCallback(() => {
-    if (!emblaApi) return;
+    if (!emblaApi) {
+      return;
+    }
     emblaApi.scrollPrev();
   }, [emblaApi]);
 
   const onNextButtonClick = useCallback(() => {
-    if (!emblaApi) return;
+    if (!emblaApi) {
+      return;
+    }
     emblaApi.scrollNext();
   }, [emblaApi]);
 
@@ -30,11 +39,13 @@ export const usePrevNextButtons = (
   }, []);
 
   useEffect(() => {
-    if (!emblaApi) return;
+    if (!emblaApi) {
+      return;
+    }
 
     onSelect(emblaApi);
-    emblaApi.on("reInit", onSelect);
-    emblaApi.on("select", onSelect);
+    emblaApi.on('reInit', onSelect);
+    emblaApi.on('select', onSelect);
   }, [emblaApi, onSelect]);
 
   return {
@@ -46,14 +57,21 @@ export const usePrevNextButtons = (
 };
 
 type PropType = PropsWithChildren<
-  React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+  React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  >
 >;
 
-export const PrevButton: React.FC<PropType> = (props) => {
+export const PrevButton: React.FC<PropType> = props => {
   const { children, ...restProps } = props;
 
   return (
-    <button className="embla__button embla__button--prev" type="button" {...restProps}>
+    <button
+      className="embla__button embla__button--prev"
+      type="button"
+      {...restProps}
+    >
       <svg className="embla__button__svg" viewBox="0 0 532 532">
         <path
           fill="currentColor"
@@ -65,11 +83,15 @@ export const PrevButton: React.FC<PropType> = (props) => {
   );
 };
 
-export const NextButton: React.FC<PropType> = (props) => {
+export const NextButton: React.FC<PropType> = props => {
   const { children, ...restProps } = props;
 
   return (
-    <button className="embla__button embla__button--next" type="button" {...restProps}>
+    <button
+      className="embla__button embla__button--next"
+      type="button"
+      {...restProps}
+    >
       <svg className="embla__button__svg" viewBox="0 0 532 532">
         <path
           fill="currentColor"

@@ -1,5 +1,5 @@
 'use client';
-
+import * as React from 'react';
 import { ProjectDescriptionProps } from '@/app/props/ProjectDescriptionProps';
 import { SiGithub } from 'react-icons/si';
 import { FiExternalLink } from 'react-icons/fi';
@@ -36,15 +36,15 @@ export const ProjectDescription = (props: ProjectDescriptionProps) => {
       <div className={technologiesListClass}>{props.techList.join(' - ')}</div>
 
       {/* Link Icons */}
-      <div className='flex-row-end'>
+      <div className="flex-row-end">
         {props.repoLink.length !== 0 && (
-          <a href={props.repoLink} target='_blank'>
-            <SiGithub className='mx-2 w-6 h-6 icon-effect-class' />
+          <a href={props.repoLink} target="_blank">
+            <SiGithub className="mx-2 w-6 h-6 icon-effect-class" />
           </a>
         )}
         {props.websiteLink.length !== 0 && (
-          <a href={props.websiteLink} target='_blank'>
-            <FiExternalLink className='mx-2 w-6 h-6 icon-effect-class' />
+          <a href={props.websiteLink} target="_blank">
+            <FiExternalLink className="mx-2 w-6 h-6 icon-effect-class" />
           </a>
         )}
       </div>

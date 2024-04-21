@@ -1,9 +1,9 @@
-"use client";
-
-import { GrowOnScrollProps } from "@/app/props/GrowOnScrollProps";
-import Grow from "@mui/material/Grow";
-import useScrollTrigger from "@mui/material/useScrollTrigger";
-import { useEffect, useRef, useState } from "react";
+'use client';
+import * as React from 'react';
+import { GrowOnScrollProps } from '@/app/props/GrowOnScrollProps';
+import Grow from '@mui/material/Grow';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import { useEffect, useRef, useState } from 'react';
 
 export const GrowOnScroll = (props: GrowOnScrollProps) => {
   /* 
@@ -14,7 +14,9 @@ export const GrowOnScroll = (props: GrowOnScrollProps) => {
   const [elementYPosition, setElementYPosition] = useState<number>(0);
   useEffect(() => {
     const { innerHeight: height } = window;
-    if (ref.current?.offsetTop) setElementYPosition(ref.current?.offsetTop - height * 0.95);
+    if (ref.current?.offsetTop) {
+      setElementYPosition(ref.current?.offsetTop - height * 0.95);
+    }
   });
 
   /* 
@@ -30,11 +32,18 @@ export const GrowOnScroll = (props: GrowOnScrollProps) => {
     --- React Hooks 2 ---
   */
   useEffect(() => {
-    if (props.growOneTime && trigger) setHasAlreadyGrown(true);
+    if (props.growOneTime && trigger) {
+      setHasAlreadyGrown(true);
+    }
   }, [trigger]);
 
   return (
-    <Grow ref={ref} appear={true} in={trigger || hasAlreadyGrown} timeout={props.growTimeout}>
+    <Grow
+      ref={ref}
+      appear={true}
+      in={trigger || hasAlreadyGrown}
+      timeout={props.growTimeout}
+    >
       {props.children}
     </Grow>
   );

@@ -1,4 +1,5 @@
 'use client';
+import * as React from 'react';
 import { LogoProps } from '@/app/props/LogoProps';
 import Image from 'next/image';
 

@@ -1,17 +1,17 @@
 {
-    "conventionalCommits.scopes": [
-        "Config",
-        "i18n",
-        "Header",
-        "Logo",
-        "Effects",
-        "Three",
-        "Experience",
-        "Projects",
-        "Contact",
-        "Readme",
-        "Visual",
-        "firebase",
-        "Learning"
-    ]
+  "conventionalCommits.scopes": [
+    "Config",
+    "i18n",
+    "Header",
+    "Logo",
+    "Effects",
+    "Three",
+    "Experience",
+    "Projects",
+    "Contact",
+    "Readme",
+    "Visual",
+    "firebase",
+    "Learning"
+  ]
 }

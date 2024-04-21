@@ -1,7 +1,9 @@
+import * as React from 'react';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Work_Sans } from 'next/font/google';
 import { getLang } from '../i18n/i18n_functions';
+import { ReactNode } from 'react';
 
 const WorkSans = Work_Sans({ subsets: ['latin'] });
 
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <html lang={getLang()}>

@@ -1,4 +1,5 @@
 'use client';
+import * as React from 'react';
 import { Project } from '@/app/props/ProjectsProps';
 import { useEffect, useState } from 'react';
 import { ProjectTitle } from './ProjectTitle';
@@ -34,7 +35,7 @@ export const ProjectDisplay = (props: { project: Project; index: number }) => {
       }`}
     >
       {/* Project image - video */}
-      <div className='md:order-1 order-2'>
+      <div className="md:order-1 order-2">
         <ProjectImage
           name={props.project.name}
           imageLink={props.project.imageLink}
@@ -46,7 +47,7 @@ export const ProjectDisplay = (props: { project: Project; index: number }) => {
       </div>
 
       {/* Title and Description of the project (desktop)*/}
-      <div className='md:flex-col-end md:order-2 hidden'>
+      <div className="md:flex-col-end md:order-2 hidden">
         <ProjectTitle
           supraName={props.project.supraName}
           name={props.project.name}
@@ -63,7 +64,7 @@ export const ProjectDisplay = (props: { project: Project; index: number }) => {
       </div>
 
       {/* Title and Description of the project (mobile)*/}
-      <div className='md:hidden w-full order-1'>
+      <div className="md:hidden w-full order-1">
         <ProjectTitle
           supraName={props.project.supraName}
           name={props.project.name}
@@ -72,7 +73,7 @@ export const ProjectDisplay = (props: { project: Project; index: number }) => {
         />
       </div>
 
-      <div className='md:hidden w-full order-3'>
+      <div className="md:hidden w-full order-3">
         <ProjectDescription
           websiteLink={props.project.websiteLink}
           repoLink={props.project.repoLink}

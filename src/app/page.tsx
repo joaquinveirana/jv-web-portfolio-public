@@ -1,26 +1,29 @@
+import * as React from 'react';
 // Pages/Components
-import Header from "./pages/Header/page";
+import Header from './pages/Header/page';
 // I18n lang
-import { getDictionary, getLang } from "../i18n/i18n_functions";
-import { Landing } from "@/app/pages/Landing/page";
-import { SocialsBar } from "@/app/components/SocialsBar/SocialsBar";
-import { About } from "@/app/pages/About/page";
-import { Experience } from "@/app/pages/Experience/page";
-import { LogoType } from "@/app/props/HeaderProps";
-import { Projects } from "@/app/pages/Projects/page";
-import { Contact } from "@/app/pages/Contact/page";
-import { getResumeStorageURL } from "./lib/firebase/firebase";
-import { Learning } from "./pages/Learning/page";
+import { getDictionary, getLang } from '../i18n/i18n_functions';
+import { Landing } from '@/app/pages/Landing/page';
+import { SocialsBar } from '@/app/components/SocialsBar/SocialsBar';
+import { About } from '@/app/pages/About/page';
+import { Experience } from '@/app/pages/Experience/page';
+import { LogoType } from '@/app/props/HeaderProps';
+import { Projects } from '@/app/pages/Projects/page';
+import { Contact } from '@/app/pages/Contact/page';
+import { getResumeStorageURL } from './lib/firebase/firebase';
+import { Learning } from './pages/Learning/page';
 
 const headerLogo: LogoType = {
-  imageLogo: "/my_logos/jv_logo_128.png",
-  imageLogoSecondary: "/my_logos/jv_logo_cyan_128.png",
-  altLogo: "JV Logo",
+  imageLogo: '/my_logos/jv_logo_128.png',
+  imageLogoSecondary: '/my_logos/jv_logo_cyan_128.png',
+  altLogo: 'JV Logo',
 };
 
 const loadResumeLink = async (dict: { [key: string]: any }) => {
   const responseURL = await getResumeStorageURL();
-  if (responseURL) dict["header"]["resume"]["itemLink"] = responseURL;
+  if (responseURL) {
+    dict['header']['resume']['itemLink'] = responseURL;
+  }
 };
 
 export default async function Main() {

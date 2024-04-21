@@ -56,7 +56,7 @@ export default function Header(props: HeaderProps) {
   };
 
   const openCloseSlidingPanel = (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
   ) => {
     setIsOpenNavSlider(!isOpenNavSlider);
     e.stopPropagation();
@@ -103,10 +103,14 @@ export default function Header(props: HeaderProps) {
 
   // Disable scroll when sliding panel is open
   useEffect(() => {
-    if (checkWindowsDefined())
-      if (isOpenNavSlider)
-        disableBodyScroll(document as unknown as HTMLElement);
-      else enableBodyScroll(document as unknown as HTMLElement);
+    if (checkWindowsDefined()) {
+      const doc = document as unknown as HTMLElement;
+      if (isOpenNavSlider) {
+        disableBodyScroll(doc);
+      } else {
+        enableBodyScroll(doc);
+      }
+    }
   }, [isOpenNavSlider]);
 
   // Disable scroll when dialog panel is open
@@ -158,7 +162,7 @@ export default function Header(props: HeaderProps) {
         ${isOpenNavSlider && 'transform -translate-x-full'}
         `}
       >
-        <nav className='md:p-0 md:flex-row-centered pb-12 h-full flex-col-centered justify-between'>
+        <nav className="md:p-0 md:flex-row-centered pb-12 h-full flex-col-centered justify-between">
           <ul className={`${desktopNavItemList} flex-col-centered`}>
             {content.navItems.map((navItem: NavItemType, index: number) => {
               return (
@@ -174,7 +178,7 @@ export default function Header(props: HeaderProps) {
             <EffectButton
               text={content.resume.itemName}
               callback={() => openResume()}
-              width='32'
+              width="32"
               growTimeout={500 * (content.navItems.length + 1)}
               disabled={props.textContent.resume.itemLink === null}
             ></EffectButton>

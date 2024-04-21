@@ -1,6 +1,6 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "fbjs"
-  ]
+  "extends": ["next/core-web-vitals", "fbjs"],
+  "rules": {
+    "ft-flow/object-type-delimiter": "off"
+  }
 }

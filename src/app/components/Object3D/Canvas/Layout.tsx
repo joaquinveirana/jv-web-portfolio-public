@@ -26,14 +26,14 @@ const Layout = ({
     Hooks
   */
   const [hiddenOrfadeIn, setHiddenOrfadeIn] = useState(
-    showFadeIn ? 'opacity-0' : 'opacity-100'
+    showFadeIn ? 'opacity-0' : 'opacity-100',
   );
   useEffect(() => {
     if (startFadeIn) setHiddenOrfadeIn('opacity-100');
   }, [startFadeIn]);
 
   return (
-    <div ref={ref} className='relative w-full h-full overflow-auto touch-auto'>
+    <div ref={ref} className="relative w-full h-full overflow-auto touch-auto">
       {children}
       <Canvas
         style={{
@@ -46,7 +46,7 @@ const Layout = ({
         }}
         className={`${hiddenOrfadeIn} transition-all-eio-11000`}
         eventSource={ref as unknown as MutableRefObject<HTMLElement>}
-        eventPrefix='client'
+        eventPrefix="client"
       >
         {/* @ts-ignore */}
         <r3f.Out />
