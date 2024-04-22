@@ -9,8 +9,7 @@ import { ProjectImage } from './ProjectImage';
 /* 
   --- Styles ---
 */
-const projectsContainerClass =
-  'md:mb-12 md:w-full md:justify-between md:flex-row-start mt-8 flex-col-centered';
+const projectsContainerClass = 'md:mb-12 md:w-full md:justify-between md:flex-row-start mt-8 flex-col-centered';
 
 export const ProjectDisplay = (props: { project: Project; index: number }) => {
   /* 
@@ -28,12 +27,7 @@ export const ProjectDisplay = (props: { project: Project; index: number }) => {
   const isOddProject = props.index % 2 !== 0;
 
   return (
-    <div
-      key={props.index}
-      className={`${projectsContainerClass} ${
-        isOddProject && 'md:flex-row-reverse'
-      }`}
-    >
+    <div key={props.index} className={`${projectsContainerClass} ${isOddProject && 'md:flex-row-reverse'}`}>
       {/* Project image - video */}
       <div className="md:order-1 order-2">
         <ProjectImage

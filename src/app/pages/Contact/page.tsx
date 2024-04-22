@@ -15,10 +15,8 @@ export const Contact = (props: ContactProps) => {
       <GrowOnScroll growTimeout={1500} growOneTime={true}>
         <div className="flex-col-centered">
           <h1 className="pb-6 title-class">{props.textContent.title}</h1>
-          <p className="md:w-1/2 px-2 w-full paragraph-class">
-            {props.textContent.mainParagraph}
-          </p>
-          <a href={props.textContent.email} target="_blank">
+          <p className="md:w-1/2 px-2 w-full paragraph-class">{props.textContent.mainParagraph}</p>
+          <a href={props.textContent.email} target="_blank" rel="noreferrer">
             <EffectButton
               text={props.textContent.buttonText}
               callback={() => {}}
@@ -27,15 +25,11 @@ export const Contact = (props: ContactProps) => {
             ></EffectButton>
           </a>
           <div className="pt-16 pb-6">
-            <a href={props.textContent.footerRepoLink} target="_blank">
-              <span className="sub-paragraph-class hover-cyan-text">
-                {props.textContent.footer1}
-              </span>
+            <a href={props.textContent.footerRepoLink} target="_blank" rel="noreferrer">
+              <span className="sub-paragraph-class hover-cyan-text">{props.textContent.footer1}</span>
             </a>
-            <a href={props.textContent.footerReferenceLink} target="_blank">
-              <span className="sub-paragraph-class hover-cyan-text">
-                {props.textContent.footer2}
-              </span>
+            <a href={props.textContent.footerReferenceLink} target="_blank" rel="noreferrer">
+              <span className="sub-paragraph-class hover-cyan-text">{props.textContent.footer2}</span>
             </a>
           </div>
         </div>

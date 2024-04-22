@@ -13,10 +13,7 @@ export const NavItem = (props: NavItemProps) => {
     <Grow in={true} timeout={props.growTimeout}>
       <div>
         <li className={`${navLinksClass} hover-cyan-text`}>
-          <a
-            href={props.navItem.itemLink}
-            onClick={props.callback(props.navItem.itemId)}
-          >
+          <a href={props.navItem.itemLink} onClick={props.callback(props.navItem.itemId)}>
             {props.navItem.itemName}
           </a>
         </li>

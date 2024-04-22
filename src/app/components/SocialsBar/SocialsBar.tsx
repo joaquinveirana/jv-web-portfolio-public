@@ -13,20 +13,16 @@ const socialSidebarClass =
   'xl:w-32 lg:w-24 md:fixed md:top-1/3 md:left-0 md:w-24 md:h-1/3 md:min-h-[300px] md:z-0 md:py-12 md:flex md:flex-col md:items-center md:justify-around md:bg-[transparent] w-full bg-dark-300 flex flex-row p-4';
 const iconClass = 'md:flex-row-centered md:my-4 w-full flex-col-centered';
 const iconHoverEffectClass = 'w-6 h-6 text-light-200 icon-effect-class';
-const iconHoverTagClass =
-  'md:w-6 md:-translate-y-1 md:-rotate-90 md:transform md:block hidden';
-const decorativeLine =
-  'md:w-[10px] md:flex md:border-[1px] md:border-light-200 md:rounded hidden';
+const iconHoverTagClass = 'md:w-6 md:-translate-y-1 md:-rotate-90 md:transform md:block hidden';
+const decorativeLine = 'md:w-[10px] md:flex md:border-[1px] md:border-light-200 md:rounded hidden';
 
 export const SocialsBar = (props: SocialsBarProps) => {
   /* 
     --- Aux Functions ---
   */
   const iconBySite = (site: Site) => {
-    const iconHover: Function = (siteName: string) => {
-      const siteInList = props.sites.find(
-        (elem: Site) => elem.name === siteName,
-      );
+    const iconHover: (siteName: string) => void = (siteName: string) => {
+      const siteInList = props.sites.find((elem: Site) => elem.name === siteName);
       if (siteInList) {
         setIndexIconHovered(props.sites.indexOf(siteInList));
       }
@@ -34,7 +30,7 @@ export const SocialsBar = (props: SocialsBarProps) => {
 
     if (site.name === 'github') {
       return (
-        <a href={site.link} target="_blank">
+        <a href={site.link} target="_blank" rel="noreferrer">
           <SiGithub
             className={iconHoverEffectClass}
             onMouseOver={() => iconHover(site.name)}
@@ -46,7 +42,7 @@ export const SocialsBar = (props: SocialsBarProps) => {
 
     if (site.name === 'linkedin') {
       return (
-        <a href={site.link} target="_blank">
+        <a href={site.link} target="_blank" rel="noreferrer">
           <SiLinkedin
             className={iconHoverEffectClass}
             onMouseOver={() => iconHover(site.name)}
@@ -58,7 +54,7 @@ export const SocialsBar = (props: SocialsBarProps) => {
 
     if (site.name === 'gmail') {
       return (
-        <a href={site.link} target="_blank">
+        <a href={site.link} target="_blank" rel="noreferrer">
           <SiGmail
             className={iconHoverEffectClass}
             onMouseOver={() => iconHover(site.name)}
@@ -70,7 +66,7 @@ export const SocialsBar = (props: SocialsBarProps) => {
 
     if (site.name === 'credly') {
       return (
-        <a href={site.link} target="_blank">
+        <a href={site.link} target="_blank" rel="noreferrer">
           <SiAcclaim
             className={iconHoverEffectClass}
             onMouseOver={() => iconHover(site.name)}
@@ -81,7 +77,7 @@ export const SocialsBar = (props: SocialsBarProps) => {
     }
 
     return (
-      <a href={site.link} target="_blank">
+      <a href={site.link} target="_blank" rel="noreferrer">
         <OpenInNewIcon
           className={iconHoverEffectClass}
           onMouseOver={() => iconHover(site.name)}

@@ -1,6 +1,7 @@
 import { headers } from 'next/headers';
 import { match } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
+import { DictContent } from './DictInterface';
 
 const locales = ['es', 'en'];
 const defaultLocale = 'es';
@@ -19,9 +20,7 @@ export const getLang = (): string => {
   return match(languages || [], locales, defaultLocale);
 };
 
-export const getDictionary = async (
-  locale: string,
-): Promise<{ [key: string]: any }> => {
+export const getDictionary = async (locale: string): Promise<DictContent> => {
   if (locale === 'en') {
     return dictionaries['en']();
   } else {

@@ -10,8 +10,7 @@ import { GrowOnScroll } from '@/app/components/GrowOnScroll/GrowOnScroll';
 /* 
   --- Styles ---
 */
-const sectionContentClass =
-  'md:flex-row-centered md:items-start flex-col-centered w-full mt-8';
+const sectionContentClass = 'md:flex-row-centered md:items-start flex-col-centered w-full mt-8';
 const tabListContainerClass = 'md:pt-6 md:w-1/5 pt-2 w-full flex-row-centered';
 const tabListStyles = {
   '.MuiTab-root': {
@@ -29,8 +28,7 @@ const tabListStyles = {
   },
   '& .Mui-selected': { color: '#34bbff' },
 };
-const tabListItemClass =
-  'transition-all-eio-300 hover:text-cyan-600 hover:bg-dark-500';
+const tabListItemClass = 'transition-all-eio-300 hover:text-cyan-600 hover:bg-dark-500';
 const tabPanelContainerClass = 'md:w-4/5 md:p-4 pt-6';
 
 export const Experience = (props: ExperienceProps) => {
@@ -38,8 +36,7 @@ export const Experience = (props: ExperienceProps) => {
     --- React Hooks ---
   */
   const [tabValue, setTabValue] = useState(0);
-  const [tabListVerticalOrientation, setTablistVerticalOrientation] =
-    useState(false);
+  const [tabListVerticalOrientation, setTablistVerticalOrientation] = useState(false);
   useEffect(() => {
     const tabListOrientationChange = () => {
       // Styling and orientation of the TabList depending ogf the screen width
@@ -64,11 +61,7 @@ export const Experience = (props: ExperienceProps) => {
   return (
     <article id="#experience" className="article-class">
       {/* Title */}
-      <SectionTitle
-        title={props.textContent.title}
-        growTimeout={1500}
-        growOneTime={true}
-      />
+      <SectionTitle title={props.textContent.title} growTimeout={1500} growOneTime={true} />
 
       <div className={sectionContentClass}>
         {/* TabList of Companies */}
@@ -76,28 +69,22 @@ export const Experience = (props: ExperienceProps) => {
           <div className={tabListContainerClass}>
             <Tabs
               aria-label={props.textContent.aria.panel}
-              onChange={(event: SyntheticEvent, newValue: number) =>
-                setTabValue(newValue)
-              }
-              orientation={
-                tabListVerticalOrientation ? 'vertical' : 'horizontal'
-              }
+              onChange={(event: SyntheticEvent, newValue: number) => setTabValue(newValue)}
+              orientation={tabListVerticalOrientation ? 'vertical' : 'horizontal'}
               sx={tabListStyles}
               value={tabValue}
               variant="scrollable"
             >
-              {props.textContent.jobs.map(
-                (job: JobExperience, index: number) => {
-                  return (
-                    <Tab
-                      className={tabListItemClass}
-                      aria-controls={`${props.textContent.aria.tab}-${index}`}
-                      key={index}
-                      label={job.companyShortName}
-                    />
-                  );
-                },
-              )}
+              {props.textContent.jobs.map((job: JobExperience, index: number) => {
+                return (
+                  <Tab
+                    className={tabListItemClass}
+                    aria-controls={`${props.textContent.aria.tab}-${index}`}
+                    key={index}
+                    label={job.companyShortName}
+                  />
+                );
+              })}
             </Tabs>
           </div>
         </GrowOnScroll>
@@ -107,18 +94,11 @@ export const Experience = (props: ExperienceProps) => {
           <div className={tabPanelContainerClass}>
             {props.textContent.jobs.map((job: JobExperience, index: number) => {
               return (
-                <div
-                  key={index}
-                  className={`${tabValue === index ? 'block' : 'hidden'}`}
-                >
+                <div key={index} className={`${tabValue === index ? 'block' : 'hidden'}`}>
                   <h1 className="subsubtitle-class">
                     {job.position}
                     <span className="text-cyan-600"> @ </span>
-                    <a
-                      className="hover-cyan-text"
-                      href={job.companyWebsite}
-                      target="_blank"
-                    >
+                    <a className="hover-cyan-text" href={job.companyWebsite} target="_blank" rel="noreferrer">
                       {job.company}
                     </a>
                   </h1>
@@ -129,9 +109,7 @@ export const Experience = (props: ExperienceProps) => {
                     return (
                       <div key={index} className="py-2 flex items-start">
                         <span className="text-cyan-600">&#9724;</span>
-                        <p className="text-base pl-2 paragraph-class">
-                          {keyPoint}
-                        </p>
+                        <p className="text-base pl-2 paragraph-class">{keyPoint}</p>
                       </div>
                     );
                   })}

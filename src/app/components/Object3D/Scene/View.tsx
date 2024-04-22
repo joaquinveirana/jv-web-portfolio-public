@@ -1,11 +1,6 @@
 'use client';
-
-import {
-  forwardRef,
-  MutableRefObject,
-  useImperativeHandle,
-  useRef,
-} from 'react';
+import * as React from 'react';
+import { forwardRef, MutableRefObject, useImperativeHandle, useRef } from 'react';
 import { OrbitControls, View as ViewImpl } from '@react-three/drei';
 import { Three } from '../Helpers/Three';
 import { ViewProps } from '@/app/props/ViewProps';

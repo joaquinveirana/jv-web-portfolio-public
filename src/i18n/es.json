@@ -87,15 +87,7 @@
       "En mis tiempos libres también disfruto de aprender en otras áreas como el machine learning, el desarrollo de videojuegos y el desarrollo mobile.",
       "Estas son las tecnologías con las que principalmente trabajo:"
     ],
-    "techList": [
-      "JavaScript",
-      "React",
-      "Angular",
-      "Node.js",
-      "TypeScript",
-      "Docker",
-      "Kubernetes"
-    ]
+    "techList": ["JavaScript", "React", "Angular", "Node.js", "TypeScript", "Docker", "Kubernetes"]
   },
   "experience": {
     "title": "Experiencia",
@@ -174,13 +166,7 @@
         "websiteLink": "https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/37192",
         "repoLink": "",
         "description": "Proyecto centrado en el Internet de las Cosas (IoT) donde se aborda un caso de diseño e implementación de un prototipo de campus inteligente a pequeña escala en la Facultad de Ingeniería.",
-        "techList": [
-          "C++",
-          "FreeRTOS",
-          "PlatformIO",
-          "ThingsBoard",
-          "Sistemas Embebidos"
-        ],
+        "techList": ["C++", "FreeRTOS", "PlatformIO", "ThingsBoard", "Sistemas Embebidos"],
         "imagePath": "./projects/smartfing_cover.webp",
         "videoPath": ""
       },

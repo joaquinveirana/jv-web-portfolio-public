@@ -1,5 +1,7 @@
+import { MouseEventHandler } from 'react';
+
 export type LogoProps = {
-  callback: Function;
+  callback: () => MouseEventHandler<HTMLDivElement> | undefined;
   imageLogo: string;
   imageLogoSecondary: string;
   altLogo: string;

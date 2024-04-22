@@ -1,12 +1,10 @@
 type MainProps = {
   params: Params;
-  searchParams?: SearchParams;
+  searchParams?: object;
 };
 
 type Params = {
   lang: string;
 };
-
-type SearchParams = {};
 
 export default MainProps;

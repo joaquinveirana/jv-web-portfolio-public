@@ -1,5 +1,5 @@
 'use client';
-
+import * as React from 'react';
 import { ProjectImageProps } from '@/app/props/ProjectImageProps';
 import ReactPlayer from 'react-player';
 
@@ -12,12 +12,9 @@ const imageContainerClass =
 export const ProjectImage = (props: ProjectImageProps) => {
   return (
     <div className={imageContainerClass}>
-      <a href={props.imageLink} target="_blank">
+      <a href={props.imageLink} target="_blank" rel="noreferrer">
         {props.videoPath.length === 0 ? (
-          <img
-            src={props.imagePath}
-            alt={`Imagen del proyecto: ${props.name} `}
-          />
+          <img src={props.imagePath} alt={`Imagen del proyecto: ${props.name} `} />
         ) : (
           props.isClient && (
             <ReactPlayer
@@ -26,12 +23,8 @@ export const ProjectImage = (props: ProjectImageProps) => {
               height="100%"
               loop={true}
               muted={true}
-              onMouseOver={(event: MouseEvent) =>
-                event.target && (event.target as HTMLMediaElement).play()
-              }
-              onMouseOut={(event: MouseEvent) =>
-                event.target && (event.target as HTMLMediaElement).load()
-              }
+              onMouseOver={(event: MouseEvent) => event.target && (event.target as HTMLMediaElement).play()}
+              onMouseOut={(event: MouseEvent) => event.target && (event.target as HTMLMediaElement).load()}
             />
           )
         )}

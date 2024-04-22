@@ -31,35 +31,16 @@ export default function Head() {
       <meta property="og:description" content={description} />
 
       <link rel="apple-touch-icon" href="/my_logos/apple-touch-icon.png" />
-      <link
-        rel="apple-touch-icon"
-        sizes="16x16"
-        href="/my_logos/favicon-16x16.png"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="32x32"
-        href="/my_logos/favicon-32x32.png"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/my_logos/apple-touch-icon.png"
-      />
+      <link rel="apple-touch-icon" sizes="16x16" href="/my_logos/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="32x32" href="/my_logos/favicon-32x32.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/my_logos/apple-touch-icon.png" />
       <link rel="manifest" href="/manifest.json" />
-      <link
-        rel="mask-icon"
-        color="#000000"
-        href="/my_logos/logo_jv_bold_cyan_white_sq.svg"
-      />
+      <link rel="mask-icon" color="#000000" href="/my_logos/logo_jv_bold_cyan_white_sq.svg" />
 
       {/* Meta Tags for HTML pages on Mobile */}
       {/* <meta name="format-detection" content="telephone=yes"/>
         <meta name="HandheldFriendly" content="true"/>  */}
-      <meta
-        name="viewport"
-        content="width=device-width, minimum-scale=1, initial-scale=1.0"
-      />
+      <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1.0" />
       <meta name="theme-color" content="#000" />
       <link rel="shortcut icon" href="/my_logos/apple-touch-icon.png" />
     </>

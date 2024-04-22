@@ -1,6 +1,20 @@
 {
-  "extends": ["next/core-web-vitals", "fbjs"],
+  "parser": "@typescript-eslint/parser",
+  "extends": ["next/core-web-vitals", "fbjs", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020
+  },
   "rules": {
-    "ft-flow/object-type-delimiter": "off"
+    "ft-flow/object-type-delimiter": "off",
+    "max-len": ["warn", { "code": 120 }],
+    "react/no-unknown-property": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

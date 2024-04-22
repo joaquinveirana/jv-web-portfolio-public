@@ -1,4 +1,4 @@
 export type IconProps = {
-  callback: Function;
+  callback: () => void;
   growTimeout: number;
 };

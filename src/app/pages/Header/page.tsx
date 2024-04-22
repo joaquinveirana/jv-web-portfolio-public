@@ -1,6 +1,6 @@
 'use client';
+import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
-
 import { BurgerClose } from 'react-burger-icons';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
@@ -15,18 +15,13 @@ import { NavItem } from '@/app/components/NavItem/NavItem';
   --- Styles ---
 */
 // Header Main Items Classes
-const mainHeaderClass =
-  'md:px-8 fixed top-0 w-full h-[100px] z-30 text-sm bg-dark-300 bg-opacity-70';
-const hamburgerIconClass =
-  'md:hidden fixed right-0 w-[50px] h-[50px] z-50 cursor-pointer';
+const mainHeaderClass = 'md:px-8 fixed top-0 w-full h-[100px] z-30 text-sm bg-dark-300 bg-opacity-70';
+const hamburgerIconClass = 'md:hidden fixed right-0 w-[50px] h-[50px] z-50 cursor-pointer';
 
 // Nav Panel Classes
-const blurPanelClass =
-  'md:hidden fixed top-0 right-full w-screen h-screen z-15 backdrop-blur-sm';
-const mobileNavPanel =
-  'fixed top-0 left-full w-3/4 h-screen z-40 pt-32 pb-10 bg-dark-500';
-const desktopNavPanel =
-  'md:p-0 md:h-[70px] md:w-fit md:sticky md:bg-[transparent]';
+const blurPanelClass = 'md:hidden fixed top-0 right-full w-screen h-screen z-15 backdrop-blur-sm';
+const mobileNavPanel = 'fixed top-0 left-full w-3/4 h-screen z-40 pt-32 pb-10 bg-dark-500';
+const desktopNavPanel = 'md:p-0 md:h-[70px] md:w-fit md:sticky md:bg-[transparent]';
 const desktopNavItemList = 'md:h-full md:flex-row-centered';
 
 export default function Header(props: HeaderProps) {
@@ -55,16 +50,15 @@ export default function Header(props: HeaderProps) {
     }
   };
 
-  const openCloseSlidingPanel = (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-  ) => {
+  const openCloseSlidingPanel = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     setIsOpenNavSlider(!isOpenNavSlider);
     e.stopPropagation();
   };
 
   const openResume = () => {
-    if (checkWindowsDefined() && props.textContent.resume.itemLink !== null)
+    if (checkWindowsDefined() && props.textContent.resume.itemLink !== null) {
       window.open(props.textContent.resume.itemLink);
+    }
   };
 
   /* 
@@ -78,20 +72,23 @@ export default function Header(props: HeaderProps) {
   // Hide header on scroll down + change header height on scroll + disable shadows when header on top
   useEffect(() => {
     const handleScrollDirectionChange = () => {
-      if (!refHeader.current) return;
+      if (!refHeader.current) {
+        return;
+      }
 
       if (window.scrollY === 0) {
         refHeader.current.style.height = '100px';
         refHeader.current.style.boxShadow = '0 0px 0px 0px rgb(0 0 0 / 0.1)';
       } else {
         refHeader.current.style.height = '70px';
-        refHeader.current.style.boxShadow =
-          '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)';
+        refHeader.current.style.boxShadow = '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)';
       }
 
-      if (window.scrollY > prevScroll)
+      if (window.scrollY > prevScroll) {
         refHeader.current.style.transform = 'translateY(-100px)';
-      else refHeader.current.style.transform = 'translateY(0px)';
+      } else {
+        refHeader.current.style.transform = 'translateY(0px)';
+      }
 
       prevScroll = window.scrollY;
     };
@@ -115,10 +112,13 @@ export default function Header(props: HeaderProps) {
 
   // Disable scroll when dialog panel is open
   useEffect(() => {
-    if (checkWindowsDefined())
-      if (isOpenInfoDialog)
+    if (checkWindowsDefined()) {
+      if (isOpenInfoDialog) {
         disableBodyScroll(document as unknown as HTMLElement);
-      else enableBodyScroll(document as unknown as HTMLElement);
+      } else {
+        enableBodyScroll(document as unknown as HTMLElement);
+      }
+    }
   }, [isOpenInfoDialog]);
 
   /* 
@@ -141,9 +141,7 @@ export default function Header(props: HeaderProps) {
 
       {/* Hamburguer Menu Icon */}
       <button
-        onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>
-          openCloseSlidingPanel(e)
-        }
+        onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => openCloseSlidingPanel(e)}
         className={hamburgerIconClass}
       >
         <BurgerClose isClosed={isOpenNavSlider} />
@@ -195,10 +193,7 @@ export default function Header(props: HeaderProps) {
       </section>
 
       {isOpenInfoDialog && (
-        <Dialog
-          callback={() => setIsOpenInfoDialog(false)}
-          content={props.textContent.moreInfo}
-        ></Dialog>
+        <Dialog callback={() => setIsOpenInfoDialog(false)} content={props.textContent.moreInfo}></Dialog>
       )}
     </header>
   );

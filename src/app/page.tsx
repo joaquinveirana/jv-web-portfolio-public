@@ -12,6 +12,7 @@ import { Projects } from '@/app/pages/Projects/page';
 import { Contact } from '@/app/pages/Contact/page';
 import { getResumeStorageURL } from './lib/firebase/firebase';
 import { Learning } from './pages/Learning/page';
+import { DictContent } from '@/i18n/DictInterface';
 
 const headerLogo: LogoType = {
   imageLogo: '/my_logos/jv_logo_128.png',
@@ -19,10 +20,10 @@ const headerLogo: LogoType = {
   altLogo: 'JV Logo',
 };
 
-const loadResumeLink = async (dict: { [key: string]: any }) => {
+const loadResumeLink = async (dict: DictContent) => {
   const responseURL = await getResumeStorageURL();
   if (responseURL) {
-    dict['header']['resume']['itemLink'] = responseURL;
+    dict.header.resume.itemLink = responseURL;
   }
 };
 

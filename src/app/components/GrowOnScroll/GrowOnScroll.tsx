@@ -38,12 +38,7 @@ export const GrowOnScroll = (props: GrowOnScrollProps) => {
   }, [trigger]);
 
   return (
-    <Grow
-      ref={ref}
-      appear={true}
-      in={trigger || hasAlreadyGrown}
-      timeout={props.growTimeout}
-    >
+    <Grow ref={ref} appear={true} in={trigger || hasAlreadyGrown} timeout={props.growTimeout}>
       {props.children}
     </Grow>
   );

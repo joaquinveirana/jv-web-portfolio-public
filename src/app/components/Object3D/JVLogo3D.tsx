@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-import { Suspense, useEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { Layout } from './Canvas/Layout';
 import { JVLogo3DProps } from '@/app/props/JVLogo3DProps';
@@ -26,9 +26,12 @@ export const JVLogo3D = (props: JVLogo3DProps) => {
   );
 
   const logoScale = () => {
-    if (windowWidth === 0) return 0;
-    if (windowWidth > 1750) return 3.1;
-    else if (windowWidth > 1600) {
+    if (windowWidth === 0) {
+      return 0;
+    }
+    if (windowWidth > 1750) {
+      return 3.1;
+    } else if (windowWidth > 1600) {
       return 2.8;
     } else if (windowWidth > 1500) {
       return 2.5;
@@ -52,7 +55,9 @@ export const JVLogo3D = (props: JVLogo3DProps) => {
   const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {
     const handleWindowWidthChange = () => {
-      if (window.outerWidth) setWindowWidth(window.outerWidth - 16);
+      if (window.outerWidth) {
+        setWindowWidth(window.outerWidth - 16);
+      }
     };
     handleWindowWidthChange();
     window.addEventListener('resize', handleWindowWidthChange);

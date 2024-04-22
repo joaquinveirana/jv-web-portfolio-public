@@ -87,15 +87,7 @@
       "In my free time I also enjoy learning in other tech areas such as machine learning, video game development and mobile development.",
       "These are the technologies I mainly work with:"
     ],
-    "techList": [
-      "JavaScript",
-      "React",
-      "Angular",
-      "Node.js",
-      "TypeScript",
-      "Docker",
-      "Kubernetes"
-    ]
+    "techList": ["JavaScript", "React", "Angular", "Node.js", "TypeScript", "Docker", "Kubernetes"]
   },
   "experience": {
     "title": "Experience",
@@ -112,9 +104,9 @@
         "startDate": "January 2022",
         "endDate": "Present",
         "keyPoints": [
-          "front end development of internal client management web applications in Angular. Rebuilding them with more modern technology and improving their user experience and interface.",
+          "Front end development of internal client management web applications in Angular. Rebuilding them with more modern technology and improving their user experience and interface.",
           "Development of libraries in Angular from components commonly used in different applications in order to speed up development through the reuse of components.",
-          "back end development of batch applications and small REST APIs in Java 8 and 11 in conjunction with frameworks such as Spring Boot and Apache Camel.",
+          "Back end development of batch applications and small REST APIs in Java 8 and 11 in conjunction with frameworks such as Spring Boot and Apache Camel.",
           "Maintenance of applications hosted both on IBM Cloud and On-premise on the client servers, making improvements and error corrections.",
           "Management of cloud services on IBM Cloud used by the client on different software solutions."
         ]
@@ -174,13 +166,7 @@
         "websiteLink": "https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/37192",
         "repoLink": "",
         "description": "Project focused on Internet of Things (IoT) technologies, in which a design and implementation of a small-scale smart campus prototype in the Faculty of Engineering is addressed.",
-        "techList": [
-          "C++",
-          "FreeRTOS",
-          "PlatformIO",
-          "ThingsBoard",
-          "Embedded Systems"
-        ],
+        "techList": ["C++", "FreeRTOS", "PlatformIO", "ThingsBoard", "Embedded Systems"],
         "imagePath": "./projects/smartfing_cover.webp",
         "videoPath": ""
       },

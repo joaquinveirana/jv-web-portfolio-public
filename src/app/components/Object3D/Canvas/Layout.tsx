@@ -1,12 +1,6 @@
 'use client';
-
-import {
-  MutableRefObject,
-  ReactNode,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import * as React from 'react';
+import { MutableRefObject, ReactNode, useEffect, useRef, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Preload } from '@react-three/drei';
 import { r3f } from '../Helpers/global';
@@ -25,11 +19,11 @@ const Layout = ({
   /* 
     Hooks
   */
-  const [hiddenOrfadeIn, setHiddenOrfadeIn] = useState(
-    showFadeIn ? 'opacity-0' : 'opacity-100',
-  );
+  const [hiddenOrfadeIn, setHiddenOrfadeIn] = useState(showFadeIn ? 'opacity-0' : 'opacity-100');
   useEffect(() => {
-    if (startFadeIn) setHiddenOrfadeIn('opacity-100');
+    if (startFadeIn) {
+      setHiddenOrfadeIn('opacity-100');
+    }
   }, [startFadeIn]);
 
   return (
@@ -48,7 +42,6 @@ const Layout = ({
         eventSource={ref as unknown as MutableRefObject<HTMLElement>}
         eventPrefix="client"
       >
-        {/* @ts-ignore */}
         <r3f.Out />
         <Preload all />
       </Canvas>

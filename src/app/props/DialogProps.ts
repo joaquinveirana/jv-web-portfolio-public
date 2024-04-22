@@ -1,6 +1,6 @@
 import { MoreInfo } from './HeaderProps';
 
 export type DialogProps = {
-  callback: Function;
+  callback: () => void;
   content: MoreInfo;
 };

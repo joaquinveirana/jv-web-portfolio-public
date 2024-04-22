@@ -1,10 +1,8 @@
+import { DictContentHeader } from '@/i18n/DictInterface';
+
 export type HeaderProps = {
   logo: LogoType;
-  textContent: {
-    navItems: NavItemType[];
-    resume: NavItemType;
-    moreInfo: MoreInfo;
-  };
+  textContent: DictContentHeader;
 };
 
 export type LogoType = {

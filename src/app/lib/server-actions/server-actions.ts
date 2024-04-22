@@ -1,10 +1,6 @@
 'use server';
 
-import {
-  getDbBadges,
-  getDbCertificates,
-  getFileStorageURL,
-} from '../firebase/firebase';
+import { getDbBadges, getDbCertificates, getFileStorageURL } from '../firebase/firebase';
 
 export async function selectAllBadgesAction() {
   return getDbBadges();
