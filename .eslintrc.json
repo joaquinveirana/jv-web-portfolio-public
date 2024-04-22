@@ -1,6 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
-  "extends": ["next/core-web-vitals", "fbjs", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
+  "extends": ["next/core-web-vitals", "fbjs"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
