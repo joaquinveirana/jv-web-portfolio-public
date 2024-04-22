@@ -93,6 +93,8 @@ export interface DictContentLanding {
 
 export interface DictContentLearning {
   title: string;
+  viewCredlyProfile: string;
+  linkCredlyProfile: string;
 }
 
 export interface DictContentProjects {

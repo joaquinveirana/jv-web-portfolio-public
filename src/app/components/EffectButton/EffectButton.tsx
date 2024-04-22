@@ -16,7 +16,7 @@ export const EffectButton = (props: EffectButtonProps) => {
       <div>
         <button
           onClick={() => {
-            if (!props.disabled) {
+            if (!props.disabled && props.callback) {
               props.callback();
             }
           }}

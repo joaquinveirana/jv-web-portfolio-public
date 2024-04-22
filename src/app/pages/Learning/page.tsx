@@ -4,6 +4,12 @@ import { selectAllBadgesAction, selectAllCertificatesAction } from '@/app/lib/se
 import { LearningItem } from '@/interfaces/db-entities';
 import { LearningCards } from '@/app/components/LearningCard/LearningCard';
 import { LearningProps } from '@/app/props/LearningProps';
+import { EffectButton } from '@/app/components/EffectButton/EffectButton';
+
+/* 
+  --- Styles ---
+*/
+const credlyDashboardLink = 'paragraph-class';
 
 export const Learning = async (props: LearningProps) => {
   const getAllBadges = async () => {
@@ -27,6 +33,9 @@ export const Learning = async (props: LearningProps) => {
       <div className="mt-8 flex-col-centered flex flex-col gap-6">
         <LearningCards items={certs} isBadge={false} />
         <LearningCards items={badges} isBadge={true} />
+        <a href={props.textContent.linkCredlyProfile} target="_blank" rel="noreferrer">
+          <EffectButton text={props.textContent.viewCredlyProfile} width={'50'} growTimeout={2000}></EffectButton>
+        </a>
       </div>
     </article>
   );

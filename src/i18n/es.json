@@ -185,7 +185,9 @@
     ]
   },
   "learning": {
-    "title": "Educación"
+    "title": "Educación",
+    "viewCredlyProfile": "Ir a mi dashboard en Credly",
+    "linkCredlyProfile": "https://www.credly.com/users/joaquin-veirana/badges?sort=-state_updated_at&page=1"
   },
   "contact": {
     "title": "Contáctame",

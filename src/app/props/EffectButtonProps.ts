@@ -1,6 +1,6 @@
 export type EffectButtonProps = {
   text: string;
-  callback: () => void;
+  callback?: () => void;
   width: string;
   growTimeout: number;
   disabled?: boolean;

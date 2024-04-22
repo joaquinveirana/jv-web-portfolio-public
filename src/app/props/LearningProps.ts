@@ -1,7 +1,5 @@
-export type LearningProps = {
-  textContent: LearningContent;
-};
+import { DictContentLearning } from '@/i18n/DictInterface';
 
-export type LearningContent = {
-  title: string;
+export type LearningProps = {
+  textContent: DictContentLearning;
 };
