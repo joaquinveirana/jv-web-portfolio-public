@@ -12,7 +12,7 @@ import { GrowOnScroll } from '../GrowOnScroll/GrowOnScroll';
 */
 const badgeContainerClass = 'md:my-0 md:pt-2 md:z-20 md:relative mb-4 w-full flex-col-star';
 const descriptionBadgeClass =
-  'md:p-8 md:w-[330px] p-6 w-full max-h-[460px] flex flex-col gap-4 rounded-md shadow-lg bg-dark-400 text-xl secondary-sub-paragraph-light-class hover:bg-dark-500 transition-all';
+  'md:p-8 md:w-[330px] p-6 w-full max-h-[460px] h-full flex flex-col gap-4 rounded-md shadow-lg bg-dark-400 text-xl secondary-sub-paragraph-light-class hover:bg-dark-500 transition-all';
 const descriptionCertClass =
   'md:p-8 md:w-[550px] p-6 w-full max-h-[530px] flex flex-col gap-4 rounded-md shadow-lg bg-dark-400 text-xl secondary-sub-paragraph-light-class hover:bg-dark-500 transition-all';
 const learningItemInfo = 'flex flex-col gap-2';
@@ -33,13 +33,14 @@ export const LearningCards = (props: LearningCardsProps) => {
           </a>
           <p className={learningItemDate}>{item.date}</p>
           <p className={learningItemSubtitle}>
-            {item.issuedBy}, {item.authorizedBy}
+            {item.issuedBy !== '' ? `${item.issuedBy}, ` : ''}
+            {item.authorizedBy}
           </p>
         </div>
       </div>
     );
   });
-  const OPTIONS: EmblaOptionsType = { loop: true };
+  const OPTIONS: EmblaOptionsType = { loop: false };
 
   return (
     <GrowOnScroll growOneTime={true} growTimeout={1500}>

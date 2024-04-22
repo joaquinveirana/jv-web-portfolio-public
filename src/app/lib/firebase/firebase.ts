@@ -5,6 +5,8 @@ import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
 import { LearningItem } from '@/interfaces/db-entities';
 import dayjs from 'dayjs';
+const customParseFormat = require('dayjs/plugin/customParseFormat');
+dayjs.extend(customParseFormat);
 
 const firebaseConfig = {
   apiKey: process.env.firebase_apiKey,
@@ -41,7 +43,11 @@ export const getDbBadges = async () => {
     const sortedObjects = badgesArray.sort((a, b) => {
       const dateA = dayjs(a.date, 'DD/MM/YYYY');
       const dateB = dayjs(b.date, 'DD/MM/YYYY');
-      return dateB.date() - dateA.date();
+      if (dateA.isBefore(dateB)) {
+        return 1;
+      } else {
+        return -1;
+      }
     });
     return sortedObjects;
   } catch (error) {
@@ -58,7 +64,11 @@ export const getDbCertificates = async () => {
     const sortedObjects = certsArray.sort((a, b) => {
       const dateA = dayjs(a.date, 'DD/MM/YYYY');
       const dateB = dayjs(b.date, 'DD/MM/YYYY');
-      return dateB.date() - dateA.date();
+      if (dateA.isBefore(dateB)) {
+        return 1;
+      } else {
+        return -1;
+      }
     });
     return sortedObjects;
   } catch (error) {
