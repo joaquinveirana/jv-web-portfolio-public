@@ -45,7 +45,7 @@ export const LearningCards = (props: LearningCardsProps) => {
   return (
     <GrowOnScroll growOneTime={true} growTimeout={1500}>
       <div className={badgeContainerClass}>
-        <EmblaCarousel slides={SLIDES} options={OPTIONS}></EmblaCarousel>
+        <EmblaCarousel slides={SLIDES} options={OPTIONS} isBadge={props.isBadge}></EmblaCarousel>
       </div>
     </GrowOnScroll>
   );
